@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: { sans: ["inter"] },
       colors: {
         blue: "#5218FA",
+        body: "#fafafa",
       },
     },
   },
