@@ -10,6 +10,7 @@ const copyRight = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       animate={{ width: isHovered ? 252 : 180 }}
+      initial={{ width: 0 }}
       className="flex  items-center bg-body pt-6 pb-6 gap-2"
     >
       <motion.div
@@ -22,6 +23,7 @@ const copyRight = () => {
       <motion.div
         transition={{ duration: 0.1, type: "spring", stiffness: 50 }}
         animate={{ x: isHovered ? -96 : 0 }}
+        initial={{ x: 0 }}
         className="text-clip  font-light text-2xl whitespace-nowrap  overflow-hidden w-fit"
       >
         code by Pelle Adlén
