@@ -1,13 +1,12 @@
 import HeroText from "./Components/heroText";
-
+import NavBar from "./Components/Navigation/navBar";
 import Header from "./header/copyRight";
-import Nav from "./Header/Navigation/nav";
 
 export default function index() {
   return (
     <>
       <div className="z-50 w-full h-fit fixed bottom-8 left-0 right-0 flex justify-center">
-        <Nav />
+        <NavBar />
       </div>
 
       <section className="h-screen w-full flex flex-col justify-between overflow-hidden">
