@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { AnimateSharedLayout, motion } from "framer-motion";
+import { LayoutGroup, motion } from "framer-motion";
 import { span, active, inactive, linkWrapper, menuLinks } from "./styles";
 
 export const NavLinks = () => {
@@ -19,7 +19,7 @@ export const NavLinks = () => {
   return (
     <>
       <nav className="flex w-fit bg-white p-4 rounded-full shadow-sm">
-        <AnimateSharedLayout>
+        <LayoutGroup>
           <motion.ul style={linkWrapper}>
             {links.map(({ link, url }, index) => {
               const isActive = index === activeIndex;
@@ -36,7 +36,7 @@ export const NavLinks = () => {
               );
             })}
           </motion.ul>
-        </AnimateSharedLayout>
+        </LayoutGroup>
       </nav>
     </>
   );

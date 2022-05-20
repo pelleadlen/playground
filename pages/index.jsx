@@ -1,21 +1,23 @@
-import HeroText from "./Components/heroText";
+import HeroText from "./Components/Home/heroText";
 import NavBar from "./Components/Navigation/navBar";
 import Header from "./header/copyRight";
+import { HomeWrapper } from "./Components/Home/homeWrapper";
+import { Navigation } from "./Components/Navigation/navigation";
+import { WorkWrapper } from "./Work/workWrapper";
 
 export default function index() {
   return (
     <>
-      <div className="z-50 w-full h-fit fixed bottom-8 left-0 right-0 flex justify-center">
+      <Navigation>
         <NavBar />
-      </div>
+      </Navigation>
 
-      <section className="h-screen w-full flex flex-col justify-between overflow-hidden">
+      <HomeWrapper id="home">
         <Header />
-
         <HeroText className="pb-12" />
-      </section>
+      </HomeWrapper>
 
-      <div className="h-screen bg-white rounded-t-3xl rounded-r-3xl -ml-6 -mr-6 z-10 shadow-xl "></div>
+      <WorkWrapper></WorkWrapper>
     </>
   );
 }
