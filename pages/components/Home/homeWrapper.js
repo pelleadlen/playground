@@ -1,6 +1,6 @@
 import tw from "tailwind-styled-components";
 
-export const HomeWrapper = tw.div`
+export const Home = tw.div`
 
 h-screen
  w-full 

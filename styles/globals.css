@@ -15,3 +15,8 @@ body {
   margin: 0 24px 0 24px;
   background-color: #fafafa;
 }
+
+::selection {
+  background: #051574;
+  color: white;
+}
