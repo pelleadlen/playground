@@ -25,7 +25,7 @@ const copyRight = () => {
           transition={{ duration: 0.1, type: "spring", stiffness: 50 }}
           animate={{ x: isHovered ? -96 : 0 }}
           initial={{ x: 0 }}
-          className="text-clip   font-light text-2xl whitespace-nowrap  overflow-hidden w-fit"
+          className="text-clip font-light text-2xl whitespace-nowrap overflow-hidden w-fit"
         >
           code by Pelle Adlén
         </motion.div>
