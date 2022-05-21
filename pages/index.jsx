@@ -1,9 +1,9 @@
 import HeroText from "./Components/Home/heroText";
 import NavBar from "./Components/Navigation/navBar";
 import Header from "./Components/Header/copyRight";
-import { Home, HomeWrapper } from "./Components/Home/homeWrapper";
+import { Home } from "./Components/Home/homeWrapper";
 import { Navigation } from "./Components/Navigation/navigation";
-import { Work, WorkWrapper } from "./Components/Work/workWrapper";
+import { Work } from "./Components/Work/workWrapper";
 import { CaseCard } from "./Components/Work/caseCard";
 import tripCloset from "../public/Assets/Images/tripcloset-banner.png";
 import fourTrack from "../public/Assets/Images/fourtrack-banner.png";
@@ -12,7 +12,7 @@ import { SelectedWorkTitle } from "./Components/Work/selectedWorkTitle";
 import { About, AboutWrapper } from "./Components/About/aboutWrapper";
 import { Slogan } from "./Components/About/slogan";
 import { Profile } from "./Components/About/profile";
-import { Contact, Footer } from "./Components/Footer/Contact";
+import { Contact } from "./Components/Contact/contact";
 
 export default function index() {
   return (
@@ -55,6 +55,7 @@ export default function index() {
         <Slogan />
         <Profile />
       </About>
+
       <Contact />
     </>
   );
