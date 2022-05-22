@@ -9,7 +9,7 @@ import tripCloset from "../public/Assets/Images/tripcloset-banner.png";
 import fourTrack from "../public/Assets/Images/fourtrack-banner.png";
 import ourLegacy from "../public/Assets/Images/ourlegacy-banner.png";
 import { SelectedWorkTitle } from "./Components/Work/selectedWorkTitle";
-import { About, AboutWrapper } from "./Components/About/aboutWrapper";
+import { About } from "./Components/About/aboutWrapper";
 import { Slogan } from "./Components/About/slogan";
 import { Profile } from "./Components/About/profile";
 import { Contact } from "./Components/Contact/contact";
@@ -28,13 +28,16 @@ export default function index() {
 
       <Work id="work">
         <SelectedWorkTitle />
+
         <CaseCard
           alt="trip closet mockups of all screens"
           src={tripCloset}
           title="Trip Closet"
           subTitle="Product design"
           buttonText="view casestudy"
+          href="/tripCloset"
         />
+
         <CaseCard
           alt="Fourtrack mockup of macbook pro"
           src={fourTrack}
@@ -56,7 +59,7 @@ export default function index() {
         <Profile />
       </About>
 
-      <Contact />
+      <Contact id="contact" />
     </>
   );
 }

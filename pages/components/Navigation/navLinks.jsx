@@ -20,7 +20,7 @@ export const NavLinks = () => {
     <>
       <nav className="flex w-fit bg-white p-4 rounded-full shadow-sm">
         <LayoutGroup>
-          <motion.ul style={linkWrapper}>
+          <motion.ul initial={false} style={linkWrapper}>
             {links.map(({ link, url }, index) => {
               const isActive = index === activeIndex;
 
@@ -28,7 +28,11 @@ export const NavLinks = () => {
                 <motion.li key={index} onClick={() => setActiveIndex(index)}>
                   <a style={menuLinks} href={url}>
                     {isActive ? (
-                      <motion.span layoutId="active" style={span} />
+                      <motion.span
+                        initial={false}
+                        layoutId="active"
+                        style={span}
+                      />
                     ) : null}
                     <span style={isActive ? active : inactive}>{link}</span>
                   </a>

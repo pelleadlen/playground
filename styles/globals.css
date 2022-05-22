@@ -12,11 +12,24 @@ html {
 }
 
 body {
-  margin: 0 24px 0 24px;
   background-color: #fafafa;
+  overscroll-behavior: none;
+  margin: 0 24px 0 24px;
 }
 
 ::selection {
   background: #051574;
   color: white;
+}
+
+/* Backdrop */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }

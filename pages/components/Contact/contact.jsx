@@ -2,7 +2,10 @@ import { Footer } from "./footer";
 
 export const Contact = () => {
   return (
-    <div className=" flex flex-col justify-between -ml-6 -mr-6 overflow-hidden w-screen h-[110vh] rounded-tl-3xl rounded-tr-3xl bg-black">
+    <div
+      id="contact"
+      className=" flex flex-col justify-between -ml-6 -mr-6 overflow-hidden w-screen h-[110vh] rounded-tl-3xl rounded-tr-3xl bg-black"
+    >
       <div className=" text-white flex flex-col gap-4 w-full h-full items-center justify-center  ">
         <h3 className=" font-medium text-9xl">Say hi!</h3>
         <a

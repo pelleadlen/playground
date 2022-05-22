@@ -10,7 +10,7 @@ const copyRight = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       animate={{ width: isHovered ? 252 : 180 }}
-      initial={{ width: 0 }}
+      initial={false}
       className="flex  items-center overflow-hidden pt-6 pb-6 gap-2"
     >
       <motion.div

@@ -5,6 +5,7 @@ export const CaseCard = ({ alt, src, title, subTitle, buttonText }) => {
     <div className="flex flex-col pl-6 pr-6 pt-6  ">
       <div className="relative w-full h-[60vh] ">
         <Image
+          blur="true"
           className=" object-cover rounded-3xl w-full h-full "
           layout="fill"
           alt={alt}
