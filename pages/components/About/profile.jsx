@@ -1,4 +1,3 @@
-import profilePic from "../../../public/Assets/Images/profilepic.png";
 import Image from "next/image";
 
 export const Profile = () => {
@@ -28,7 +27,7 @@ export const Profile = () => {
             className=" object-cover rounded-3xl w-full h-full "
             alt="Pelle Adlén in a blue shirt thinking about digital design"
             layout="fill"
-            src={profilePic}
+            src="/Assets/Images/profilepic.png"
           />
         </div>
       </div>

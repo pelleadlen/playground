@@ -1,13 +1,10 @@
 import "../styles/globals.css";
+
 import { AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <AnimatePresence
-      onExitComplete={() => null}
-      exitBeforeEnter={true}
-      initial={false}
-    >
+    <AnimatePresence exitBeforeEnter>
       <Component {...pageProps} />
     </AnimatePresence>
   );

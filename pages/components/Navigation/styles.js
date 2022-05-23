@@ -24,7 +24,7 @@ export const linkWrapper = {
 export const menuLinks = {
   display: "inlineBlock",
   position: "relative",
-  padding: "0.5rem",
+  padding: "0.75rem 1rem 0.75rem 1rem",
   textDecoration: "none",
   borderRadius: "1.5rem",
   color: "black",
