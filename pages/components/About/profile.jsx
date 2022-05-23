@@ -4,7 +4,7 @@ export const Profile = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="flex flex-col">
-        <div className=" text-4xl font-medium max-w-4xl leading-normal pb-12">
+        <div className=" text-xl lg:text-4xl font-medium max-w-4xl leading-normal pb-12">
           <p className="mb-6">
             Hi. My name is Pelle Adlén. I’m a music loving tech enthusiast with
             a passion for slick user experiences. Currently based in

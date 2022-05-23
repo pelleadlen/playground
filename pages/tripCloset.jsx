@@ -4,23 +4,24 @@ import threePhones from "../public/Assets/Images/trip3iphones.png";
 import banner from "../public/Assets/Images/tripcloset-banner.png";
 import wireframe from "../public/Assets/Images/tripwireframe.png";
 import stylesheet from "../public/Assets/Images/tripstylesheet.png";
+import CaseLinks from "./Components/Cases/caseLinks";
 
 const TripCloset = () => {
   return (
     <>
-      <main className="w-full h-fit bg-white flex flex-col gap-6 items-center pl-6 pr-6 ">
+      <main className="w-full h-full overflow-hidden bg-white flex flex-col gap-6 items-center justify-center pl-6 pr-6 ">
         <Link href="/">
-          <button>close</button>
+          <button className="self-end fixed top-0">close</button>
         </Link>
-        <section className="w-full mt-24 h-fit flex">
-          <div className="text-8xl leading-[80%] font-medium tracking-tighter self-start ">
-            <p className=" text-base tracking-normal font-light text-gray-400 ">
+        <section className="w-full h-full mt-24 flex flex-col lg:flex-row">
+          <div className=" text-7xl md:text-8xl leading-[80%] font-medium tracking-tighter self-start ">
+            <p className=" text-base tracking-normal mb-2 font-light text-gray-400 ">
               2021
             </p>
             <h1>Trip</h1>
             <h1>Closet</h1>
           </div>
-          <div className="self-center relative w-[800px] h-[800px]  ">
+          <div className="self-center overflow-hidden relative w-[800px] h-[800px]  ">
             <Image
               blur="true"
               className=" object-cover rounded-3xl w-full h-full "
@@ -29,7 +30,8 @@ const TripCloset = () => {
             />
           </div>
         </section>
-        <div className="flex gap-8 text-2xl mb-12 self-start">
+
+        <div className="flex gap-8 text-base md:text-2xl mb-12 self-start">
           <div>
             <h4 className="text-gray-500">Role</h4>
             <h4>Product Designer</h4>
@@ -41,9 +43,9 @@ const TripCloset = () => {
           </div>
         </div>
 
-        <div className="flex flex-col mb-12 gap-2 self-start">
+        <div className="flex flex-col justify-center  h-screen mb-12 gap-2 ">
           <h4 className="text-gray-500 text-2xl">Concept</h4>
-          <p className="max-w-[780px] text-3xl font-medium  ">
+          <p className="max-w-[780px] text-2xl md:text-3xl   font-medium  ">
             Trip closet is an ai generated clothing rental for digital nomads.
             We generate what clothes you need on your trip by answering a few
             questions. We look at your destination, the weather and what
@@ -60,15 +62,15 @@ const TripCloset = () => {
         </div>
         <div className="flex flex-col mb-12 mt-12 gap-2 self-start">
           <h4 className="text-gray-500 text-2xl">Problem</h4>
-          <p className="max-w-[780px] mb-12 text-3xl font-medium  ">
+          <p className="max-w-[780px] mb-12 text-2xl md:text-3xl font-medium  ">
             We know there is a big problem with the environmental impact of
             textile. How can we solve this problem? And how can we make it
             accessible and smooth for those who need clothing for a limited
             amount of time?
           </p>
         </div>
-        <section className="flex w-full justify-between">
-          <div className="flex flex-col gap-2 self-start font-bold text-7xl tracking-tight ">
+        <section className="flex flex-col lg:flex-row w-full justify-between">
+          <div className="flex flex-col gap-2 self-start font-bold text-5xl lg:text-7xl tracking-tight ">
             <h4 className="text-gray-500 text-2xl tracking-normal font-light">
               Process
             </h4>
@@ -79,7 +81,7 @@ const TripCloset = () => {
             <h2>Iterate</h2>
           </div>
 
-          <div className=" max-w-lg ">
+          <div className=" max-w-lg mt-12 lg:mt-0 ">
             <h4 className="text-gray-500 font-light text-2xl">Methods</h4>
             <ul className="list-disc">
               <li className=" text-lg md:text-xl pb-4">
@@ -117,19 +119,48 @@ const TripCloset = () => {
             src={wireframe}
           />
         </div>
-        <div className="relative w-full h-[60vh] ">
+        <div className="relative max-w-full max-h-[60vh] overflow-hidden ">
           <Image
             blur="true"
             className=" object-cover rounded-3xl w-full h-full "
-            layout="fill"
+            layout="responsive"
             src={stylesheet}
           />
         </div>
-        <video autoPlay loop muted>
-          <source src="/Assets/Videos/trip.mp4" type="video/mp4" />
-        </video>
+        <div className="h-screen  flex items-center justify-center">
+          <video autoPlay loop muted>
+            <source src="/Assets/Videos/trip.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="flex flex-col mb-12 mt-12 gap-2 self-start">
+          <h4 className="text-gray-500 text-2xl">What did I learn?</h4>
+          <p className="max-w-[780px] mb-12 text-2xl md:text-3xl font-medium  ">
+            I learned so much from this project and I had really fun. In the
+            beginning I had no idea what the outcome would be but if you trust
+            the process It usually turns out pretty cool. If you like this idea
+            — let's make it!
+          </p>
+        </div>
+        <section className="bg-body flex flex-col items-center justify-center h-screen w-screen pb-24">
+          <div className=" w-screen lg:w-1/2">
+            <h1 className=" text-5xl lg:text-7xl p-8 mb-8 font-medium ">
+              {" "}
+              More Work
+            </h1>
+            <CaseLinks title="Fourtrack" category="Product design" href="/" />
 
-        <section className="bg-body h-screen w-screen"></section>
+            <CaseLinks
+              title="Our Legacy"
+              category="Website redesign"
+              href="/"
+            />
+            <CaseLinks
+              title="Forgetfully"
+              category="Micro interactions"
+              href="/"
+            />
+          </div>
+        </section>
       </main>
     </>
   );

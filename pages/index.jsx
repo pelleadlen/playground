@@ -10,7 +10,6 @@ import { About } from "./Components/About/aboutWrapper";
 import { Slogan } from "./Components/About/slogan";
 import { Profile } from "./Components/About/profile";
 import { Contact } from "./Components/Contact/contact";
-import Link from "next/link";
 
 export default function index() {
   return (
@@ -28,17 +27,14 @@ export default function index() {
         <Work id="work">
           <SelectedWorkTitle />
 
-          <Link href="/tripCloset">
-            <a>
-              <CaseCard
-                alt="trip closet mockups of all screens"
-                src="/Assets/Images/tripcloset-banner.png"
-                title="Trip Closet"
-                subTitle="Product design"
-                buttonText="view casestudy"
-              />
-            </a>
-          </Link>
+          <CaseCard
+            alt="trip closet mockups of all screens"
+            src="/Assets/Images/tripcloset-banner.png"
+            title="Trip Closet"
+            subTitle="Product design"
+            buttonText="view casestudy"
+            href="/tripCloset"
+          />
 
           <CaseCard
             alt="Fourtrack mockup of macbook pro"
@@ -46,6 +42,7 @@ export default function index() {
             title="Fourtrack"
             subTitle="Product design"
             buttonText="view case"
+            href="/"
           />
           <CaseCard
             alt="macbook pro with redesigned ourlegacy homepage"
@@ -53,6 +50,7 @@ export default function index() {
             title="Our legacy"
             subTitle="redesign"
             buttonText="view case"
+            href="/"
           />
         </Work>
 
