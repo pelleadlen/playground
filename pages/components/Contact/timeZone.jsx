@@ -9,6 +9,7 @@ export const TimeZone = () => {
         timezone={"Europe/Stockholm"}
         className="text-white text-2xl underline"
         ticking={true}
+        noSsr={true}
       />
     </div>
   );

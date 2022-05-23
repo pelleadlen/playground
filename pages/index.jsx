@@ -13,6 +13,7 @@ import { About } from "./Components/About/aboutWrapper";
 import { Slogan } from "./Components/About/slogan";
 import { Profile } from "./Components/About/profile";
 import { Contact } from "./Components/Contact/contact";
+import Link from "next/link";
 
 export default function index() {
   return (
@@ -28,16 +29,20 @@ export default function index() {
 
       <Work id="work">
         <SelectedWorkTitle />
-
-        <CaseCard
-          alt="trip closet mockups of all screens"
-          src={tripCloset}
-          title="Trip Closet"
-          subTitle="Product design"
-          buttonText="view casestudy"
-          href="/tripCloset"
-        />
-
+ 
+          <Link href="/tripClosetPage">
+            <a>
+              <CaseCard
+                layoutId="trip"
+                alt="trip closet mockups of all screens"
+                src={tripCloset}
+                title="Trip Closet"
+                subTitle="Product design"
+                buttonText="view casestudy"
+              />
+            </a>
+          </Link>
+    
         <CaseCard
           alt="Fourtrack mockup of macbook pro"
           src={fourTrack}

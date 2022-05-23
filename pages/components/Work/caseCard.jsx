@@ -1,8 +1,23 @@
 import Image from "next/image";
-
-export const CaseCard = ({ alt, src, title, subTitle, buttonText }) => {
+import { motion } from "framer-motion";
+export const CaseCard = ({
+  alt,
+  src,
+  title,
+  subTitle,
+  buttonText,
+  onClick,
+  layoutId,
+}) => {
   return (
-    <div className="flex flex-col pl-6 pr-6 pt-6  ">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      layoutId={layoutId}
+      onClick={onClick}
+      className="flex flex-col pl-6 pr-6 pt-6  "
+    >
       <div className="relative w-full h-[60vh] ">
         <Image
           blur="true"
@@ -26,6 +41,6 @@ export const CaseCard = ({ alt, src, title, subTitle, buttonText }) => {
           {subTitle}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
