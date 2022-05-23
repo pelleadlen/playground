@@ -5,13 +5,19 @@ import banner from "../public/Assets/Images/tripcloset-banner.png";
 import wireframe from "../public/Assets/Images/tripwireframe.png";
 import stylesheet from "../public/Assets/Images/tripstylesheet.png";
 import CaseLinks from "./Components/Cases/caseLinks";
+import { motion } from "framer-motion";
 
 const TripCloset = () => {
   return (
     <>
-      <main className="w-full h-full overflow-hidden bg-white flex flex-col gap-6 items-center justify-center pl-6 pr-6 ">
+      <motion.main
+        layoutId="page"
+        className="w-full h-full overflow-hidden bg-white flex flex-col gap-6 items-center justify-center pl-6 pr-6 "
+      >
         <Link href="/">
-          <button className="self-end fixed top-0">close</button>
+          <button className="self-end fixed top-4 mix-blend-difference  z-10 text-white ">
+            back home
+          </button>
         </Link>
         <section className="w-full h-full mt-24 flex flex-col lg:flex-row">
           <div className=" text-7xl md:text-8xl leading-[80%] font-medium tracking-tighter self-start ">
@@ -43,16 +49,15 @@ const TripCloset = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center  h-screen mb-12 gap-2 ">
-          <h4 className="text-gray-500 text-2xl">Concept</h4>
-          <p className="max-w-[780px] text-2xl md:text-3xl   font-medium  ">
-            Trip closet is an ai generated clothing rental for digital nomads.
+        <Information
+          headline="Concept"
+          text="       Trip closet is an ai generated clothing rental for digital nomads.
             We generate what clothes you need on your trip by answering a few
             questions. We look at your destination, the weather and what
             activities you want to do. Travel without a bag and rent apparel
-            that was made to last.{" "}
-          </p>
-        </div>
+            that was made to last."
+        />
+
         <div className="relative w-full h-[50vh] overflow-hidden">
           <Image
             className=" object-cover rounded-3xl w-full h-full "
@@ -60,15 +65,15 @@ const TripCloset = () => {
             layout="fill"
           />
         </div>
-        <div className="flex flex-col mb-12 mt-12 gap-2 self-start">
-          <h4 className="text-gray-500 text-2xl">Problem</h4>
-          <p className="max-w-[780px] mb-12 text-2xl md:text-3xl font-medium  ">
-            We know there is a big problem with the environmental impact of
+
+        <Information
+          headline="Problem"
+          text=" We know there is a big problem with the environmental impact of
             textile. How can we solve this problem? And how can we make it
             accessible and smooth for those who need clothing for a limited
-            amount of time?
-          </p>
-        </div>
+            amount of time?"
+        />
+
         <section className="flex flex-col lg:flex-row w-full justify-between">
           <div className="flex flex-col gap-2 self-start font-bold text-5xl lg:text-7xl tracking-tight ">
             <h4 className="text-gray-500 text-2xl tracking-normal font-light">
@@ -132,15 +137,15 @@ const TripCloset = () => {
             <source src="/Assets/Videos/trip.mp4" type="video/mp4" />
           </video>
         </div>
-        <div className="flex flex-col mb-12 mt-12 gap-2 self-start">
-          <h4 className="text-gray-500 text-2xl">What did I learn?</h4>
-          <p className="max-w-[780px] mb-12 text-2xl md:text-3xl font-medium  ">
-            I learned so much from this project and I had really fun. In the
+
+        <Information
+          headline="What did I learn?"
+          text="I learned so much from this project and I had really fun. In the
             beginning I had no idea what the outcome would be but if you trust
             the process It usually turns out pretty cool. If you like this idea
-            — let's make it!
-          </p>
-        </div>
+            — let's make it!"
+        />
+
         <section className="bg-body flex flex-col items-center justify-center h-screen w-screen pb-24">
           <div className=" w-screen lg:w-1/2">
             <h1 className=" text-5xl lg:text-7xl p-8 mb-8 font-medium ">
@@ -161,9 +166,20 @@ const TripCloset = () => {
             />
           </div>
         </section>
-      </main>
+      </motion.main>
     </>
   );
 };
 
 export default TripCloset;
+
+const Information = ({ headline, text }) => {
+  return (
+    <div className="flex flex-col mb-12 mt-12 gap-2 self-start">
+      <h4 className="text-gray-500 text-2xl">{headline}</h4>
+      <p className="max-w-[780px] mb-12 text-2xl md:text-3xl font-medium  ">
+        {text}
+      </p>
+    </div>
+  );
+};

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const copyRight = () => {
+const CopyRight = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -34,4 +34,4 @@ const copyRight = () => {
   );
 };
 
-export default copyRight;
+export default CopyRight;

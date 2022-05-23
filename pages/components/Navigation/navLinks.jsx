@@ -21,7 +21,7 @@ export const NavLinks = () => {
       <nav className="flex w-fit bg-white p-4 rounded-full shadow-sm">
         <LayoutGroup>
           <motion.ul initial={false} style={linkWrapper}>
-            {links.map(({ link, url }, index) => {
+            {links.map(({ link, url, router }, index) => {
               const isActive = index === activeIndex;
 
               return (
@@ -47,8 +47,8 @@ export const NavLinks = () => {
 };
 
 const links = [
-  { link: "Home", url: "#home", id: "home" },
-  { link: "Work", url: "#work", id: "work" },
-  { link: "About", url: "#about", id: "about" },
-  { link: "Contact", url: "#contact", id: "contact" },
+  { link: "Home", url: "#home" },
+  { link: "Work", url: "#work" },
+  { link: "About", url: "#about" },
+  { link: "Contact", url: "#contact" },
 ];

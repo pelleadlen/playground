@@ -14,11 +14,10 @@ import { Contact } from "./Components/Contact/contact";
 export default function index() {
   return (
     <>
-      <main className="ml-6 mr-6">
-        <Navigation>
-          <NavBar />
-        </Navigation>
-
+      <Navigation>
+        <NavBar />
+      </Navigation>
+      <main className="ml-6 mr-6 ">
         <Home id="home">
           <Header />
           <HeroText className="pb-12" />
@@ -28,6 +27,7 @@ export default function index() {
           <SelectedWorkTitle />
 
           <CaseCard
+            layoutId="page"
             alt="trip closet mockups of all screens"
             src="/Assets/Images/tripcloset-banner.png"
             title="Trip Closet"

@@ -1,9 +1,9 @@
-import copyRight from "..";
+import CopyRight from "..";
 
 const Header = () => {
   return (
     <div>
-      <copyRight />
+      <CopyRight />
     </div>
   );
 };
