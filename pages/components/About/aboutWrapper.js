@@ -1,6 +1,6 @@
 import tw from "tailwind-styled-components";
 
-export const About = tw.div`
+export const AboutWrapper = tw.div`
 
 
 h-full

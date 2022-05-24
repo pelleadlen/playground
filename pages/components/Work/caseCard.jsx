@@ -12,14 +12,7 @@ export const CaseCard = ({
   href,
 }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      layoutId={layoutId}
-      onClick={onClick}
-      className="flex flex-col pl-6 pr-6 pt-6  "
-    >
+    <motion.div onClick={onClick} className="flex flex-col pl-6 pr-6 pt-6  ">
       <Link href={href}>
         <a>
           <div className="relative w-full h-[60vh] ">

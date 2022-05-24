@@ -1,10 +1,10 @@
 import CopyRight from "..";
-
+import { motion } from "framer-motion";
 const Header = () => {
   return (
-    <div>
+    <motion.div>
       <CopyRight />
-    </div>
+    </motion.div>
   );
 };
 
