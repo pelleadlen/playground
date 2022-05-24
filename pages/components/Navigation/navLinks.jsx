@@ -8,7 +8,7 @@ export const NavLinks = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const active = links.findIndex((i) => i.url === window.location.hash);
+      const active = links.findIndex((i) => i.url === window.location.pathname);
       if (active !== -1) {
         setActiveIndex(active);
       } else {
@@ -23,15 +23,20 @@ export const NavLinks = () => {
         <motion.ul style={linkWrapper}>
           {links.map(({ link, url }, index) => {
             const isActive = index === activeIndex;
-
             return (
-              <motion.li>
+              <motion.li key={index}>
                 <Link href={url}>
                   <a style={menuLinks}>
                     {isActive ? (
-                      <span initial={false} layoutId="active" style={span} />
+                      <motion.span
+                        initial="false"
+                        layoutId="active"
+                        style={span}
+                      />
                     ) : null}
-                    <span style={isActive ? active : inactive}>{link}</span>
+                    <motion.span style={isActive ? active : inactive}>
+                      {link}
+                    </motion.span>
                   </a>
                 </Link>
               </motion.li>

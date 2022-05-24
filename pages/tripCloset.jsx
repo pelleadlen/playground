@@ -8,24 +8,20 @@ import stylesheet from "../public/Assets/Images/tripstylesheet.png";
 import CaseLinks from "./Components/Cases/caseLinks";
 import { motion } from "framer-motion";
 import Head from "next/head";
-import { TripWrapper, Hero } from "./Components/Cases/TripCloset-styled";
-
-const easing = [0.6, -0.05, 0.01, 0.99];
-
-const fadeInUp = {
-  initial: {
-    y: 60,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      ease: easing,
-    },
-  },
-};
+import {
+  TripWrapper,
+  Hero,
+  Intro,
+  Methods,
+  ListWrapper,
+  List,
+  Process,
+  Video,
+  ImageWrap,
+  OtherProjects,
+  Information,
+} from "./Components/Cases/TripCloset-styled";
+import { fadeInUp } from "./Components/Hooks/Animation";
 
 const TripCloset = () => {
   return (
@@ -39,18 +35,19 @@ const TripCloset = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <Link href="/work">
-          <button className=" fixed z-10 top-4 right-6 mix-blend-difference text-white">
-            back home
-          </button>
-        </Link>
-        <TripWrapper>
-          <motion.div
-            exit={{ opacity: 0 }}
-            animate="animate"
-            initial="initial"
-            variants={fadeInUp}
-          >
+      <Link href="/work">
+        <button className=" fixed z-10 top-4 right-6 mix-blend-difference text-white">
+          back home
+        </button>
+      </Link>
+      <ScrollerMotion>
+        <motion.div
+          exit={{ opacity: 0 }}
+          animate="animate"
+          initial="initial"
+          variants={fadeInUp}
+        >
+          <TripWrapper>
             <Hero>
               <div className=" text-7xl md:text-8xl leading-[80%] font-medium tracking-tighter self-start ">
                 <p className=" text-base tracking-normal mb-2 font-light text-gray-400 ">
@@ -70,17 +67,16 @@ const TripCloset = () => {
               </div>
             </Hero>
 
-            <div className="flex gap-8 text-base md:text-2xl mb-12 self-start">
+            <Intro>
               <div>
                 <h4 className="text-gray-500">Role</h4>
                 <h4>Product Designer</h4>
               </div>
-
               <div>
                 <h4 className="text-gray-500">Work</h4>
                 <h4>Concept app</h4>
               </div>
-            </div>
+            </Intro>
 
             <Information
               headline="Concept"
@@ -91,14 +87,14 @@ const TripCloset = () => {
             that was made to last."
             />
 
-            <div className="relative w-full h-[50vh] overflow-hidden">
+            <ImageWrap>
               <Image
                 alt="isometric mockups of iphonescreens"
                 className=" object-cover rounded-3xl w-full h-full "
                 src={banner}
                 layout="fill"
               />
-            </div>
+            </ImageWrap>
 
             <Information
               headline="Problem"
@@ -107,9 +103,8 @@ const TripCloset = () => {
             accessible and smooth for those who need clothing for a limited
             amount of time?"
             />
-
-            <section className="flex flex-col lg:flex-row w-full justify-between">
-              <div className="flex flex-col gap-2 self-start font-bold text-5xl lg:text-7xl tracking-tight ">
+            <Methods>
+              <Process>
                 <h4 className="text-gray-500 text-2xl tracking-normal font-light">
                   Process
                 </h4>
@@ -118,63 +113,60 @@ const TripCloset = () => {
                 <h2>Prototype</h2>
                 <h2>Test</h2>
                 <h2>Iterate</h2>
-              </div>
+              </Process>
 
-              <div className=" max-w-lg mt-12 lg:mt-0 ">
+              <ListWrapper>
                 <h4 className="text-gray-500 font-light text-2xl">Methods</h4>
                 <ul className="list-disc">
-                  <li className=" text-lg md:text-xl pb-4">
+                  <List>
                     I started out with user research and conducted interviews
-                    with people about their shopping habits and got a better
-                    understanding of my target audience. I then organized the
-                    data, developed key findings and built personas.
-                  </li>
-                  <li className=" text-lg md:text-xl pb-4">
-                    During this part of the project I worked with crazy 8's and
-                    other problem solving techniques to come up with many
-                    different ideas.
-                  </li>
-                  <li className=" text-lg md:text-xl pb-4">
-                    I started with lo-fidelity wireframes to prototype my ideas
-                    and test them, then moved on to high-fidelity wireframes to
+                    with people about their shopping habits and got a bett e r
+                    understanding of my target audience. I then org a developed
+                    key developed key findings and built personas.
+                  </List>
+                  <List>
+                    During this part of the project I worked with crazy 8's a
+                    other other problem solving techniques to come up with many
+                    d i fferent ideas.
+                  </List>
+                  <List>
+                    I started with lo-fidelity wireframes to prototype my idea s
+                    more test them, then moved on to high-fidelity wireframes to
                     test more in depth.
-                  </li>
-                  <li className=" text-lg md:text-xl pb-4">
+                  </List>
+                  <List>
                     10+ user tests with Maze and got valuable feedback and
                     suggestions
-                  </li>
-                  <li className="text-lg md:text-xl pb-4">
-                    iterating … iterating … iterating …
-                  </li>
+                  </List>
+                  <List>iterating … iterating … iterating …</List>
                 </ul>
-              </div>
-            </section>
-            <div className="flex flex-col gap-6">
-              <div className="relative w-full h-[60vh] ">
-                <Image
-                  alt="wireframes"
-                  blur="true"
-                  className=" object-cover rounded-3xl w-full h-full "
-                  layout="fill"
-                  src={wireframe}
-                />
-              </div>
-              <div className="relative max-w-full max-h-[60vh] overflow-hidden ">
-                <Image
-                  alt="design system"
-                  blur="true"
-                  className=" object-cover rounded-3xl w-full h-full "
-                  layout="responsive"
-                  src={stylesheet}
-                />
-              </div>
-            </div>
+              </ListWrapper>
+            </Methods>
 
-            <div className="h-screen  flex items-center justify-center">
+            <ImageWrap>
+              <Image
+                className=" object-cover rounded-3xl w-full h-full "
+                alt="wireframes"
+                blur="true"
+                layout="fill"
+                src={wireframe}
+              />
+            </ImageWrap>
+            <ImageWrap>
+              <Image
+                alt="design system"
+                blur="true"
+                className=" object-cover rounded-3xl w-full h-full "
+                layout="fill"
+                src={stylesheet}
+              />
+            </ImageWrap>
+
+            <Video>
               <video autoPlay loop muted>
                 <source src="/Assets/Videos/trip.mp4" type="video/mp4" />
               </video>
-            </div>
+            </Video>
 
             <Information
               headline="What did I learn?"
@@ -184,7 +176,7 @@ const TripCloset = () => {
             — let's make it!"
             />
 
-            <section className="bg-body flex flex-col items-center justify-center h-screen w-screen pb-24">
+            <OtherProjects>
               <div className=" w-screen lg:w-1/2">
                 <h1 className=" text-5xl lg:text-7xl p-8 mb-8 font-medium ">
                   {" "}
@@ -207,23 +199,12 @@ const TripCloset = () => {
                   href="/"
                 />
               </div>
-            </section>
-          </motion.div>
-        </TripWrapper>
-
+            </OtherProjects>
+          </TripWrapper>
+        </motion.div>
+      </ScrollerMotion>
     </>
   );
 };
 
 export default TripCloset;
-
-const Information = ({ headline, text }) => {
-  return (
-    <div className="flex flex-col mb-12 mt-12 gap-2 self-start">
-      <h4 className="text-gray-500 text-2xl">{headline}</h4>
-      <p className="max-w-[780px] mb-12 text-2xl md:text-3xl font-medium  ">
-        {text}
-      </p>
-    </div>
-  );
-};

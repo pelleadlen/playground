@@ -4,23 +4,7 @@ import { Profile } from "./Components/About/profile";
 import { Slogan } from "./Components/About/slogan";
 import Head from "next/head";
 import { ScrollerMotion } from "scroller-motion";
-
-const easing = [0.6, -0.05, 0.01, 0.99];
-
-const fadeInUp = {
-  initial: {
-    y: 60,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: easing,
-    },
-  },
-};
+import { fadeInUp } from "./Components/Hooks/Animation";
 
 const About = () => {
   return (
@@ -34,14 +18,17 @@ const About = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ScrollerMotion>
-        <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
-          <motion.div variants={fadeInUp}>
-            <AboutWrapper>
-              <Slogan />
+        <motion.div
+          variants={fadeInUp}
+          exit={{ opacity: 0 }}
+          initial="initial"
+          animate="animate"
+        >
+          <AboutWrapper>
+            <Slogan />
 
-              <Profile />
-            </AboutWrapper>
-          </motion.div>
+            <Profile />
+          </AboutWrapper>
         </motion.div>
       </ScrollerMotion>
     </>

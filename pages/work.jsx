@@ -4,23 +4,8 @@ import { SelectedWorkTitle } from "./Components/Work/selectedWorkTitle";
 import { WorkWrapper } from "./Components/Work/workWrapper";
 import Head from "next/head";
 import { ScrollerMotion } from "scroller-motion";
+import { fadeInUp, stagger } from "./Components/Hooks/Animation";
 
-const easing = [0.6, -0.05, 0.01, 0.99];
-
-const fadeInUp = {
-  initial: {
-    y: 60,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: easing,
-    },
-  },
-};
 
 const Work = () => {
   return (
@@ -33,7 +18,7 @@ const Work = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
+      <motion.div variants={stagger} exit={{ opacity: 0 }} initial="initial" animate="animate">
         <ScrollerMotion>
           <WorkWrapper>
             <motion.div variants={fadeInUp}>

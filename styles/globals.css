@@ -14,19 +14,9 @@ html {
 body {
   background-color: #f2f2f2;
   overscroll-behavior: none;
-  padding: 0 1.5rem 0 1.5rem;
 }
 
 ::selection {
   background: #051574;
   color: white;
-}
-
-.scroll-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  will-change: transform;
 }
