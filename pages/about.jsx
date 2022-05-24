@@ -1,10 +1,10 @@
-import { AboutWrapper } from "./Components/About/aboutWrapper";
+import { AboutWrapper } from "../Components/About/aboutWrapper";
 import { motion } from "framer-motion";
-import { Profile } from "./Components/About/profile";
-import { Slogan } from "./Components/About/slogan";
+import { Profile } from "../Components/About/profile";
+import { Slogan } from "../Components/About/slogan";
 import Head from "next/head";
 import { ScrollerMotion } from "scroller-motion";
-import { fadeInUp } from "./Components/Hooks/Animation";
+import { fadeInUp } from "../Components/Hooks/Animation";
 
 const About = () => {
   return (

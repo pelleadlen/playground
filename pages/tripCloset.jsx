@@ -5,7 +5,7 @@ import threePhones from "../public/Assets/Images/trip3iphones.png";
 import banner from "../public/Assets/Images/tripcloset-banner.png";
 import wireframe from "../public/Assets/Images/tripwireframe.png";
 import stylesheet from "../public/Assets/Images/tripstylesheet.png";
-import CaseLinks from "./Components/Cases/caseLinks";
+import CaseLinks from "../Components/Cases/caseLinks";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import {
@@ -20,8 +20,8 @@ import {
   ImageWrap,
   OtherProjects,
   Information,
-} from "./Components/Cases/TripCloset-styled";
-import { fadeInUp } from "./Components/Hooks/Animation";
+} from "../Components/Cases/TripCloset-styled";
+import { fadeInUp } from "../Components/Hooks/Animation";
 
 const TripCloset = () => {
   return (
@@ -125,9 +125,9 @@ const TripCloset = () => {
                     key developed key findings and built personas.
                   </List>
                   <List>
-                    During this part of the project I worked with crazy 8's a
+                    During this part of the project I worked with crazy 8s a
                     other other problem solving techniques to come up with many
-                    d i fferent ideas.
+                    different ideas.
                   </List>
                   <List>
                     I started with lo-fidelity wireframes to prototype my idea s

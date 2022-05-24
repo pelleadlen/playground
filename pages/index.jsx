@@ -1,10 +1,9 @@
-import HeroText from "./Components/Home/heroText";
+import HeroText from "../Components/Home/heroText";
 
-import Header from "./Components/Header/copyRight";
-import { Home } from "./Components/Home/homeWrapper";
-import { fadeInUp } from "./Components/Hooks/Animation";
+import { Home } from "../Components/Home/homeWrapper";
+import { fadeInUp } from "../Components/Hooks/Animation";
 import { motion } from "framer-motion";
-
+import Header from "../Components/Header/header";
 
 export default function index() {
   return (

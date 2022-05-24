@@ -1,7 +1,7 @@
-import { ContactFooter } from "./Components/Contact/contact";
 import { motion } from "framer-motion";
 import Head from "next/head";
-import { fadeInUp } from "./Components/Hooks/Animation";
+import { ContactFooter } from "../Components/Contact/ContactFooter";
+import { fadeInUp } from "../Components/Hooks/Animation";
 
 const Contact = () => {
   return (

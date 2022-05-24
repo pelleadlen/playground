@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import { CaseCard } from "./Components/Work/caseCard";
-import { SelectedWorkTitle } from "./Components/Work/selectedWorkTitle";
-import { WorkWrapper } from "./Components/Work/workWrapper";
+import { CaseCard } from "../Components/Work/caseCard";
+import { SelectedWorkTitle } from "../Components/Work/selectedWorkTitle";
+import { WorkWrapper } from "../Components/Work/workWrapper";
 import Head from "next/head";
 import { ScrollerMotion } from "scroller-motion";
-import { fadeInUp, stagger } from "./Components/Hooks/Animation";
-
+import { fadeInUp, stagger } from "../Components/Hooks/Animation";
 
 const Work = () => {
   return (
@@ -18,7 +17,12 @@ const Work = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <motion.div variants={stagger} exit={{ opacity: 0 }} initial="initial" animate="animate">
+      <motion.div
+        variants={stagger}
+        exit={{ opacity: 0 }}
+        initial="initial"
+        animate="animate"
+      >
         <ScrollerMotion>
           <WorkWrapper>
             <motion.div variants={fadeInUp}>

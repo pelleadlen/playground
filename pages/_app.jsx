@@ -1,6 +1,6 @@
 import "../styles/globals.css";
-import { Navigation } from "./Components/Navigation/navigation";
-import NavBar from "./Components/Navigation/navBar";
+import { Navigation } from "../Components/Navigation/navigation";
+import NavBar from "../Components/Navigation/navBar";
 import { AnimatePresence } from "framer-motion";
 import App from "next/app";
 import Head from "next/head";
