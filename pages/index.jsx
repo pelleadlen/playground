@@ -4,8 +4,8 @@ import { Home } from "../Components/Home/homeWrapper";
 import { fadeInUp } from "../Components/Hooks/Animation";
 import { motion } from "framer-motion";
 import Header from "../Components/Header/header";
-
-export default function index() {
+import WithTransition from "../Components/Hooks/WithTransition";
+function index() {
   return (
     <>
       <motion.main
@@ -24,3 +24,4 @@ export default function index() {
     </>
   );
 }
+export default WithTransition(index);
