@@ -1,11 +1,9 @@
 import { NavLinks } from "./navLinks";
 
-const NavBar = ({ className }) => {
+const NavBar = () => {
   return (
     <>
-      <div className={className}>
-        <NavLinks />
-      </div>
+      <NavLinks />
     </>
   );
 };
