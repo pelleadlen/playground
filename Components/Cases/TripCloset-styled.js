@@ -55,8 +55,6 @@ export const ListWrapper = styled.div`
   }
 `;
 
-<div className="text-lg md:text-xl pb-4"></div>;
-
 export const List = styled.li`
   font-size: 1.125rem;
   line-height: 1.75rem;

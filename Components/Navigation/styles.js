@@ -30,5 +30,4 @@ export const menuLinks = {
   color: "black",
   fontSize: "1.125rem",
   lineHeight: "1.5rem",
-  mixBlendMode: "exclusion",
 };
