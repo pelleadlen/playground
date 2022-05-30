@@ -20,3 +20,30 @@ body {
   background: #051574;
   color: white;
 }
+
+.App {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row-wrap;
+  background-color: chocolate;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  transition: background-color 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.inactive {
+  background-color: pink;
+  opacity: 1;
+}
+
+.active {
+  background-color: green;
+  opacity: 1;
+}

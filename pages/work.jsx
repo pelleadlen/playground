@@ -23,8 +23,8 @@ const Work = () => {
         initial="initial"
         animate="animate"
       >
-        <ScrollerMotion>
-          <WorkWrapper>
+        <WorkWrapper>
+          <ScrollerMotion>
             <motion.div variants={fadeInUp}>
               <SelectedWorkTitle />
 
@@ -55,8 +55,8 @@ const Work = () => {
                 href="/"
               />
             </motion.div>
-          </WorkWrapper>
-        </ScrollerMotion>
+          </ScrollerMotion>
+        </WorkWrapper>
       </motion.div>
     </>
   );

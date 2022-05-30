@@ -1,10 +1,9 @@
 import HeroText from "../Components/Home/heroText";
-
 import { Home } from "../Components/Home/homeWrapper";
 import { fadeInUp } from "../Components/Hooks/Animation";
 import { motion } from "framer-motion";
 import Header from "../Components/Header/header";
-import WithTransition from "../Components/Hooks/WithTransition";
+
 function index() {
   return (
     <>
@@ -24,4 +23,4 @@ function index() {
     </>
   );
 }
-export default WithTransition(index);
+export default index;

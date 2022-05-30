@@ -4,10 +4,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  compiler: {
-    // ssr and displayName are configured by default
-    tailwindStyledComponents: true,
-  },
 };
 
 module.exports = nextConfig;
