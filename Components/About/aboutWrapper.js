@@ -1,11 +1,7 @@
-import tw from "tailwind-styled-components";
+import styled from "styled-components";
 
-export const AboutWrapper = tw.div`
-
-
-h-full
-bg-body
-pb-12
-
-
+export const AboutWrapper = styled.div`
+  height: 100%;
+  background-color: rgb(242 242 242);
+  padding-bottom: 3rem;
 `;

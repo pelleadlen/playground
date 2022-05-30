@@ -1,13 +1,13 @@
-import tw from "tailwind-styled-components";
+import styled from "styled-components";
 
-export const Navigation = tw.div`
-z-50 
-w-full 
-h-fit 
-fixed 
-bottom-8 
-left-0 
-right-0 
-flex 
-justify-center
+export const Navigation = styled.div`
+  z-index: 50;
+  width: 100%;
+  height: fit-content;
+  position: fixed;
+  bottom: 2rem;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: center;
 `;
