@@ -1,16 +1,11 @@
-import tw from "tailwind-styled-components";
+import styled from "styled-components";
 
-export const Home = tw.div`
-
-h-screen
-overflow-hidden
-w-full 
-flex 
-flex-col 
-justify-between 
-ml-6 
-mr-6 
-
-
-
+export const Home = styled.div`
+  margin: 0 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 `;

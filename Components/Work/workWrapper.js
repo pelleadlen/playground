@@ -1,11 +1,9 @@
-import tw from "tailwind-styled-components";
+import styled from "styled-components";
 
-export const WorkWrapper = tw.div`
-
-h-fit 
-flex
-flex-col
-gap-6
-pb-32
-
+export const WorkWrapper = styled.div`
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 8rem;
 `;

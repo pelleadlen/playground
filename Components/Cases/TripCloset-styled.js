@@ -1,66 +1,109 @@
-import tw from "tailwind-styled-components";
+import styled from "styled-components";
 
-export const TripWrapper = tw.div`
-
- bg-white
-  flex 
-  flex-col
-   gap-6 
-   items-center 
-   justify-center 
-   w-screen
-   h-full
-   pl-6 pr-6
-
- 
-
+export const TripWrapper = styled.div`
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 2rem 0 2rem;
 `;
 
-export const Hero = tw.section`
-w-full
-h-full
-mt-24
-flex
-flex-col
-lg:flex-row
+export const Hero = styled.section`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
 
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
 `;
 
-export const Intro = tw.div`
-flex gap-8 text-base md:text-2xl mb-12 self-start
-
+export const Intro = styled.div`
+  display: flex;
+  gap: 2rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 3rem;
+  align-self: flex-start;
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 `;
 
-export const Methods = tw.div`
-flex flex-col lg:flex-row w-full justify-between
-
+export const Methods = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
 `;
 
-export const ListWrapper = tw.div`
-max-w-lg mt-12 lg:mt-0
+export const ListWrapper = styled.div`
+  max-width: 32rem;
+  margin-top: 3rem;
+  @media (min-width: 1024px) {
+    margin-top: 0;
+  }
 `;
 
-export const List = tw.li`
-text-lg md:text-xl pb-4
+<div className="text-lg md:text-xl pb-4"></div>;
+
+export const List = styled.li`
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding-bottom: 1rem;
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 `;
 
-export const Process = tw.div`
-flex flex-col gap-2 self-start font-bold text-5xl lg:text-7xl tracking-tight
+export const Process = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-self: flex-start;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  @media (min-width: 1024px) {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
 `;
 
-export const Video = tw.div`
-h-screen  flex items-center justify-center
-
+export const Video = styled.div`
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
-export const ImageWrap = tw.div`
-relative w-full h-[60vh]
-
+export const ImageWrap = styled.div`
+  position: relative;
+  width: 100%;
+  height: 60vh;
 `;
 
-export const OtherProjects = tw.div`
-bg-body flex flex-col items-center justify-center h-screen w-screen pb-24
-
+export const OtherProjects = styled.div`
+  background-color: rgb(242 242 242);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  padding-bottom: 6rem;
 `;
 
 export const Information = ({ headline, text }) => {
