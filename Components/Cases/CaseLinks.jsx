@@ -7,7 +7,7 @@ const CaseLinks = ({ title, category, href, className }) => {
       <a>
         <motion.div whileHover={{ scale: 1.03 }} className={className}>
           <div className="flex flex-row border-b-2 p-8 items-center justify-between">
-            <div className="flex flex-col gap-4 font-light">
+            <div className="flex lg flex-col gap-4 font-light">
               <h4 className=" text-4xl">{title}</h4>
               <h6 className="text-base text-gray-500">{category}</h6>
             </div>
