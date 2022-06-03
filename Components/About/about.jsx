@@ -1,12 +1,14 @@
+import { AboutWrapper } from "./aboutWrapper";
 import { Profile } from "./profile";
-import { Slogan } from "./slogan";
+import { Slogan } from "./Slogan";
 
 const About = () => {
   return (
     <>
-      <Slogan />
-
-      <Profile />
+      <AboutWrapper>
+        <Slogan />
+        <Profile />
+      </AboutWrapper>
     </>
   );
 };
