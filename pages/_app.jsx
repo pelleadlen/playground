@@ -20,11 +20,12 @@ class MyApp extends App {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Navigation>
+        {/* <Navigation>
           <NavBar />
-        </Navigation>
+        </Navigation> */}
         <AnimatePresence
           exitBeforeEnter
+          initial={false}
           onExitComplete={() => window.scrollTo(0, 0)}
         >
           <Component {...pageProps} key={router.route} />

@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export const Profile = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col bg-white items-center rounded-tl-3xl rounded-tr-3xl justify-center pr-6 pl-6 pt-12 pb-12">
       <div className="flex flex-col">
         <div className=" text-xl lg:text-4xl font-medium max-w-4xl leading-normal pb-12">
           <p className="mb-6">
             Hi. My name is Pelle Adlén. I’m a music loving tech enthusiast with
             a passion for slick user experiences. Currently based in
             <span className="line-through pl-2 pr-2">Gothenburg, Sweden,</span>
-            Anywhere.
+            anywhere.
           </p>
           <p>
             Design with a purpose is what excites me. And like your favorite

@@ -8,8 +8,8 @@ export const TripWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
-  padding: 0 2rem 0 2rem;
+  min-height: 100vh;
+  padding: 0 1.5rem 0 1.5rem;
 `;
 
 export const Hero = styled.section`
