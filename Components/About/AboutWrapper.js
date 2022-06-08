@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
 export const AboutWrapper = styled.section`
-  background-color: white;
+  background-color: #f2f2f2;
 `;

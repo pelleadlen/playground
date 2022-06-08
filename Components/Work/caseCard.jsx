@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
+
 import Link from "next/link";
 export const CaseCard = ({
   alt,
@@ -12,13 +13,13 @@ export const CaseCard = ({
   href,
 }) => {
   return (
-    <motion.div onClick={onClick} className="flex flex-col pl-6 pr-6 pt-6  ">
+    <motion.div onClick={onClick} className="flex flex-col pl-6 pr-6 pt-6   ">
       <Link href={href}>
         <a>
-          <div className="relative w-full h-[60vh] ">
+          <div className="relative w-full h-[60vh] overflow-hidden rounded-3xl  ">
             <Image
               blur="true"
-              className=" object-cover rounded-3xl w-full h-full "
+              className=" transition duration-500 ease-in-out hover:scale-105 object-cover  w-full h-full "
               layout="fill"
               alt={alt}
               src={src}

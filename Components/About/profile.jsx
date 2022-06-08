@@ -8,7 +8,9 @@ export const Profile = () => {
           <p className="mb-6">
             Hi. My name is Pelle Adlén. I’m a music loving tech enthusiast with
             a passion for slick user experiences. Currently based in
-            <span className="line-through pl-2 pr-2">Gothenburg, Sweden,</span>
+            <span className="line-through decoration-4 pl-2 pr-2">
+              Gothenburg, Sweden,
+            </span>
             anywhere.
           </p>
           <p>
@@ -22,6 +24,7 @@ export const Profile = () => {
             Let’s get together and push some pixels for a reason!
           </p>
         </div>
+
         <div className=" relative max-w-[56rem] h-[80vh]">
           <Image
             className=" object-cover rounded-3xl w-full h-full "
