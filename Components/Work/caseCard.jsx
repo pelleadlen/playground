@@ -2,18 +2,9 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import Link from "next/link";
-export const CaseCard = ({
-  alt,
-  src,
-  title,
-  subTitle,
-  buttonText,
-  onClick,
-  layoutId,
-  href,
-}) => {
+export const CaseCard = ({ alt, src, title, subTitle, buttonText, href }) => {
   return (
-    <motion.div onClick={onClick} className="flex flex-col pl-6 pr-6 pt-6   ">
+    <motion.div className="flex flex-col pl-6 pr-6 pt-6   ">
       <Link href={href}>
         <a>
           <div className="relative w-full h-[60vh] overflow-hidden rounded-3xl  ">

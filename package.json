@@ -17,6 +17,8 @@
     "react-live-clock": "git://github.com/pvoznyuk/react-live-clock.git",
     "react-moment": "^1.1.2",
     "react-parallax-tilt": "^1.7.40",
+    "react-scroll": "^1.8.7",
+    "react-scroll-parallax": "^3.2.0",
     "styled-components": "^5.3.5",
     "tailwindcss": "^3.0.24"
   },

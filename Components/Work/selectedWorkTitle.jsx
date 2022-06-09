@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 export const SelectedWorkTitle = () => {
   return (
     <motion.div
+      id="selected-work"
       initial={{ y: 10 }}
       animate={{ y: 0 }}
       transition={{ delay: 0.3, duration: 1 }}

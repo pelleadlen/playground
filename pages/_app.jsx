@@ -1,9 +1,7 @@
 import "../styles/globals.css";
-import { Navigation } from "../Components/Navigation/navigation";
-import NavBar from "../Components/Navigation/navBar";
-import { AnimatePresence } from "framer-motion";
 import App from "next/app";
 import Head from "next/head";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 class MyApp extends App {
   render() {
@@ -20,16 +18,9 @@ class MyApp extends App {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        {/* <Navigation>
-          <NavBar />
-        </Navigation> */}
-        <AnimatePresence
-          exitBeforeEnter
-          initial={false}
-          onExitComplete={() => window.scrollTo(0, 0)}
-        >
+        <ParallaxProvider>
           <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
+        </ParallaxProvider>
       </>
     );
   }
