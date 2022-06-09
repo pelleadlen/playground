@@ -6,7 +6,7 @@ export const Profile = () => {
     <Parallax speed={-5}>
       <div
         id="profile"
-        className="flex flex-col bg-white items-center rounded-tl-3xl rounded-tr-3xl justify-center pr-6 pl-6 pt-12 pb-12"
+        className="flex flex-col bg-white items-center rounded-tl-3xl rounded-tr-3xl justify-center pr-6 pl-6 pt-12 pb-12 -z-10"
       >
         <div className="flex flex-col">
           <div className=" text-xl lg:text-4xl font-medium max-w-4xl leading-normal pb-12">

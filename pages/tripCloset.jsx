@@ -19,7 +19,7 @@ import {
   ImageWrap,
   OtherProjects,
   Information,
-} from "../styles/TripCloset-styled";
+} from "../styles/StyledTripCloset";
 
 const TripCloset = () => {
   return (
