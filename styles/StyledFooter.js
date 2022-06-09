@@ -13,7 +13,7 @@ const Content = styled.div`
   z-index: 10;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 1rem;
   height: 100%;

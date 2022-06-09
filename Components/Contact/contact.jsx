@@ -10,7 +10,7 @@ const Contact = () => {
         <Content>
           <UnderLineTitle title="Say Hello" />
           <SocialLinks
-            href="mailto: abc@example.com"
+            href="mailto: pelleadlen@gmail.com?subject= Coffee? ☕"
             LinkName="pelleadlen@gmail.com"
           />
 
