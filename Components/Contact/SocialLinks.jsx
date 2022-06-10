@@ -15,6 +15,7 @@ const SocialLinks = ({ LinkName, href, layoutId }) => {
       </TitleLink>
 
       <Underline
+        initial={{ scaleX: 0 }}
         transition={{ duration: 1 }}
         as={motion.div}
         animate={{ scaleX: isHovered ? 1 : 0 }}

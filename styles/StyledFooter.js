@@ -1,30 +1,43 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Footer = styled.footer`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background-color: white;
   width: 100vw;
   height: 100vh;
 `;
 
 const Content = styled.div`
-  z-index: 10;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
   gap: 1rem;
   height: 100%;
+  width: 100%;
+  padding: 0 1.5rem 0 1.5rem;
   background-color: rgb(242 242 242);
   border-top-right-radius: 1.5rem;
   border-top-left-radius: 1.5rem;
 `;
 
+const Flex = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+`;
+
 const Wrap = styled.div`
   position: relative;
+  pointer-events: auto;
+  max-width: fit-content;
+
+  ${(props) =>
+    props.margin &&
+    css`
+      margin-bottom: 1rem;
+    `};
 `;
+
+const Socials = styled.div``;
 
 const Title = styled.h1`
   font-size: 3.5rem;
@@ -40,6 +53,13 @@ const TitleLink = styled.a`
   font-weight: 300;
 `;
 
+const LinkWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  gap: 0.5rem;
+`;
+
 const Underline = styled.div`
   position: absolute;
   left: 0;
@@ -50,4 +70,14 @@ const Underline = styled.div`
   transform-origin: left;
 `;
 
-export { Footer, Content, Underline, Title, Wrap, TitleLink };
+export {
+  Footer,
+  Content,
+  Underline,
+  Title,
+  Wrap,
+  TitleLink,
+  LinkWrapper,
+  Socials,
+  Flex,
+};

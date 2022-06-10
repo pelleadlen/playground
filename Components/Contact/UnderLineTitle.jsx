@@ -18,7 +18,7 @@ const UnderLineTitle = ({ title }) => {
   });
   return (
     <>
-      <Wrap>
+      <Wrap margin>
         <Title>{title}:</Title>
         <Underline
           as={motion.div}

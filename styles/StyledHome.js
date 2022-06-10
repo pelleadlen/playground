@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomeWrapper = styled.div`
-  margin: 0 2rem 0 2rem;
+  margin: 0 1.5rem 0 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
