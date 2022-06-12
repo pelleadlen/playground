@@ -30,11 +30,11 @@ body {
 nav {
   border: 0.1px solid #003;
   background: #fff;
-  padding: 0.5em 1em;
-  border-radius: 2.5em;
+  padding: 0.5rem 1rem;
+  border-radius: 2.5rem;
   width: fit-content;
   position: fixed;
-  bottom: 1em;
+  bottom: 1rem;
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);

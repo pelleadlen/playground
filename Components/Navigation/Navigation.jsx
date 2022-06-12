@@ -4,7 +4,7 @@ const links = [
   { link: "Home", id: "home", offset: -100 },
   { link: "Work", id: "work" },
   { link: "About", id: "about" },
-  { link: "Contact", id: "contact" },
+  { link: "Contact", id: "contact", offset: 45 },
 ];
 
 export const Navigation = () => {
