@@ -2,7 +2,7 @@ import HeroText from "./heroText";
 
 import Header from "../Header/header";
 import { Parallax } from "react-scroll-parallax";
-import { HomeWrapper } from "../../styles/StyledHome";
+import { HomeWrapper } from "../../styles/styledHome";
 
 const Home = () => {
   return (
