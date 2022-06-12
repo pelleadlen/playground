@@ -28,6 +28,7 @@ body {
 /* Navbar */
 
 nav {
+  border: 0.1px solid #003;
   background: #fff;
   padding: 0.5em 1em;
   border-radius: 2.5em;

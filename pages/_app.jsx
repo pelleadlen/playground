@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import App from "next/app";
 import Head from "next/head";
-import { ParallaxProvider } from "react-scroll-parallax";
 import { AnimatePresence } from "framer-motion";
 
 class MyApp extends App {
@@ -20,9 +19,7 @@ class MyApp extends App {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <AnimatePresence exitBeforeEnter>
-          <ParallaxProvider>
-            <Component {...pageProps} key={router.route} />
-          </ParallaxProvider>
+          <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       </>
     );
