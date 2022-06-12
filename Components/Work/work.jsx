@@ -5,7 +5,7 @@ const Work = () => {
   return (
     <>
       <Parallax speed={5}>
-        <div className="bg-white rounded-tl-3xl rounded-tr-3xl pb-12">
+        <div id="work" className="bg-white rounded-tl-3xl rounded-tr-3xl pb-12">
           <SelectedWorkTitle />
 
           <CaseCard

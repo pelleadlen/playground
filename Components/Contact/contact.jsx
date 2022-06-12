@@ -12,7 +12,7 @@ import UnderLineTitle from "./UnderLineTitle";
 const Contact = () => {
   return (
     <>
-      <Footer>
+      <Footer id="contact">
         <Content>
           <Flex>
             <Socials>

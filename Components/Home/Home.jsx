@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <Parallax speed={-10}>
-        <HomeWrapper>
+        <HomeWrapper id="home">
           <Header />
           <HeroText className="pb-12" />
         </HomeWrapper>

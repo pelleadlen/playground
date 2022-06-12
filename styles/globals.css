@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://rsms.me/inter/inter.css");
+
+/* Global styles */
+
 html {
   font-family: "Inter", sans-serif;
 }
@@ -20,4 +23,39 @@ body {
 ::selection {
   background: #051574;
   color: white;
+}
+
+/* Navbar */
+
+nav {
+  background: #fff;
+  padding: 0.5em 1em;
+  border-radius: 2.5em;
+  width: fit-content;
+  position: fixed;
+  bottom: 1em;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  z-index: 100;
+  box-shadow: 3.5px 5px 2.2px -39px rgba(0, 0, 0, 0.026),
+    6.5px 9.5px 5.3px -39px rgba(0, 0, 0, 0.031),
+    9.6px 13.9px 10px -39px rgba(0, 0, 0, 0.036),
+    14.2px 20.6px 17.9px -39px rgba(0, 0, 0, 0.043),
+    27.5px 39.9px 33.4px -39px rgba(0, 0, 0, 0.054),
+    69px 100px 80px -39px rgba(0, 0, 0, 0.07);
+}
+
+.link {
+  font-size: 1.25em;
+  line-height: 1.5em;
+  padding: 0.5em 1em;
+  border-radius: 1.5em;
+  transition: all cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.link.active {
+  background: #000;
+  color: #fff;
 }

@@ -5,7 +5,7 @@ import { Slogan } from "./Slogan";
 const About = () => {
   return (
     <>
-      <AboutWrapper>
+      <AboutWrapper id="about">
         <Slogan />
         <Profile />
       </AboutWrapper>

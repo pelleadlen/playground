@@ -2,14 +2,16 @@ import Work from "../Components/Work/work";
 import About from "../Components/About/about";
 import Contact from "../Components/Contact/contact";
 import Home from "../Components/Home/Home";
+import { Navigation } from "../Components/Navigation/Navigation";
 
 function index() {
   return (
     <>
-      <Home id="home" />
-      <Work id="work" />
-      <About id="about" />
-      <Contact id="contact" />
+      <Navigation />
+      <Home />
+      <Work />
+      <About />
+      <Contact />
     </>
   );
 }
