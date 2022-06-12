@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import CopyRight from "./CopyRight";
+import CopyRight from "./copyRight";
 
 const Header = () => {
   return (
