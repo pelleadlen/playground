@@ -1,11 +1,10 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
-
+import { FadeIn } from "../hooks/fadeIn";
 import Link from "next/link";
 export const CaseCard = ({ alt, src, title, subTitle, buttonText, href }) => {
   return (
-    <motion.div className="flex flex-col pl-6 pr-6 pt-6   ">
-      <Link href={href}>
+    <FadeIn className="flex flex-col pt-6 pl-6 pr-6 pb-12">
+      <Link scroll={false} href={href}>
         <a>
           <div className="relative w-full h-[60vh] overflow-hidden rounded-3xl  ">
             <Image
@@ -32,6 +31,6 @@ export const CaseCard = ({ alt, src, title, subTitle, buttonText, href }) => {
           </div>
         </a>
       </Link>
-    </motion.div>
+    </FadeIn>
   );
 };

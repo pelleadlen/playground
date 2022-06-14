@@ -1,5 +1,4 @@
 import HeroText from "./heroText";
-
 import Header from "../header/header";
 import { HomeWrapper } from "../../styles/styledHome";
 

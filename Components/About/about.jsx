@@ -7,6 +7,7 @@ const About = () => {
     <>
       <AboutWrapper id="about">
         <Slogan />
+
         <Profile />
       </AboutWrapper>
     </>

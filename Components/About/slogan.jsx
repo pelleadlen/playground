@@ -9,7 +9,7 @@ export const Slogan = () => {
         transitionSpeed={1000}
         transitionEasing={"cubic-bezier(.03,.98,.52,.99)"}
       >
-        <Link to="profile" offset={-48} smooth={true}>
+        <Link to="profile" offset={25} smooth={true}>
           <div className="flex flex-col gap-3 lg:gap-0 justify-start cursor-pointer">
             <h1>Whatʼs new</h1>
             <h1>and exciting in</h1>

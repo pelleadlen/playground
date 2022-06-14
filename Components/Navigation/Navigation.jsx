@@ -2,9 +2,9 @@ import { Link } from "react-scroll";
 
 const links = [
   { link: "Home", id: "home", offset: -100 },
-  { link: "Work", id: "work" },
+  { link: "Work", id: "work", offset: -30 },
   { link: "About", id: "about" },
-  { link: "Contact", id: "contact", offset: 45 },
+  { link: "Contact", id: "contact", offset: 0 },
 ];
 
 export const Navigation = () => {

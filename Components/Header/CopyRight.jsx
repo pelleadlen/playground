@@ -11,7 +11,7 @@ const CopyRight = () => {
       onMouseLeave={() => setIsHovered(false)}
       animate={{ width: isHovered ? 252 : 180 }}
       initial={false}
-      className="flex  items-center overflow-hidden pt-6 pb-6 gap-2"
+      className="flex z-[100]  items-center overflow-hidden pt-6 pb-6 gap-2"
     >
       <motion.div
         transition={{ duration: 0.1, type: "spring", stiffness: 60 }}

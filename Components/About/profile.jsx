@@ -1,10 +1,11 @@
 import Image from "next/image";
-
+import { FadeIn } from "../hooks/fadeIn";
+import { motion } from "framer-motion";
 export const Profile = () => {
   return (
-    <div
+    <FadeIn
       id="profile"
-      className="flex flex-col bg-white items-center rounded-tl-3xl rounded-tr-3xl justify-center pr-6 pl-6 pt-12 pb-12 -z-10 w-screen"
+      className="flex flex-col bg-white items-center rounded-tl-3xl rounded-tr-3xl justify-center pt-12 pb-12 pl-6 pr-6 -z-10 w-screen"
     >
       <div className="flex flex-col">
         <div className=" text-xl md:text-3xl lg:text-4xl font-medium max-w-4xl leading-normal pb-12">
@@ -28,7 +29,6 @@ export const Profile = () => {
 
         <div className=" relative max-w-[56rem] h-[80vh]">
           <Image
-            priority
             className=" object-cover rounded-3xl w-full h-full "
             alt="Pelle Adlén in a blue shirt thinking about digital design"
             layout="fill"
@@ -36,6 +36,6 @@ export const Profile = () => {
           />
         </div>
       </div>
-    </div>
+    </FadeIn>
   );
 };

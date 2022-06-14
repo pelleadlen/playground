@@ -40,14 +40,14 @@ const Wrap = styled.div`
 const Socials = styled.div``;
 
 const Title = styled.h1`
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
   line-height: 1.2;
   position: relative;
   font-weight: 500;
 `;
 
 const TitleLink = styled.a`
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
   line-height: 1.2;
   position: relative;
   font-weight: 300;
@@ -56,7 +56,7 @@ const TitleLink = styled.a`
 const LinkWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 250px;
+  width: 80%;
   gap: 0.5rem;
 `;
 

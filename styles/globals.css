@@ -14,15 +14,15 @@ html {
   }
 }
 
+::selection {
+  background: #051574;
+  color: white;
+}
+
 body {
   background-color: #f2f2f2;
   overscroll-behavior: none;
   overflow-x: hidden;
-}
-
-::selection {
-  background: #051574;
-  color: white;
 }
 
 /* Navbar */
@@ -34,12 +34,12 @@ nav {
   border-radius: 2.5rem;
   width: fit-content;
   position: fixed;
-  bottom: 1rem;
+  bottom: 0;
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  z-index: 100;
+  z-index: 1;
   box-shadow: 3.5px 5px 2.2px -39px rgba(0, 0, 0, 0.026),
     6.5px 9.5px 5.3px -39px rgba(0, 0, 0, 0.031),
     9.6px 13.9px 10px -39px rgba(0, 0, 0, 0.036),
@@ -49,14 +49,25 @@ nav {
 }
 
 .link {
-  font-size: 1.25em;
+  font-size: clamp(1em, 4vw, 1.25em);
   line-height: 1.5em;
   padding: 0.5em 1em;
   border-radius: 1.5em;
-  transition: all cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all linear;
 }
 
 .link.active {
   background: #000;
   color: #fff;
 }
+
+/* SmoothScrolling */
+
+/* .scroll-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  will-change: transform;
+} */

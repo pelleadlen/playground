@@ -1,10 +1,11 @@
+import { WorkWrapper } from "../../styles/styledWork";
 import { CaseCard } from "./caseCard";
 import { SelectedWorkTitle } from "./selectedWorkTitle";
 
 const Work = () => {
   return (
     <>
-      <div id="work" className="bg-white rounded-tl-3xl rounded-tr-3xl pb-12">
+      <WorkWrapper id="work">
         <SelectedWorkTitle />
 
         <CaseCard
@@ -33,7 +34,7 @@ const Work = () => {
           buttonText="view case"
           href="/"
         />
-      </div>
+      </WorkWrapper>
     </>
   );
 };

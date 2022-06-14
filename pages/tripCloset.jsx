@@ -6,7 +6,6 @@ import wireframe from "../public/Assets/Images/tripwireframe.png";
 import stylesheet from "../public/Assets/Images/tripstylesheet.png";
 import CaseLinks from "../Components/Cases/CaseLinks";
 import Head from "next/head";
-
 import {
   TripWrapper,
   Hero,
@@ -33,10 +32,10 @@ const TripCloset = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Link href="/#selected-work">
-        <button className=" fixed z-10 top-4 right-6 mix-blend-difference text-white">
+      <Link href="/#work" passHref>
+        <a className=" fixed snap z-10 top-4 right-6 mix-blend-difference text-white">
           back home
-        </button>
+        </a>
       </Link>
 
       <TripWrapper>

@@ -1,11 +1,10 @@
 import styled from "styled-components";
-
-export const HomeWrapper = styled.div`
-  margin: 0 1.5rem 0 1.5rem;
+import { motion } from "framer-motion";
+export const HomeWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  padding: 0 1.5rem;
 `;
