@@ -4,7 +4,7 @@ import {
   Footer,
   LinkWrapper,
   Socials,
-} from "../../styles/StyledFooter";
+} from "../../styles/styledFootera";
 import SocialLinks from "./socialLink";
 import { TimeZone } from "./timeZone";
 import UnderLineTitle from "./markTitle";
