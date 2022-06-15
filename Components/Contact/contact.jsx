@@ -5,9 +5,9 @@ import {
   LinkWrapper,
   Socials,
 } from "../../styles/StyledFooter";
-import SocialLinks from "./socialLinks";
+import SocialLinks from "./socialLink";
 import { TimeZone } from "./timeZone";
-import UnderLineTitle from "./underlineTitle";
+import UnderLineTitle from "./markTitle";
 
 const Contact = () => {
   return (
