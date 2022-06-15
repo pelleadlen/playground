@@ -5,7 +5,7 @@ import {
   Character,
   SelectedWork,
   Paragraph,
-} from "../../styles/styledWorka";
+} from "../../styles/styledWork";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 

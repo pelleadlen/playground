@@ -1,6 +1,6 @@
 import HeroText from "./heroText";
 import Header from "../header/header";
-import { HomeWrapper } from "../../styles/styledHomea";
+import { HomeWrapper } from "../../styles/styledHome";
 
 const Home = () => {
   return (

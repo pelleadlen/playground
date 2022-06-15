@@ -1,4 +1,4 @@
-import { TitleLink, Underline, Wrap } from "../../styles/styledFootera";
+import { TitleLink, Underline, Wrap } from "../../styles/styledFooter";
 import { motion } from "framer-motion";
 import { useState } from "react";
 const SocialLinks = ({ LinkName, href, layoutId }) => {

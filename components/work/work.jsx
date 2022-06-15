@@ -1,4 +1,4 @@
-import { WorkWrapper } from "../../styles/styledWorka";
+import { WorkWrapper } from "../../styles/styledWork";
 import { CaseCard } from "./caseCard";
 import { SelectedWorkTitle } from "./selectedWorkTitle";
 

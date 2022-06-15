@@ -1,4 +1,4 @@
-import { Underline, Title, Wrap } from "../../styles/styledFootera";
+import { Underline, Title, Wrap } from "../../styles/styledFooter";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
