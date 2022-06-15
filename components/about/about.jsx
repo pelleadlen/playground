@@ -1,6 +1,6 @@
 import { AboutWrapper } from "../../styles/StyledAbout";
-import { Profile } from "./profilea";
-import { Slogan } from "./slogana";
+import { Profile } from "./profile";
+import { Slogan } from "./slogan";
 
 const About = () => {
   return (

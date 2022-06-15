@@ -1,6 +1,6 @@
 import { WorkWrapper } from "../../styles/styledWork";
-import { CaseCard } from "./caseCarda";
-import { SelectedWorkTitle } from "./selectedWorkTitlea";
+import { CaseCard } from "./caseCard";
+import { SelectedWorkTitle } from "./selectedWorkTitle";
 
 const Work = () => {
   return (

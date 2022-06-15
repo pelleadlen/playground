@@ -1,5 +1,5 @@
-import HeroText from "./heroTexta";
-import Header from "../headera/headera";
+import HeroText from "./heroText";
+import Header from "../header/header";
 import { HomeWrapper } from "../../styles/styledHome";
 
 const Home = () => {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FadeIn } from "../hooka/fadeIn";
+import { FadeIn } from "../hook/fadeIn";
 import Link from "next/link";
 export const CaseCard = ({ alt, src, title, subTitle, buttonText, href }) => {
   return (
