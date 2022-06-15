@@ -2,7 +2,6 @@ import "../styles/globals.css";
 import App from "next/app";
 import Head from "next/head";
 import { AnimatePresence } from "framer-motion";
-import SmoothScroll from "../components/hooks/smoothScroll";
 
 class MyApp extends App {
   render() {
