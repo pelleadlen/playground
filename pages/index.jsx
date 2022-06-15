@@ -1,8 +1,8 @@
-import Work from "../Components/Work/work";
-import About from "../Components/About/about";
-import Contact from "../Components/Contact/contact";
-import Home from "../components/home";
-import { Navigation } from "../components/navigation";
+import Work from "../component/Work/work";
+import About from "../component/About/about";
+import Contact from "../component/Contact/contact";
+import Home from "../component/home";
+import { Navigation } from "../component/navigation";
 import { Layout } from "../styles/layout";
 
 function index() {
