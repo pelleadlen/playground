@@ -18,7 +18,7 @@ import {
   ImageWrap,
   OtherProjects,
   Information,
-} from "../styles/styledTripCloseta";
+} from "../styles/styledTripCloset";
 
 const TripCloset = () => {
   return (
