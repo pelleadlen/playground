@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FadeIn } from "../hook/fadeIn";
+import { FadeIn } from "../hooks/fadeIn";
 import { motion } from "framer-motion";
 export const Profile = () => {
   return (
