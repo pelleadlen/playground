@@ -4,7 +4,7 @@ import threePhones from "../public/Assets/Images/trip3iphones.png";
 import banner from "../public/Assets/Images/tripcloset-banner.png";
 import wireframe from "../public/Assets/Images/tripwireframe.png";
 import stylesheet from "../public/Assets/Images/tripstylesheet.png";
-import CaseLinks from "../components/casesa/caseLinksa";
+import CaseLinks from "../components/cases/caseLinks";
 import Head from "next/head";
 import {
   TripWrapper,
