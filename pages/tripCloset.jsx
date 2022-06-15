@@ -4,7 +4,7 @@ import threePhones from "../public/Assets/Images/trip3iphones.png";
 import banner from "../public/Assets/Images/tripcloset-banner.png";
 import wireframe from "../public/Assets/Images/tripwireframe.png";
 import stylesheet from "../public/Assets/Images/tripstylesheet.png";
-import CaseLinks from "../Components/Cases/CaseLinks";
+import CaseLinks from "../components/casesa/caseLinksa";
 import Head from "next/head";
 import {
   TripWrapper,
@@ -32,7 +32,7 @@ const TripCloset = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Link href="/#work" passHref>
+      <Link href="/#work">
         <a className=" fixed snap z-10 top-4 right-6 mix-blend-difference text-white">
           back home
         </a>
