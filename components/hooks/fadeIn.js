@@ -10,7 +10,6 @@ export const FadeIn = ({ children, className }) => {
   const animation = useAnimation();
 
   useEffect(() => {
-    console.log(inView);
     if (inView) {
       animation.start(
         {
