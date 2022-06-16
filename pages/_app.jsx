@@ -24,6 +24,7 @@ class MyApp extends App {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <AnimatePresence
+          // initial={false}
           exitBeforeEnter
           onExitComplete={() => {
             if (typeof window !== "undefined") {

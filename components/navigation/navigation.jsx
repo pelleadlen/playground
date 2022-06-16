@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-
+import { motion } from "framer-motion";
 const links = [
   { link: "Home", id: "home", offset: -100 },
   { link: "Work", id: "work", offset: -30 },
@@ -10,7 +10,7 @@ const links = [
 export const Navigation = () => {
   return (
     <>
-      <nav>
+      <motion.nav exit={{ opacity: 0 }}>
         {links.map(({ link, id, offset }) => (
           <Link
             offset={offset}
@@ -24,7 +24,7 @@ export const Navigation = () => {
             {link}
           </Link>
         ))}
-      </nav>
+      </motion.nav>
     </>
   );
 };

@@ -10,7 +10,7 @@ function index() {
     <>
       <Navigation />
 
-      <Layout id="layout" exit={{ opacity: 0 }}>
+      <Layout>
         <Home />
         <Work />
         <About />
