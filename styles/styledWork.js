@@ -50,12 +50,13 @@ export const SelectedWork = styled.div`
 export const Grid = styled.section`
   height: 100%;
   width: 100%;
-  padding: 0 1.5rem 4rem 1.5rem;
+  padding: 1.5rem 1.5rem 4rem 1.5rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
   @media only screen and (max-width: 1024px) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.5rem 0rem;
   }
 `;
 
@@ -72,10 +73,33 @@ export const Overlay = styled(motion.div)`
     rgba(0, 0, 0, 0.6) 100%
   );
   z-index: 1;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const OverlayText = styled.h3`
-  font-size: 2rem;
+  letter-spacing: 0.02em;
+  font-size: ${(props) => (props.small ? "1rem" : "2rem")};
   color: white;
-  padding: 1rem;
+`;
+
+export const MobileText = styled.h3`
+  font-size: ${(props) => (props.small ? "1rem" : "1.5rem")};
+  padding-top: ${(props) => (props.large ? "0.5rem" : "0")};
+  color: black;
+`;
+
+export const Cursor = styled(motion.div)`
+  padding: 0.5rem 1rem;
+  border: 1px solid #000000;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  width: fit-content;
+  height: fit-content;
+  background: #fff;
+  opacity: 95%;
 `;
