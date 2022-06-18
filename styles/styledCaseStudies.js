@@ -11,12 +11,12 @@ export const Container = styled.main`
 // TopLevel
 
 export const TopRow = styled.section`
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
 `;
 
 const Info = styled.p`
@@ -38,10 +38,8 @@ export const FlexRow = styled.div`
 `;
 
 export const Hero = styled.div`
-  height: 50%;
+  height: 40vh;
   display: flex;
-  position: absolute;
-  top: 25%;
   flex-direction: column;
   justify-content: space-between;
 `;

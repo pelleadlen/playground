@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 export const WorkWrapper = styled(motion.section)`
   background: #fff;
   width: 100vw;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
 `;
@@ -50,9 +52,12 @@ export const SelectedWork = styled.div`
 export const Grid = styled.section`
   height: 100%;
   width: 100%;
+  min-width: 100%;
+
   padding: 1.5rem 1.5rem 4rem 1.5rem;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(auto, minmax(0, 1fr));
+  min-height: 100vh;
   gap: 1.5rem;
   @media only screen and (max-width: 1024px) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -96,10 +101,12 @@ export const Cursor = styled(motion.div)`
   border-radius: 2rem;
   font-size: 1.5rem;
   position: absolute;
-  inset: 0;
-  z-index: 3;
+  top: 0;
+  left: 0;
+  z-index: 10;
   width: fit-content;
   height: fit-content;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.54);
   opacity: 95%;
+  pointer-events: none;
 `;

@@ -8,8 +8,8 @@ import {
   Hero,
   SecondRow,
 } from "../styles/styledCaseStudies";
+import { Overlay } from "../styles/styledWork";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { transition } from "../components/hooks/animation";
 
 const TripCloset = () => {
@@ -38,9 +38,16 @@ const TripCloset = () => {
           initial={{ padding: "1.5rem" }}
           animate={{ padding: "0rem" }}
         >
+          <Overlay
+            transition={{ ease: [0.65, 0.05, 0.36, 1], duration: 0.3 }}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 0 }}
+            exit={{ opactiy: 0 }}
+          />
+
           <StartImage
             initial={{ height: "100vh", y: 0 }}
-            animate={{ height: "60vh", y: "80vh" }}
+            animate={{ height: "60vh", y: "75vh" }}
             transition={transition}
           >
             <Image
@@ -50,17 +57,9 @@ const TripCloset = () => {
             />
           </StartImage>
         </SecondRow>
+
+        <div className="h-screen bg-black"></div>
       </Container>
-      <motion.div
-        initial={{ backgroundColor: "white" }}
-        animate={{ backgroundColor: "black" }}
-        transition={{ duration: 1, delay: 2 }}
-        className="h-[200vh] bg-black"
-      >
-        {" "}
-        <h1 className="text-white">heyhey</h1>
-      </motion.div>
-      <div className="h-screen bg-blue"></div>
     </>
   );
 };
