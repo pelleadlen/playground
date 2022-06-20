@@ -17,6 +17,10 @@ const Content = styled.div`
   background-color: rgb(242 242 242);
   border-top-right-radius: 1.5rem;
   border-top-left-radius: 1.5rem;
+  @media only screen and (max-width: 640px) {
+    padding: 0 1rem;
+    align-items: center;
+  }
 `;
 
 const Flex = styled.div`

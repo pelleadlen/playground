@@ -63,6 +63,9 @@ export const Grid = styled.section`
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 1.5rem 0rem;
   }
+  @media only screen and (max-width: 640px) {
+    padding: 1rem 1rem 2rem 1rem;
+  }
 `;
 
 export const Overlay = styled(motion.div)`

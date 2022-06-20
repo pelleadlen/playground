@@ -61,13 +61,14 @@ nav {
   color: #fff;
 }
 
-/* SmoothScrolling */
-
-/* .scroll-container {
-  position: fixed;
+.cursor {
+  background: #fff;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  overflow: hidden;
-  will-change: transform;
-} */
+  z-index: 1000;
+  pointer-events: none;
+}

@@ -1,11 +1,9 @@
 import Image from "next/image";
-import { FadeIn } from "../hooks/fadeIn";
-import { motion } from "framer-motion";
 export const Profile = () => {
   return (
-    <FadeIn
+    <div
       id="profile"
-      className="flex flex-col bg-white items-center rounded-tl-3xl rounded-tr-3xl justify-center pt-12 pb-12 pl-6 pr-6 -z-10 w-screen"
+      className="flex flex-col bg-white items-center rounded-tl-3xl rounded-tr-3xl justify-center pt-12 pb-12 pl-4 pr-4 md:pl-6 md:pr-6 -z-10 w-screen"
     >
       <div className="flex flex-col">
         <div className=" text-xl md:text-3xl lg:text-4xl font-medium max-w-4xl leading-normal pb-12">
@@ -36,6 +34,6 @@ export const Profile = () => {
           />
         </div>
       </div>
-    </FadeIn>
+    </div>
   );
 };

@@ -5,7 +5,7 @@ import { SelectedWorkTitle } from "./selectedWorkTitle";
 const Work = () => {
   return (
     <>
-      <WorkWrapper id="work">
+      <WorkWrapper name="work" id="work">
         <SelectedWorkTitle />
         <Grid>
           <CaseCard

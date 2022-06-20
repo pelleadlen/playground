@@ -20,7 +20,7 @@ export const TopRow = styled.section`
 `;
 
 const Info = styled.p`
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   line-height: 1.5;
   font-weight: 500;
   color: ${(props) => (props.Secondary ? "gray" : "black")};
@@ -35,6 +35,7 @@ const InfoContainer = styled.div`
 export const FlexRow = styled.div`
   display: flex;
   gap: 3rem;
+  width: 100%;
 `;
 
 export const Hero = styled.div`
@@ -56,7 +57,7 @@ export const CaseInfo = (props) => {
 };
 
 export const Heading = styled(motion.span)`
-  font-size: 8rem;
+  font-size: clamp(2.5rem, 18vw, 8rem);
   line-height: 1;
 `;
 
@@ -71,4 +72,22 @@ export const StartImage = styled(motion.div)`
 export const SecondRow = styled(motion.div)`
   position: absolute;
   inset: 0;
+`;
+
+// Section with accordion
+
+export const AccordionSection = styled.section`
+  height: 100vh;
+  margin-top: 24rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 1.5rem;
+  background: #000;
+  position: relative;
+
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+  }
 `;

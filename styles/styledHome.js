@@ -7,4 +7,7 @@ export const HomeWrapper = styled(motion.div)`
   width: 100vw;
   height: 100vh;
   padding: 0 1.5rem;
+  @media only screen and (max-width: 640px) {
+    padding: 0 1rem;
+  }
 `;
