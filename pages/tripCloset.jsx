@@ -90,8 +90,8 @@ const TripCloset = () => {
               that was made to last.
             </Paragraph>
           </AccordionWrap>
-          {tripClosetData.map(({ title, content }) => (
-            <Accordion title={title} content={content} />
+          {tripClosetData.map(({ title, content, i }) => (
+            <Accordion key={i} title={title} content={content} />
           ))}
         </AccordionSection>
 
