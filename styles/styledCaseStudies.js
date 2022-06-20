@@ -168,12 +168,58 @@ export const ProcessText = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  padding: 2.75rem 0;
+  padding: 2.75rem 0 4rem 0;
   @media (max-width: 768px) {
     max-width: 75%;
     padding: 2.75rem 1rem;
   }
   @media (max-width: 600px) {
     max-width: 100%;
+  }
+`;
+
+export const LearnSection = styled.section`
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const LearnTitle = styled.h2`
+  font-size: clamp(1.5rem, 10vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+`;
+
+export const LearnParagraph = styled.p`
+  line-height: 130%;
+  letter-spacing: 0.02em;
+  font-weight: 300;
+  font-size: 1.5rem;
+`;
+
+export const TextWrapper = styled.div`
+  max-width: 560px;
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+`;
+
+export const MoreWork = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  @media (max-width: 1024px) {
+    padding: 0 1rem;
   }
 `;

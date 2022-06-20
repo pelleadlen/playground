@@ -12,6 +12,11 @@ import {
   ProcessInformation,
   Process,
   ProcessText,
+  LearnSection,
+  LearnTitle,
+  LearnParagraph,
+  TextWrapper,
+  MoreWork,
 } from "../styles/styledCaseStudies";
 import { Overlay } from "../styles/styledWork";
 import Image from "next/image";
@@ -22,6 +27,8 @@ import { AccordionWrap, Paragraph, Title } from "../styles/styledTripCloset";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 import Link from "next/link";
 import Marquee from "../components/work/marquee";
+import CaseLinks from "../components/cases/caseLinks";
+
 const TripCloset = () => {
   return (
     <>
@@ -52,7 +59,7 @@ const TripCloset = () => {
           animate={{ padding: "0rem" }}
         >
           <Overlay
-            transition={{ ease: [0.65, 0.05, 0.36, 1], duration: 0.5 }}
+            transition={{ ease: [0.65, 0.05, 0.36, 1], duration: 0.7 }}
             initial={{ opacity: 1 }}
             animate={{ opacity: 0 }}
             exit={{ opactiy: 0 }}
@@ -139,11 +146,40 @@ const TripCloset = () => {
             src="/Assets/Images/tripstylesheet.png"
           />
         </ImageContainer>
-        <div className="w-screen h-fit ">
-          <video muted playsInline loop autoPlay>
-            <source src="/Assets/Videos/trip.mp4" type="video/mp4" />
-          </video>
-        </div>
+
+        <video
+          className="h-screen object-cover"
+          muted
+          playsInline
+          loop
+          autoPlay
+        >
+          <source src="/Assets/Videos/trip.mp4" type="video/mp4" />
+        </video>
+
+        <LearnSection>
+          <TextWrapper>
+            <LearnTitle>What did I learn?</LearnTitle>
+            <LearnParagraph>
+              I learned so much from this project and I had really fun. In the
+              beginning I had no idea what the outcome would be but if you trust
+              the process It usually turns out pretty cool. If you like this
+              idea — let's make it!
+            </LearnParagraph>
+          </TextWrapper>
+        </LearnSection>
+        <MoreWork>
+          <div className=" w-full lg:w-1/2">
+            <LearnTitle>More work</LearnTitle>
+            <CaseLinks title="Fourtrack" category="Product design" href="/" />
+            <CaseLinks title="Our Legacy" category="Redesign" href="/" />
+            <CaseLinks
+              title="Forgetful"
+              category="Micro interactions"
+              href="/"
+            />
+          </div>
+        </MoreWork>
       </Container>
     </>
   );
