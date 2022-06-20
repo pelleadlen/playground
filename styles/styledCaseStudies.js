@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 // Global page
 
@@ -89,5 +89,91 @@ export const AccordionSection = styled.section`
 
   @media only screen and (max-width: 768px) {
     align-items: center;
+  }
+`;
+
+//Divider image
+
+export const ImageContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 75vh;
+`;
+
+// Marquee
+
+export const Track = styled(motion.div)`
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+`;
+
+export const Marquees = styled(motion.div)`
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem;
+  overflow: hidden;
+`;
+
+export const MarqueeText = styled.h1`
+  font-size: clamp(8rem, 20vw, 12.5rem);
+  font-weight: 500;
+`;
+
+//ProcessInformation
+
+export const ProcessTitle = styled.h3`
+  font-size: 2rem;
+  font-weight: 500;
+  padding-bottom: 0.25em;
+  letter-spacing: -0.02em;
+`;
+
+export const ProcessParagraph = styled.p`
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+  font-size: 1.5rem;
+`;
+
+export const ProcessInformation = ({ method, methodInformation }) => {
+  return (
+    <>
+      <div>
+        <ProcessTitle>{method}</ProcessTitle>
+        <ProcessParagraph>{methodInformation}</ProcessParagraph>
+      </div>
+    </>
+  );
+};
+
+//Process section
+
+export const Process = styled.section`
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ProcessText = styled.div`
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2.75rem 0;
+  @media (max-width: 768px) {
+    max-width: 75%;
+    padding: 2.75rem 1rem;
+  }
+  @media (max-width: 600px) {
+    max-width: 100%;
   }
 `;

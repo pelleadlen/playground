@@ -8,6 +8,10 @@ import {
   Hero,
   SecondRow,
   AccordionSection,
+  ImageContainer,
+  ProcessInformation,
+  Process,
+  ProcessText,
 } from "../styles/styledCaseStudies";
 import { Overlay } from "../styles/styledWork";
 import Image from "next/image";
@@ -17,6 +21,7 @@ import Accordion from "../components/cases/accordion";
 import { AccordionWrap, Paragraph, Title } from "../styles/styledTripCloset";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 import Link from "next/link";
+import Marquee from "../components/work/marquee";
 const TripCloset = () => {
   return (
     <>
@@ -61,6 +66,7 @@ const TripCloset = () => {
             <Image
               className="object-cover"
               layout="fill"
+              alt="Same mockup of the screens as the one you clicked"
               src="/Assets/Images/tripcloset-banner.png"
             />
           </StartImage>
@@ -81,6 +87,63 @@ const TripCloset = () => {
             <Accordion title={title} content={content} />
           ))}
         </AccordionSection>
+
+        <ImageContainer>
+          <Image
+            className="object-cover"
+            layout="fill"
+            alt="three iphones floating"
+            src="/Assets/Images/trip3iphones.png"
+          />
+        </ImageContainer>
+
+        <Process>
+          <Marquee marqueeText="Process Process Process Process Process Process Process Process Process Process Process Process Process Process Process Process Process Process Process Process Process" />
+          <ProcessText>
+            <ProcessInformation
+              method="Empathize"
+              methodInformation="I started out with user research and conducted interviews with people about their shopping habits and got a better understanding of my target audience. I then organized the data, developed key findings and built personas."
+            />
+            <ProcessInformation
+              method="Ideate"
+              methodInformation="During this part of the project I worked with crazy 8's and other problem solving techniques to come up with many different ideas"
+            />
+            <ProcessInformation
+              method="Prototype"
+              methodInformation="I started with lo-fidelity wireframes to prototype my ideas and test them, then moved on to high-fidelity wireframes to test more in depth."
+            />
+            <ProcessInformation
+              method="Test"
+              methodInformation="10+ user tests with Maze and got valuable feedback and suggestions. Especially on the onboarding part."
+            />
+            <ProcessInformation
+              method="Iterate"
+              methodInformation="iterating … iterating … iterating …"
+            />
+          </ProcessText>
+        </Process>
+
+        <ImageContainer>
+          <Image
+            alt="Wireframes and userflow charts"
+            className="object-cover"
+            layout="fill"
+            src="/Assets/Images/tripwireframe.png"
+          />
+        </ImageContainer>
+        <ImageContainer>
+          <Image
+            alt="component system"
+            className="object-cover"
+            layout="fill"
+            src="/Assets/Images/tripstylesheet.png"
+          />
+        </ImageContainer>
+        <div className="w-screen h-fit ">
+          <video muted playsInline loop autoPlay>
+            <source src="/Assets/Videos/trip.mp4" type="video/mp4" />
+          </video>
+        </div>
       </Container>
     </>
   );
