@@ -29,7 +29,11 @@ const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 const fourtrack = () => {
   return (
     <>
-      <Container exit={{ opacity: 0 }}>
+      <Container
+        exit={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
         <Link scroll={false} href="/">
           <IoArrowBackCircleSharp className="w-9 h-9 fixed top-4 right-4 cursor-pointer md:top-6 md:right-6 z-50 mix-blend-difference text-white" />
         </Link>
@@ -52,12 +56,13 @@ const fourtrack = () => {
 
         <ImageContainer>
           <Image
-            className="object-cover rounded-3xl"
+            className="object-cover"
             layout="fill"
             alt="mockup of chrome browser with fourtrack UI on it"
             src="/Assets/Images/fourtrack-browser.png"
           />
         </ImageContainer>
+
         <Info>
           <Paragraph>
             <ParagraphSpan>info</ParagraphSpan> Fourtrack is a browser based
@@ -116,7 +121,7 @@ const fourtrack = () => {
         <div className="w-full pb-12 md:w-1/2 pl-4 md:pl-6">
           <ParagraphSpan>
             this project is currently under development. First version is
-            planned to be released in 2023.{" "}
+            planned to be released in 2023. More info soon!{" "}
           </ParagraphSpan>
         </div>
 

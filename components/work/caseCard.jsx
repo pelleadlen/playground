@@ -72,6 +72,7 @@ export const CaseCard = ({ alt, src, href, title, subtitle, cursor }) => {
             </Overlay>
 
             <Image
+              priority={true}
               className=" object-cover"
               layout="fill"
               alt={alt}

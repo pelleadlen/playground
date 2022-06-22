@@ -8,7 +8,11 @@ import CaseLinks from "../components/cases/caseLinks";
 const ourlegacy = () => {
   return (
     <>
-      <Container>
+      <Container
+        exit={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
         <Link scroll={false} href="/">
           <IoArrowBackCircleSharp className="w-9 h-9 fixed top-4 right-4 cursor-pointer md:top-6 md:right-6 z-50 mix-blend-difference text-white" />
         </Link>
