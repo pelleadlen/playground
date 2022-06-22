@@ -65,7 +65,7 @@ const fourtrack = () => {
 
         <Info>
           <Paragraph>
-            <ParagraphSpan>info</ParagraphSpan> Fourtrack is a browser based
+            <ParagraphSpan>Info</ParagraphSpan> Fourtrack is a browser based
             tape recorder made by me and David Neråfors. It's for those who want
             to record an idea fast. No need to connect to a DAW and set up
             inputs, or find your cables; just record straight into your browser.
@@ -93,7 +93,7 @@ const fourtrack = () => {
 
         <About>
           <Paragraph>
-            <ParagraphSpan>problem</ParagraphSpan> The idea came up when we
+            <ParagraphSpan>Problem</ParagraphSpan> The idea came up when we
             where discussing the problem with recording music. It's always a
             hassle to get started and you can easily forget the idea when you
             are given to many options of a regular DAW. We wanted to make
@@ -101,7 +101,7 @@ const fourtrack = () => {
           </Paragraph>
 
           <Paragraph>
-            <ParagraphSpan>solution</ParagraphSpan> A cloud based studio that
+            <ParagraphSpan>Solution</ParagraphSpan> A cloud based studio that
             you can use wherever you are. Simple to use interface and color
             coded visuals. Sometimes creativity needs some boundaries . You only
             got four channels, exactly like an old porta studio. We even include
@@ -121,7 +121,7 @@ const fourtrack = () => {
         <div className="w-full pb-12 md:w-1/2 pl-4 md:pl-6">
           <ParagraphSpan>
             this project is currently under development. First version is
-            planned to be released in 2023. More info soon!{" "}
+            planned to be released in 2023. More info soon!
           </ParagraphSpan>
         </div>
 

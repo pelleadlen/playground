@@ -20,7 +20,7 @@ import {
 } from "../styles/styledCaseStudies";
 import { Overlay } from "../styles/styledWork";
 import Image from "next/image";
-import { transition } from "../components/hooks/animation";
+import { RevealUp, transition } from "../components/hooks/animation";
 import { tripClosetData } from "../components/cases/content";
 import Accordion from "../components/cases/accordion";
 import { AccordionWrap, Paragraph, Title } from "../styles/styledTripCloset";
@@ -28,8 +28,6 @@ import { IoArrowBackCircleSharp } from "react-icons/io5";
 import Link from "next/link";
 import Marquee from "../components/work/marquee";
 import CaseLinks from "../components/cases/caseLinks";
-import { Fade } from "react-awesome-reveal";
-
 const TripCloset = () => {
   return (
     <>
@@ -83,7 +81,7 @@ const TripCloset = () => {
 
         <AccordionSection>
           <AccordionWrap>
-            <Fade duration="1000" cascade={true}>
+            <RevealUp>
               <Title>Concept</Title>
               <Paragraph>
                 Trip closet is an AI generated clothing rental for digital
@@ -92,8 +90,9 @@ const TripCloset = () => {
                 weather and what activities you want to do. Travel without a bag
                 and rent apparel that was made to last.
               </Paragraph>
-            </Fade>
+            </RevealUp>
           </AccordionWrap>
+
           {tripClosetData.map(({ title, content, i }) => (
             <Accordion key={i} title={title} content={content} />
           ))}
@@ -110,46 +109,50 @@ const TripCloset = () => {
 
         <Process>
           <Marquee marqueeText="Process Process Process Process Process Process Process Process Process Process Process Process Process Process Process Process Process Process Process Process Process" />
+
           <ProcessText>
-            <ProcessInformation
-              method="Empathize"
-              methodInformation="I started out with user research and conducted interviews with people about their shopping habits and got a better understanding of my target audience. I then organized the data, developed key findings and built personas."
-            />
-            <ProcessInformation
-              method="Ideate"
-              methodInformation="During this part of the project I worked with crazy 8's and other problem solving techniques to come up with many different ideas"
-            />
-            <ProcessInformation
-              method="Prototype"
-              methodInformation="I started with lo-fidelity wireframes to prototype my ideas and test them, then moved on to high-fidelity wireframes to test more in depth."
-            />
-            <ProcessInformation
-              method="Test"
-              methodInformation="10+ user tests with Maze and got valuable feedback and suggestions. Especially on the onboarding part."
-            />
-            <ProcessInformation
-              method="Iterate"
-              methodInformation="iterating … iterating … iterating …"
-            />
+            <RevealUp>
+              <ProcessInformation
+                method="Empathize"
+                methodInformation="I started out with user research and conducted interviews with people about their shopping habits and got a better understanding of my target audience. I then organized the data, developed key findings and built personas."
+              />
+              <ProcessInformation
+                method="Ideate"
+                methodInformation="During this part of the project I worked with crazy 8's and other problem solving techniques to come up with many different ideas"
+              />
+              <ProcessInformation
+                method="Prototype"
+                methodInformation="I started with lo-fidelity wireframes to prototype my ideas and test them, then moved on to high-fidelity wireframes to test more in depth."
+              />
+              <ProcessInformation
+                method="Test"
+                methodInformation="10+ user tests with Maze and got valuable feedback and suggestions. Especially on the onboarding part."
+              />
+              <ProcessInformation
+                method="Iterate"
+                methodInformation="iterating … iterating … iterating …"
+              />
+            </RevealUp>
           </ProcessText>
         </Process>
-
-        <ImageContainer>
-          <Image
-            alt="Wireframes and userflow charts"
-            className="object-cover"
-            layout="fill"
-            src="/Assets/Images/tripwireframe.png"
-          />
-        </ImageContainer>
-        <ImageContainer>
-          <Image
-            alt="component system"
-            className="object-cover"
-            layout="fill"
-            src="/Assets/Images/tripstylesheet.png"
-          />
-        </ImageContainer>
+        <RevealUp>
+          <ImageContainer>
+            <Image
+              alt="Wireframes and userflow charts"
+              className="object-cover"
+              layout="fill"
+              src="/Assets/Images/tripwireframe.png"
+            />
+          </ImageContainer>
+          <ImageContainer>
+            <Image
+              alt="component system"
+              className="object-cover"
+              layout="fill"
+              src="/Assets/Images/tripstylesheet.png"
+            />
+          </ImageContainer>
+        </RevealUp>
 
         <video
           className="h-screen object-cover"
@@ -162,35 +165,44 @@ const TripCloset = () => {
         </video>
 
         <LearnSection>
-          <TextWrapper>
-            <LearnTitle>What did I learn?</LearnTitle>
-            <LearnParagraph>
-              I learned so much from this project and I had really fun. In the
-              beginning I had no idea what the outcome would be but if you trust
-              the process It usually turns out pretty cool. If you like this
-              idea — let's make it!
-            </LearnParagraph>
-          </TextWrapper>
+          <RevealUp>
+            <TextWrapper>
+              <LearnTitle>What did I learn?</LearnTitle>
+              <LearnParagraph>
+                This project was really fun to work on. I learned a lot and
+                especially about the importance of user testing and learning
+                from my mistakes. As a user experience designer, I’m always
+                looking for new tools to make my design process better. For the
+                user testing I did a deep dive into Maze. An amazing app that
+                makes it easy to get quick feedback from real people. And for
+                prototyping, I used Protopie where I could implement some logic
+                into the onboarding process which was important during the
+                testings. If you like this idea — let's make it!
+              </LearnParagraph>
+            </TextWrapper>
+          </RevealUp>
         </LearnSection>
 
         <MoreWork>
           <div className=" w-full lg:w-1/2">
-            <LearnTitle>More work</LearnTitle>
-            <CaseLinks
-              title="Fourtrack"
-              category="Product design"
-              href="/fourtrack"
-            />
-            <CaseLinks
-              title="Our Legacy"
-              category="Redesign"
-              href="/ourlegacy"
-            />
-            <CaseLinks
-              title="Forgetful"
-              category="Micro interactions"
-              href="/"
-            />
+            <RevealUp cascade={true}>
+              <LearnTitle>More work</LearnTitle>
+              <CaseLinks
+                title="Fourtrack"
+                category="Product design"
+                href="/fourtrack"
+              />
+              <CaseLinks
+                title="Our Legacy"
+                category="Redesign"
+                href="/ourlegacy"
+              />
+              <CaseLinks
+                title="Forgetful"
+                category="Micro interactions"
+                href="/"
+              />
+            </RevealUp>
           </div>
         </MoreWork>
       </Container>

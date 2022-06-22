@@ -7,8 +7,7 @@ export const tripClosetData = [
   {
     id: "Section 2",
     title: "Goals",
-    content: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam
-      reprehenderit nam assumenda voluptatem ut. Ipsum eius dicta, officiis
+    content: `For this project the goal was to make an app that would be environmentally friendly, have a sustainable job creating process and create a smooth and pleasant experience for the users. I was vary of not making it too hard on the user and keeping it simple but easy enough for anyone to use and enjoy.
       `,
   },
 ];

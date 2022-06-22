@@ -200,14 +200,14 @@ export const LearnTitle = styled.h2`
 `;
 
 export const LearnParagraph = styled.p`
-  line-height: 130%;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   font-weight: 300;
   font-size: 1.5rem;
 `;
 
 export const TextWrapper = styled.div`
-  max-width: 560px;
+  max-width: 600px;
 
   @media (max-width: 600px) {
     max-width: 100%;

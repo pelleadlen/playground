@@ -7,6 +7,7 @@
 
 html {
   font-family: "Inter", sans-serif;
+  scroll-snap-type: y mandatory;
 }
 @supports (font-variation-settings: normal) {
   html {

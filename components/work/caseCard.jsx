@@ -9,6 +9,7 @@ import {
   OverlayText,
   Cursor,
 } from "../../styles/styledWork";
+import { RevealUp } from "../hooks/animation";
 
 export const CaseCard = ({ alt, src, href, title, subtitle, cursor }) => {
   const ref = useRef(null);
@@ -42,50 +43,52 @@ export const CaseCard = ({ alt, src, href, title, subtitle, cursor }) => {
 
   return (
     <>
-      <Link scroll={false} href={href}>
-        <a>
-          <motion.div
-            exit={{ opacity: 0 }}
-            ref={ref}
-            transition={{ ease: [0.65, 0.05, 0.36, 1] }}
-            initial={{ borderRadius: "1.5rem" }}
-            whileHover={{ borderRadius: 0 }}
-            className="relative cursor-none w-full h-[80vh] overflow-hidden "
-          >
-            <Overlay
-              transition={{ ease: [0.65, 0.05, 0.36, 1], duration: 0.3 }}
-              initial={{ opacity: 0 }}
-              whileHover={{ opacity: 1 }}
-              exit={{ opactiy: 0 }}
+      <RevealUp>
+        <Link scroll={false} href={href}>
+          <a>
+            <motion.div
+              exit={{ opacity: 0 }}
+              ref={ref}
+              transition={{ ease: [0.65, 0.05, 0.36, 1] }}
+              initial={{ borderRadius: "1.5rem" }}
+              whileHover={{ borderRadius: 0 }}
+              className="relative cursor-none w-full h-[80vh] overflow-hidden "
             >
-              <Cursor
+              <Overlay
+                transition={{ ease: [0.65, 0.05, 0.36, 1], duration: 0.3 }}
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
                 exit={{ opactiy: 0 }}
-                variants={variants}
-                animate="default"
               >
-                {cursor}
-              </Cursor>
-              <div className="flex flex-col p-4">
-                <OverlayText>{title}</OverlayText>
-                <OverlayText small>{subtitle}</OverlayText>
-              </div>
-            </Overlay>
+                <Cursor
+                  exit={{ opactiy: 0 }}
+                  variants={variants}
+                  animate="default"
+                >
+                  {cursor}
+                </Cursor>
+                <div className="flex flex-col p-4">
+                  <OverlayText>{title}</OverlayText>
+                  <OverlayText small>{subtitle}</OverlayText>
+                </div>
+              </Overlay>
 
-            <Image
-              priority={true}
-              className=" object-cover"
-              layout="fill"
-              alt={alt}
-              src={src}
-            />
-          </motion.div>
+              <Image
+                priority={true}
+                className=" object-cover"
+                layout="fill"
+                alt={alt}
+                src={src}
+              />
+            </motion.div>
 
-          <div className=" block md:hidden ">
-            <MobileText large>{title}</MobileText>
-            <MobileText small>{subtitle}</MobileText>
-          </div>
-        </a>
-      </Link>
+            <div className=" block md:hidden ">
+              <MobileText large>{title}</MobileText>
+              <MobileText small>{subtitle}</MobileText>
+            </div>
+          </a>
+        </Link>
+      </RevealUp>
     </>
   );
 };
