@@ -1,8 +1,10 @@
-import { Container } from "../styles/styledCaseStudies";
+import { Container, LearnTitle, MoreWork } from "../styles/styledCaseStudies";
 import { Text, Wrapper } from "../styles/styledOurlegacy";
 import Image from "next/image";
 import Link from "next/link";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
+import { ImageContainer, ParagraphSpan } from "../styles/styledFourtrack";
+import CaseLinks from "../components/cases/caseLinks";
 const ourlegacy = () => {
   return (
     <>
@@ -31,16 +33,28 @@ const ourlegacy = () => {
         >
           <source src="/Assets/Videos/Mobile-Promo.mp4" type="video/mp4" />
         </video>
-        <div className=" p-4 md:p-6 w-full h-full flex flex-col md:flex-row gap-4">
-          <div className=" w-full h-screen relative object-cover">
+        <div className="flex flex-col gap-4 p-4 lg:p-6">
+          <ImageContainer>
             <Image
-              className=" object-cover rounded-3xl "
+              className="
+              object-cover 
+              rounded-3xl "
               layout="fill"
-              alt="splashscreen"
-              src="/Assets/Images/ourlegacy-closer.png"
+              alt="colorscheme"
+              src="/Assets/Images/Product page.png"
             />
-          </div>
-          <div className=" w-full h-screen relative ">
+          </ImageContainer>
+          <ImageContainer>
+            <Image
+              className="
+              object-cover 
+              rounded-3xl "
+              layout="fill"
+              alt="colorscheme"
+              src="/Assets/Images/Season.png"
+            />
+          </ImageContainer>
+          <ImageContainer>
             <Image
               className="
               object-cover 
@@ -49,8 +63,44 @@ const ourlegacy = () => {
               alt="colorscheme"
               src="/Assets/Images/colors.png"
             />
-          </div>
+          </ImageContainer>
         </div>
+        <video
+          className="h-screen w-full hidden md:block object-cover"
+          muted
+          playsInline
+          loop
+          autoPlay
+        >
+          <source
+            src="/Assets/Videos/ourlegacy_case_desktop_scroll.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div className="w-full pb-12 pt-8 md:w-1/2 pl-4 md:pl-6">
+          <ParagraphSpan>*Images and logo are from Our legacy.</ParagraphSpan>
+        </div>
+
+        <MoreWork>
+          <div className=" w-full lg:w-1/2">
+            <LearnTitle>More work</LearnTitle>
+            <CaseLinks
+              title="Fourtrack"
+              category="Product design"
+              href="/fourtrack"
+            />
+            <CaseLinks
+              title="Trip closet"
+              category="Redesign"
+              href="/tripCloset"
+            />
+            <CaseLinks
+              title="Forgetful"
+              category="Micro interactions"
+              href="/"
+            />
+          </div>
+        </MoreWork>
       </Container>
     </>
   );
