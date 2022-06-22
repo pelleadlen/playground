@@ -1,8 +1,8 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { motion } from "framer-motion";
 // Global page
 
-export const Container = styled.main`
+export const Container = styled(motion.main)`
   min-height: 100%;
   width: 100%;
   background: #fff;
@@ -20,9 +20,11 @@ export const TopRow = styled.section`
 `;
 
 const Info = styled.p`
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.5;
   font-weight: 500;
+  letter-spacing: -0.02em;
+  font-style: ${(props) => (props.italic ? "italic" : "regular")};
   color: ${(props) => (props.Secondary ? "gray" : "black")};
 `;
 
@@ -49,7 +51,9 @@ export const CaseInfo = (props) => {
   return (
     <>
       <InfoContainer>
-        <Info Secondary>{props.title}</Info>
+        <Info italic Secondary>
+          {props.title}
+        </Info>
         <Info>{props.subtitle}</Info>
       </InfoContainer>
     </>

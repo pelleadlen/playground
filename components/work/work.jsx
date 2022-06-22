@@ -24,7 +24,7 @@ const Work = () => {
             title="Fourtrack"
             subtitle="Product design"
             buttonText="view case"
-            href="/"
+            href="/fourtrack"
             cursor="View project"
           />
 
@@ -33,15 +33,6 @@ const Work = () => {
             src="/Assets/Images/ourlegacy-banner.png"
             title="Our legacy"
             subtitle="redesign"
-            buttonText="view case"
-            href="/"
-            cursor="View project"
-          />
-          <CaseCard
-            alt="soon"
-            src="/Assets/Images/forgetful.png"
-            title="Forgetful"
-            subtitle="Micro interactions"
             buttonText="view case"
             href="/"
             cursor="View project"

@@ -50,7 +50,7 @@ export const CaseCard = ({ alt, src, href, title, subtitle, cursor }) => {
             transition={{ ease: [0.65, 0.05, 0.36, 1] }}
             initial={{ borderRadius: "1.5rem" }}
             whileHover={{ borderRadius: 0 }}
-            className="relative  w-full h-[80vh] overflow-hidden  "
+            className="relative cursor-none w-full h-[80vh] overflow-hidden "
           >
             <Overlay
               transition={{ ease: [0.65, 0.05, 0.36, 1], duration: 0.3 }}

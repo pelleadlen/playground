@@ -53,7 +53,6 @@ export const Grid = styled.section`
   height: 100%;
   width: 100%;
   min-width: 100%;
-
   padding: 1.5rem 1.5rem 4rem 1.5rem;
   display: grid;
   grid-template-rows: repeat(auto, minmax(0, 1fr));
@@ -103,10 +102,10 @@ export const Cursor = styled(motion.div)`
   border: 1px solid #000000;
   border-radius: 2rem;
   font-size: 1.5rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+
   width: fit-content;
   height: fit-content;
   background: rgba(255, 255, 255, 0.54);

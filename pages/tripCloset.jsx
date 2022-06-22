@@ -28,13 +28,14 @@ import { IoArrowBackCircleSharp } from "react-icons/io5";
 import Link from "next/link";
 import Marquee from "../components/work/marquee";
 import CaseLinks from "../components/cases/caseLinks";
+import { Fade } from "react-awesome-reveal";
 
 const TripCloset = () => {
   return (
     <>
-      <Container>
-        <Link href="/">
-          <IoArrowBackCircleSharp className="w-9 h-9 fixed top-4 right-4 cursor-pointer md:top-6 md:right-6   z-50 mix-blend-difference text-white " />
+      <Container exit={{ opacity: 0 }}>
+        <Link scroll={false} href="/">
+          <IoArrowBackCircleSharp className="w-9 h-9 fixed top-4 right-4 cursor-pointer md:top-6 md:right-6 z-50 mix-blend-difference text-white" />
         </Link>
         <TopRow>
           <Hero>
@@ -71,6 +72,7 @@ const TripCloset = () => {
             transition={transition}
           >
             <Image
+              priority
               className="object-cover"
               layout="fill"
               alt="Same mockup of the screens as the one you clicked"
@@ -81,14 +83,16 @@ const TripCloset = () => {
 
         <AccordionSection>
           <AccordionWrap>
-            <Title>Concept</Title>
-            <Paragraph>
-              Trip closet is an AI generated clothing rental for digital nomads.
-              We generate what clothes you need on your trip by answering a few
-              questions. We look at your destination, the weather and what
-              activities you want to do. Travel without a bag and rent apparel
-              that was made to last.
-            </Paragraph>
+            <Fade duration="1000" cascade={true}>
+              <Title>Concept</Title>
+              <Paragraph>
+                Trip closet is an AI generated clothing rental for digital
+                nomads. We generate what clothes you need on your trip by
+                answering a few questions. We look at your destination, the
+                weather and what activities you want to do. Travel without a bag
+                and rent apparel that was made to last.
+              </Paragraph>
+            </Fade>
           </AccordionWrap>
           {tripClosetData.map(({ title, content, i }) => (
             <Accordion key={i} title={title} content={content} />
@@ -168,6 +172,7 @@ const TripCloset = () => {
             </LearnParagraph>
           </TextWrapper>
         </LearnSection>
+
         <MoreWork>
           <div className=" w-full lg:w-1/2">
             <LearnTitle>More work</LearnTitle>
