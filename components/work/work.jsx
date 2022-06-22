@@ -34,7 +34,7 @@ const Work = () => {
             title="Our legacy"
             subtitle="redesign"
             buttonText="view case"
-            href="/"
+            href="/ourlegacy"
             cursor="View project"
           />
         </Grid>

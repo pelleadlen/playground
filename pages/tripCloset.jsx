@@ -176,8 +176,16 @@ const TripCloset = () => {
         <MoreWork>
           <div className=" w-full lg:w-1/2">
             <LearnTitle>More work</LearnTitle>
-            <CaseLinks title="Fourtrack" category="Product design" href="/" />
-            <CaseLinks title="Our Legacy" category="Redesign" href="/" />
+            <CaseLinks
+              title="Fourtrack"
+              category="Product design"
+              href="/fourtrack"
+            />
+            <CaseLinks
+              title="Our Legacy"
+              category="Redesign"
+              href="/ourlegacy"
+            />
             <CaseLinks
               title="Forgetful"
               category="Micro interactions"
