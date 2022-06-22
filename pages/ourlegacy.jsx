@@ -35,7 +35,10 @@ const ourlegacy = () => {
           loop
           autoPlay
         >
-          <source src="/Assets/Videos/Mobile-Promo.mp4" type="video/mp4" />
+          <source
+            src="https://res.cloudinary.com/pellux/video/upload/v1655921345/Mobile-promo_qi1ywn.mp4"
+            type="video/mp4"
+          />
         </video>
         <div className="flex flex-col gap-4 p-4 lg:p-6">
           <ImageContainer>

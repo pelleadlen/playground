@@ -27,6 +27,7 @@ export const Profile = () => {
 
         <div className=" relative max-w-[56rem] h-[80vh]">
           <Image
+            priority={true}
             className=" object-cover rounded-3xl w-full h-full "
             alt="Pelle Adlén in a blue shirt thinking about digital design"
             layout="fill"
