@@ -1,13 +1,18 @@
 import "../styles/globals.css";
-import App from "next/app";
 import { AnimatePresence } from "framer-motion";
 import Script from "next/script";
 import * as gtag from "../lib/gtag";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import { hotjar } from "react-hotjar";
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
+
+  useEffect(() => {
+    hotjar.initialize(2865806, 6);
+  }, []);
+
   useEffect(() => {
     const handleRouteChange = (url) => {
       gtag.pageview(url);
