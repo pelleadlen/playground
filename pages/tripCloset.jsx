@@ -29,6 +29,7 @@ import Link from "next/link";
 import Marquee from "../components/work/marquee";
 import CaseLinks from "../components/cases/caseLinks";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const TripCloset = () => {
   return (
@@ -41,7 +42,7 @@ const TripCloset = () => {
         />
       </Head>
       <Container exit={{ opacity: 0 }}>
-        <Link scroll={false} href="/">
+        <Link scroll={false} href="/#work" as="/">
           <a>
             <IoArrowBackCircleSharp className="w-9 h-9 fixed top-4 right-4 cursor-pointer md:top-6 md:right-6 z-50 mix-blend-difference text-white" />
           </a>

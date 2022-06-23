@@ -49,10 +49,9 @@ export const CaseCard = ({ alt, src, href, title, subtitle, cursor }) => {
             <motion.div
               exit={{ opacity: 0 }}
               ref={ref}
-              transition={{ ease: [0.65, 0.05, 0.36, 1] }}
               initial={{ borderRadius: "1.5rem" }}
-              whileHover={{ borderRadius: 0 }}
-              className="relative cursor-none w-full h-[80vh] overflow-hidden "
+              transition={{ ease: [0.65, 0.05, 0.36, 1] }}
+              className="relative w-full cursor-none h-[80vh] overflow-hidden "
             >
               <Overlay
                 transition={{ ease: [0.65, 0.05, 0.36, 1], duration: 0.3 }}
@@ -67,6 +66,7 @@ export const CaseCard = ({ alt, src, href, title, subtitle, cursor }) => {
                 >
                   {cursor}
                 </Cursor>
+
                 <div className="flex flex-col p-4">
                   <OverlayText>{title}</OverlayText>
                   <OverlayText small>{subtitle}</OverlayText>
@@ -75,7 +75,7 @@ export const CaseCard = ({ alt, src, href, title, subtitle, cursor }) => {
 
               <Image
                 priority={true}
-                className=" object-cover"
+                className=" object-cover "
                 layout="fill"
                 alt={alt}
                 src={src}

@@ -5,6 +5,7 @@ import * as gtag from "../lib/gtag";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { hotjar } from "react-hotjar";
+import Head from "next/head";
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
@@ -27,6 +28,10 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#f2f2f2" />
+      </Head>
       <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
@@ -46,13 +51,8 @@ const MyApp = ({ Component, pageProps }) => {
         }}
       />
       <AnimatePresence
-        initial={false}
         exitBeforeEnter
-        onExitComplete={() => {
-          if (typeof window !== "undefined") {
-            window.scrollTo({ top: 0 });
-          }
-        }}
+        onExitComplete={() => window.scrollTo({ top: 0 })}
       >
         <Component {...pageProps} key={router.route} />
       </AnimatePresence>

@@ -105,9 +105,8 @@ export const Cursor = styled(motion.div)`
   position: fixed;
   top: 0;
   left: 0;
-
   width: fit-content;
-  height: fit-content;
+  max-height: fit-content;
   background: rgba(255, 255, 255, 0.54);
   opacity: 95%;
   pointer-events: none;
