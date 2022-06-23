@@ -21,6 +21,7 @@ export const Accordion = ({ title, content }) => {
       </Heading>
       {isActive && (
         <motion.div
+          exit={{ height: 0 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
           initial={{ height: 0 }}
           animate={{ height: isActive ? "auto" : 0 }}

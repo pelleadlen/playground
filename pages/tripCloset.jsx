@@ -135,24 +135,23 @@ const TripCloset = () => {
             </RevealUp>
           </ProcessText>
         </Process>
-        <RevealUp>
-          <ImageContainer>
-            <Image
-              alt="Wireframes and userflow charts"
-              className="object-cover"
-              layout="fill"
-              src="/Assets/Images/tripwireframe.png"
-            />
-          </ImageContainer>
-          <ImageContainer>
-            <Image
-              alt="component system"
-              className="object-cover"
-              layout="fill"
-              src="/Assets/Images/tripstylesheet.png"
-            />
-          </ImageContainer>
-        </RevealUp>
+
+        <ImageContainer>
+          <Image
+            alt="Wireframes and userflow charts"
+            className="object-cover"
+            layout="fill"
+            src="/Assets/Images/tripwireframe.png"
+          />
+        </ImageContainer>
+        <ImageContainer>
+          <Image
+            alt="component system"
+            className="object-cover"
+            layout="fill"
+            src="/Assets/Images/tripstylesheet.png"
+          />
+        </ImageContainer>
 
         <video
           className="h-screen object-cover"
@@ -185,24 +184,22 @@ const TripCloset = () => {
 
         <MoreWork>
           <div className=" w-full lg:w-1/2">
-            <RevealUp cascade={true}>
-              <LearnTitle>More work</LearnTitle>
-              <CaseLinks
-                title="Fourtrack"
-                category="Product design"
-                href="/fourtrack"
-              />
-              <CaseLinks
-                title="Our Legacy"
-                category="Redesign"
-                href="/ourlegacy"
-              />
-              <CaseLinks
-                title="Forgetful"
-                category="Micro interactions"
-                href="/"
-              />
-            </RevealUp>
+            <LearnTitle>More work</LearnTitle>
+            <CaseLinks
+              title="Fourtrack"
+              category="Product design"
+              href="/fourtrack"
+            />
+            <CaseLinks
+              title="Our Legacy"
+              category="Redesign"
+              href="/ourlegacy"
+            />
+            <CaseLinks
+              title="Forgetful"
+              category="Micro interactions"
+              href="/"
+            />
           </div>
         </MoreWork>
       </Container>

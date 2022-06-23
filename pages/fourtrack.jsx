@@ -23,6 +23,7 @@ import { IoArrowBackCircleSharp } from "react-icons/io5";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import CaseLinks from "../components/cases/caseLinks";
+import { RevealUp } from "../components/hooks/animation";
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
@@ -64,14 +65,18 @@ const fourtrack = () => {
         </ImageContainer>
 
         <Info>
-          <Paragraph>
-            <ParagraphSpan>Info</ParagraphSpan> Fourtrack is a browser based
-            tape recorder made by me and David Neråfors. It's for those who want
-            to record an idea fast. No need to connect to a DAW and set up
-            inputs, or find your cables; just record straight into your browser.
-            Share your recordings with your friends and record on the fly.
-          </Paragraph>
+          <RevealUp>
+            <Paragraph>
+              <ParagraphSpan>Info</ParagraphSpan> Fourtrack is a browser based
+              tape recorder made by me and David Neråfors. It's for those who
+              want to record an idea fast. No need to connect to a DAW and set
+              up inputs, or find your cables; just record straight into your
+              browser. Share your recordings with your friends and record on the
+              fly.
+            </Paragraph>
+          </RevealUp>
         </Info>
+
         <ImageRow>
           <ImageContainer>
             <Image
@@ -92,24 +97,27 @@ const fourtrack = () => {
         </ImageRow>
 
         <About>
-          <Paragraph>
-            <ParagraphSpan>Problem</ParagraphSpan> The idea came up when we
-            where discussing the problem with recording music. It's always a
-            hassle to get started and you can easily forget the idea when you
-            are given to many options of a regular DAW. We wanted to make
-            something easy that everybody could use.
-          </Paragraph>
+          <RevealUp cascade={true}>
+            <Paragraph>
+              <ParagraphSpan>Problem</ParagraphSpan> The idea came up when we
+              where discussing the problem with recording music. It's always a
+              hassle to get started and you can easily forget the idea when you
+              are given to many options of a regular DAW. We wanted to make
+              something easy that everybody could use.
+            </Paragraph>
 
-          <Paragraph>
-            <ParagraphSpan>Solution</ParagraphSpan> A cloud based studio that
-            you can use wherever you are. Simple to use interface and color
-            coded visuals. Sometimes creativity needs some boundaries . You only
-            got four channels, exactly like an old porta studio. We even include
-            some standard effects. This doesn´t replace a whole studio, but the
-            purpose is to write music like we used to and make it easy and more
-            accessible.
-          </Paragraph>
+            <Paragraph>
+              <ParagraphSpan>Solution</ParagraphSpan> A cloud based studio that
+              you can use wherever you are. Simple to use interface and color
+              coded visuals. Sometimes creativity needs some boundaries . You
+              only got four channels, exactly like an old porta studio. We even
+              include some standard effects. This doesn´t replace a whole
+              studio, but the purpose is to write music like we used to and make
+              it easy and more accessible.
+            </Paragraph>
+          </RevealUp>
         </About>
+
         <Video>
           <ReactPlayer
             width="100%"

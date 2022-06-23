@@ -1,9 +1,8 @@
-import { Fade } from "react-awesome-reveal";
-
+import { RevealUp } from "../hooks/animation";
 import Image from "next/image";
 export const Profile = () => {
   return (
-    <Fade cascade={true}>
+    <RevealUp>
       <div
         id="profile"
         className="flex snap-y flex-col bg-white items-center rounded-tl-3xl rounded-tr-3xl justify-center pt-12 pb-12 pl-4 pr-4 md:pl-6 md:pr-6 -z-10 w-screen"
@@ -39,6 +38,6 @@ export const Profile = () => {
           </div>
         </div>
       </div>
-    </Fade>
+    </RevealUp>
   );
 };

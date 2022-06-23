@@ -85,6 +85,7 @@ export const AccordionSection = styled.section`
   margin-top: 24rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-end;
   padding: 1.5rem;
@@ -93,6 +94,7 @@ export const AccordionSection = styled.section`
 
   @media only screen and (max-width: 768px) {
     align-items: center;
+    height: 100%;
   }
 `;
 
@@ -203,7 +205,7 @@ export const LearnParagraph = styled.p`
   line-height: 1.5;
   letter-spacing: 0.02em;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 4.4vw, 1.5rem);
 `;
 
 export const TextWrapper = styled.div`

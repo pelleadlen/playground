@@ -43,7 +43,7 @@ export const CaseCard = ({ alt, src, href, title, subtitle, cursor }) => {
 
   return (
     <>
-      <RevealUp>
+      <RevealUp triggerOnce={true}>
         <Link scroll={false} href={href}>
           <a>
             <motion.div

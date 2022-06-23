@@ -1,10 +1,11 @@
 import { Fade } from "react-awesome-reveal";
 import Tilt from "react-parallax-tilt";
 import { Link } from "react-scroll";
+import { RevealUp } from "../hooks/animation";
 
 export const Slogan = () => {
   return (
-    <Fade>
+    <RevealUp>
       <section className="flex flex-col z-10 bg-body rounded-tl-3xl rounded-tr-3xl h-screen w-full items-center justify-center text-5xl lg:text-8xl leading-[88%] font-medium">
         <Tilt
           perspective={800}
@@ -20,6 +21,6 @@ export const Slogan = () => {
           </Link>
         </Tilt>
       </section>
-    </Fade>
+    </RevealUp>
   );
 };

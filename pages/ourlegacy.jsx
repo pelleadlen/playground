@@ -5,6 +5,7 @@ import Link from "next/link";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 import { ImageContainer, ParagraphSpan } from "../styles/styledFourtrack";
 import CaseLinks from "../components/cases/caseLinks";
+import { RevealUp } from "../components/hooks/animation";
 const ourlegacy = () => {
   return (
     <>
@@ -16,17 +17,19 @@ const ourlegacy = () => {
         <Link scroll={false} href="/">
           <IoArrowBackCircleSharp className="w-9 h-9 fixed top-4 right-4 cursor-pointer md:top-6 md:right-6 z-50 mix-blend-difference text-white" />
         </Link>
-        <Wrapper>
-          <Text title="true">Our legacy</Text>
-          <Text>
-            I attended a workshop together with digital agency Aino in
-            Gothenburg and did a redesign on the swedish clothing brand Our
-            legacy. I wanted to make a clean, minimalistic and functional design
-            where the clothes would speak for them self. Inspired by the classic
-            notebook I choose a blue ink color and designed the navigation as an
-            archive.
-          </Text>
-        </Wrapper>
+        <RevealUp>
+          <Wrapper>
+            <Text title="true">Our legacy</Text>
+            <Text>
+              I attended a workshop together with digital agency Aino in
+              Gothenburg and did a redesign on the swedish clothing brand Our
+              legacy. I wanted to make a clean, minimalistic and functional
+              design where the clothes would speak for them self. Inspired by
+              the classic notebook I choose a blue ink color and designed the
+              navigation as an archive.
+            </Text>
+          </Wrapper>
+        </RevealUp>
 
         <video
           className="h-screen object-cover"
