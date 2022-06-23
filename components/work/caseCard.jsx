@@ -21,7 +21,7 @@ export const CaseCard = ({ alt, src, href, title, subtitle, cursor }) => {
 
   let mouseXPosition = 0;
   let mouseYPosition = 0;
-  console.log(mouse);
+
   if (mouse.x !== null) {
     mouseXPosition = mouse.clientX;
   }

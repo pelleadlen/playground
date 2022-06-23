@@ -24,12 +24,19 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import CaseLinks from "../components/cases/caseLinks";
 import { RevealUp } from "../components/hooks/animation";
-
+import Head from "next/head";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const fourtrack = () => {
   return (
     <>
+      <Head>
+        <title>Fourtrack</title>
+        <meta
+          name="description"
+          content="Fourtrack is a browser based studio where you can collaborate effortlessly when making music. "
+        />
+      </Head>
       <Container
         exit={{ opacity: 0 }}
         initial={{ opacity: 0 }}

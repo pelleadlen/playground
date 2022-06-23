@@ -6,9 +6,17 @@ import { IoArrowBackCircleSharp } from "react-icons/io5";
 import { ImageContainer, ParagraphSpan } from "../styles/styledFourtrack";
 import CaseLinks from "../components/cases/caseLinks";
 import { RevealUp } from "../components/hooks/animation";
+import Head from "next/head";
 const ourlegacy = () => {
   return (
     <>
+      <Head>
+        <title>Our legacy</title>
+        <meta
+          name="description"
+          content="Redesign of Our legacy together with gothenburg agency "
+        />
+      </Head>
       <Container
         exit={{ opacity: 0 }}
         initial={{ opacity: 0 }}

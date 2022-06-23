@@ -20,6 +20,7 @@ export const Navigation = () => {
             duration={500}
             key={id}
             to={id}
+            href={id}
           >
             {link}
           </Link>

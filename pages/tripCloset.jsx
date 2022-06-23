@@ -28,9 +28,17 @@ import { IoArrowBackCircleSharp } from "react-icons/io5";
 import Link from "next/link";
 import Marquee from "../components/work/marquee";
 import CaseLinks from "../components/cases/caseLinks";
+import Head from "next/head";
 const TripCloset = () => {
   return (
     <>
+      <Head>
+        <title>Trip Closet</title>
+        <meta
+          name="description"
+          content="A UX casestudy about the making of trip closet, the ai generated clothing rental app "
+        />
+      </Head>
       <Container exit={{ opacity: 0 }}>
         <Link scroll={false} href="/">
           <IoArrowBackCircleSharp className="w-9 h-9 fixed top-4 right-4 cursor-pointer md:top-6 md:right-6 z-50 mix-blend-difference text-white" />

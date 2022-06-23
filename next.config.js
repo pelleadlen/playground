@@ -10,6 +10,7 @@ const nextConfig = {
   images: {
     minimumCacheTTL: 31536000,
   },
+  swcMinify: true,
 };
 
 module.exports = nextConfig;
