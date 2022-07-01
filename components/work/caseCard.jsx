@@ -11,7 +11,7 @@ import {
 } from "../../styles/styledWork";
 import { RevealUp } from "../hooks/animation";
 
-export const CaseCard = ({ alt, src, href, title, subtitle, cursor }) => {
+export const CaseCard = ({ alt, src, href, title, subtitle, cursor, id }) => {
   const ref = useRef(null);
   const mouse = useMouse(ref, {
     enterDelay: 100,
@@ -45,7 +45,7 @@ export const CaseCard = ({ alt, src, href, title, subtitle, cursor }) => {
     <>
       <RevealUp triggerOnce={true}>
         <Link scroll={false} href={href}>
-          <a>
+          <a id={id}>
             <motion.div
               exit={{ opacity: 0 }}
               ref={ref}

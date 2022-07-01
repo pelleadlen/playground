@@ -3,16 +3,27 @@ import { AnimatePresence } from "framer-motion";
 import Script from "next/script";
 import * as gtag from "../lib/gtag";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { hotjar } from "react-hotjar";
 import Head from "next/head";
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
+  const [history, setHistory] = useState('')
 
   useEffect(() => {
     hotjar.initialize(2865806, 6);
   }, []);
+
+  useEffect(() => {
+    switch(Component.name) {
+      case 'Index':
+        break
+      default:
+        window.scrollTo({top: 0})
+        setHistory(Component.name)
+    }
+  }, [Component])
 
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -52,9 +63,8 @@ const MyApp = ({ Component, pageProps }) => {
       />
       <AnimatePresence
         exitBeforeEnter
-        onExitComplete={() => window.scrollTo({ top: 0 })}
       >
-        <Component {...pageProps} key={router.route} />
+        <Component {...pageProps} key={router.route} history={history} />
       </AnimatePresence>
     </>
   );
