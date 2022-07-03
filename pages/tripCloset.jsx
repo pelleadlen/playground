@@ -218,4 +218,6 @@ const TripCloset = () => {
     </>
   );
 };
+
+TripCloset.displayName = "TripCloset"
 export default TripCloset;

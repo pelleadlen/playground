@@ -168,4 +168,5 @@ const fourtrack = () => {
   );
 };
 
+fourtrack.displayName = "fourtrack"
 export default fourtrack;

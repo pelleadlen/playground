@@ -16,15 +16,14 @@ const MyApp = ({ Component, pageProps }) => {
   }, []);
 
   useEffect(() => {
-    console.log('Component: ', Component.name)
-    switch(Component.name) {
+    switch(Component.displayName){
       case 'Index':
         break
       default:
         window.scrollTo({top: 0})
-        setHistory(Component.name)
+        setHistory(Component.displayName)
     }
-  }, [Component])
+  }, [Component, history])
 
   useEffect(() => {
     const handleRouteChange = (url) => {

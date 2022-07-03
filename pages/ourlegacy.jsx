@@ -57,7 +57,7 @@ const ourlegacy = () => {
           <ImageContainer>
             <Image
               className="
-              object-cover 
+              object-cover
               rounded-3xl "
               layout="fill"
               alt="colorscheme"
@@ -67,7 +67,7 @@ const ourlegacy = () => {
           <ImageContainer>
             <Image
               className="
-              object-cover 
+              object-cover
               rounded-3xl "
               layout="fill"
               alt="colorscheme"
@@ -77,7 +77,7 @@ const ourlegacy = () => {
           <ImageContainer>
             <Image
               className="
-              object-cover 
+              object-cover
               rounded-3xl "
               layout="fill"
               alt="colorscheme"
@@ -126,4 +126,5 @@ const ourlegacy = () => {
   );
 };
 
+ourlegacy.displayName = "ourlegacy"
 export default ourlegacy;
