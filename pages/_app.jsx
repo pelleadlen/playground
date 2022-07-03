@@ -16,6 +16,7 @@ const MyApp = ({ Component, pageProps }) => {
   }, []);
 
   useEffect(() => {
+    console.log('Component: ', Component.name)
     switch(Component.name) {
       case 'Index':
         break

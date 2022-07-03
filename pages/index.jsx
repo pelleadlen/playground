@@ -9,7 +9,8 @@ import { useEffect } from "react";
 
 const Index = ({ history }) => {
   useEffect(() => {
-    const element = document.getElementById(history);
+    const element = document.getElementById(history)
+    console.log(history, element)
     if (element) {
       const elementBounds = element.getBoundingClientRect();
       const yOffset = -((window.innerHeight - elementBounds.height) / 2);
