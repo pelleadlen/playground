@@ -5,23 +5,23 @@ import Home from "../components/home";
 import { Navigation } from "../components/navigation/navigation";
 import { Layout } from "../styles/layout";
 import Head from "next/head";
-import {useEffect} from 'react'
+import { useEffect } from "react";
 
-const Index = ({history}) => {
+const Index = ({ history }) => {
   useEffect(() => {
-    const element = document.getElementById(history)
+    const element = document.getElementById(history);
     if (element) {
-      const elementBounds = element.getBoundingClientRect()
-      const yOffset = - ((window.innerHeight - elementBounds.height) / 2)
-      const y = elementBounds.top + window.pageYOffset + yOffset
-      window.scrollTo({top: y, behavior: 'smooth'})
+      const elementBounds = element.getBoundingClientRect();
+      const yOffset = -((window.innerHeight - elementBounds.height) / 2);
+      const y = elementBounds.top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y });
     }
-  }, [history])
+  }, [history]);
 
   return (
     <>
       <Head>
-        <title>Pelle Adlén — digital product designer</title>
+        <title>Pelle Adlén — Digital product designer</title>
         <meta
           name="description"
           content="Pelle Adlén is a digital product designer & UI developer from Sweden. This portfolio contains all information you need to hire a passionate tech nerd"
@@ -37,5 +37,5 @@ const Index = ({history}) => {
       </Layout>
     </>
   );
-}
+};
 export default Index;
