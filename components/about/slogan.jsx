@@ -6,7 +6,7 @@ import { RevealUp } from "../hooks/animation";
 export const Slogan = () => {
   return (
     <RevealUp>
-      <section className="flex flex-col z-10 bg-body rounded-tl-3xl rounded-tr-3xl h-screen w-full items-center justify-center text-5xl lg:text-8xl leading-[88%] font-medium">
+      <section className="flex flex-col z-10 bg-body rounded-tl-3xl rounded-tr-3xl h-screen w-full items-center justify-center text-5xl md:text-7xl lg:text-9xl leading-[88%] font-medium">
         <Tilt
           perspective={800}
           transitionSpeed={1000}

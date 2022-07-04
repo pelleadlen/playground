@@ -16,7 +16,7 @@ const Work = () => {
             src="/Assets/Images/tripcloset-banner.png"
             href="/tripCloset"
             cursor="View casestudy"
-            id='TripCloset'
+            id="TripCloset"
           />
 
           <CaseCard
@@ -27,7 +27,7 @@ const Work = () => {
             buttonText="view case"
             href="/fourtrack"
             cursor="View project"
-            id='fourtrack'
+            id="fourtrack"
           />
 
           <CaseCard
@@ -38,7 +38,7 @@ const Work = () => {
             buttonText="view case"
             href="/ourlegacy"
             cursor="View project"
-            id='ourlegacy'
+            id="ourlegacy"
           />
         </Grid>
       </WorkWrapper>

@@ -196,14 +196,15 @@ export const LearnSection = styled.section`
 `;
 
 export const LearnTitle = styled.h2`
-  font-size: clamp(1.5rem, 10vw, 4.5rem);
+  font-size: clamp(1.5rem, 10vw, 4.8rem);
   font-weight: 400;
   letter-spacing: 0.01em;
+  padding-bottom: 1rem;
 `;
 
 export const LearnParagraph = styled.p`
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   font-weight: 300;
   font-size: clamp(1rem, 4.4vw, 1.5rem);
 `;

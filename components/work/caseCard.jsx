@@ -67,10 +67,10 @@ export const CaseCard = ({ alt, src, href, title, subtitle, cursor, id }) => {
                   {cursor}
                 </Cursor>
 
-                <div className="flex flex-col p-4">
+                <motion.div exit={{ opacity: 0 }} className="flex flex-col p-4">
                   <OverlayText>{title}</OverlayText>
                   <OverlayText small>{subtitle}</OverlayText>
-                </div>
+                </motion.div>
               </Overlay>
 
               <Image

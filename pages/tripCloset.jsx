@@ -29,7 +29,6 @@ import Link from "next/link";
 import Marquee from "../components/work/marquee";
 import CaseLinks from "../components/cases/caseLinks";
 import Head from "next/head";
-import { useRouter } from "next/router";
 
 const TripCloset = () => {
   return (
@@ -219,5 +218,5 @@ const TripCloset = () => {
   );
 };
 
-TripCloset.displayName = "TripCloset"
+TripCloset.displayName = "TripCloset";
 export default TripCloset;

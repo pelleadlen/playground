@@ -19,7 +19,7 @@ export const Word = styled(motion.span)`
 `;
 
 export const Title = styled.h2`
-  font-size: clamp(3rem, 6vw + 1rem, 6rem);
+  font-size: clamp(3rem, 6vw + 2rem, 12rem);
   font-weight: 500;
   line-height: 0.8;
 `;

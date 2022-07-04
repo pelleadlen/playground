@@ -6,7 +6,7 @@ import { Fade } from "react-awesome-reveal";
 const Home = () => {
   return (
     <>
-      <HomeWrapper id="home">
+      <HomeWrapper exit={{ opacity: 0 }} id="home">
         <Header />
         <HeroText className="pb-12" />
       </HomeWrapper>
