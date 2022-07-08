@@ -17,10 +17,17 @@ import { ImageContainer } from "../styles/styledForgetful";
 import { RevealUp } from "../components/hooks/animation";
 import { MoreWork, LearnTitle } from "../styles/styledCaseStudies";
 import CaseLinks from "../components/cases/caseLinks";
-
+import Head from "next/head";
 const forgetful = () => {
   return (
     <>
+      <Head>
+        <title>Forgetful</title>
+        <meta
+          name="description"
+          content="Should designers code? A casestudy about micro interactions by designer Pelle Adlén"
+        />
+      </Head>
       <Container>
         <Link scroll={false} href="/#work" as="/">
           <a>
