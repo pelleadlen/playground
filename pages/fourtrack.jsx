@@ -69,7 +69,7 @@ const fourtrack = () => {
             className="object-cover"
             layout="fill"
             alt="mockup of chrome browser with fourtrack UI on it"
-            src="/Assets/Images/fourtrack-banner.png"
+            src="/Assets/Images/fourtrack-banner-2.png"
           />
         </ImageContainer>
 
