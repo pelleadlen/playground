@@ -14,9 +14,9 @@ const marqueeVariants = {
   },
 };
 
-const Marquee = ({ marqueeText }) => {
+const Marquee = ({ marqueeText, className }) => {
   return (
-    <div>
+    <div className={className}>
       <Marquees>
         <Track className="track" variants={marqueeVariants} animate="animate">
           <MarqueeText>{marqueeText}</MarqueeText>

@@ -69,7 +69,7 @@ const fourtrack = () => {
             className="object-cover"
             layout="fill"
             alt="mockup of chrome browser with fourtrack UI on it"
-            src="/Assets/Images/fourtrack-browser.png"
+            src="/Assets/Images/fourtrack-banner.png"
           />
         </ImageContainer>
 
@@ -159,7 +159,7 @@ const fourtrack = () => {
             <CaseLinks
               title="Forgetful"
               category="Micro interactions"
-              href="/"
+              href="/forgetful"
             />
           </div>
         </MoreWork>
@@ -168,5 +168,5 @@ const fourtrack = () => {
   );
 };
 
-fourtrack.displayName = "fourtrack"
+fourtrack.displayName = "fourtrack";
 export default fourtrack;

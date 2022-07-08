@@ -209,7 +209,7 @@ const TripCloset = () => {
             <CaseLinks
               title="Forgetful"
               category="Micro interactions"
-              href="/"
+              href="/forgetful"
             />
           </div>
         </MoreWork>

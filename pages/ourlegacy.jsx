@@ -117,7 +117,7 @@ const ourlegacy = () => {
             <CaseLinks
               title="Forgetful"
               category="Micro interactions"
-              href="/"
+              href="/forgetful"
             />
           </div>
         </MoreWork>
@@ -126,5 +126,5 @@ const ourlegacy = () => {
   );
 };
 
-ourlegacy.displayName = "ourlegacy"
+ourlegacy.displayName = "ourlegacy";
 export default ourlegacy;

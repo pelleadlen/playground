@@ -18,10 +18,19 @@ const Work = () => {
             cursor="View casestudy"
             id="TripCloset"
           />
-
           <CaseCard
-            alt="Fourtrack mockup of macbook pro"
-            src="/Assets/Images/fourtrack-banner.png"
+            alt="mockup of macbook pro"
+            src="/Assets/Images/forgetful-mockup-mac.png"
+            title="Forgetful"
+            subtitle="Micro interactions"
+            buttonText="view case"
+            href="/forgetful"
+            cursor="View project"
+            id="forgetful"
+          />
+          <CaseCard
+            alt="Fourtrack mockup of safari browser"
+            src="/Assets/Images/fourtrack-browser-safari.png"
             title="Fourtrack"
             subtitle="Product design"
             buttonText="view case"
