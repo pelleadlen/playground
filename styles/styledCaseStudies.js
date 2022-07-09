@@ -210,7 +210,7 @@ export const LearnParagraph = styled.p`
 `;
 
 export const TextWrapper = styled.div`
-  max-width: 600px;
+  max-width: 700px;
 
   @media (max-width: 600px) {
     max-width: 100%;
