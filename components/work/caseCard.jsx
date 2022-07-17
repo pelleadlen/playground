@@ -1,17 +1,13 @@
 import Image from "next/image";
 import useMouse from "@react-hook/mouse-position";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import {
-  MobileText,
-  Overlay,
-  OverlayText,
-  Cursor,
-} from "../../styles/styledWork";
+import { MobileText, Overlay, OverlayText, Cursor } from "./styledWork";
 import { RevealUp } from "../hooks/animation";
 
 export const CaseCard = ({ alt, src, href, title, subtitle, cursor, id }) => {
+  const [isHovered, setIsHovered] = useState(false);
   const ref = useRef(null);
   const mouse = useMouse(ref, {
     enterDelay: 100,
@@ -49,12 +45,14 @@ export const CaseCard = ({ alt, src, href, title, subtitle, cursor, id }) => {
             <motion.div
               exit={{ opacity: 0 }}
               ref={ref}
-              initial={{ borderRadius: "1.5rem" }}
-              transition={{ ease: [0.65, 0.05, 0.36, 1] }}
-              className="relative w-full cursor-none h-[80vh] overflow-hidden "
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              animate={{ borderRadius: isHovered ? "0rem" : "1.5rem" }}
+              transition={{ ease: "easeInOut", duration: 0.4 }}
+              className="relative w-full  h-[80vh] overflow-hidden "
             >
               <Overlay
-                transition={{ ease: [0.65, 0.05, 0.36, 1], duration: 0.3 }}
+                transition={{ ease: [0.65, 0.05, 0.36, 1], duration: 0.8 }}
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 exit={{ opactiy: 0 }}
@@ -67,9 +65,21 @@ export const CaseCard = ({ alt, src, href, title, subtitle, cursor, id }) => {
                   {cursor}
                 </Cursor>
 
-                <motion.div exit={{ opacity: 0 }} className="flex flex-col p-4">
+                <motion.div
+                  exit={{ opacity: 0 }}
+                  animate={{
+                    y: isHovered ? -"15" : 0,
+                  }}
+                  transition={{
+                    delay: 0.2,
+                    duration: 0.4,
+                    type: "spring",
+                    stiffness: 100,
+                  }}
+                  className="flex w-full justify-center pb-6 "
+                >
                   <OverlayText>{title}</OverlayText>
-                  <OverlayText small>{subtitle}</OverlayText>
+                  {/* <OverlayText small>{subtitle}</OverlayText> */}
                 </motion.div>
               </Overlay>
 

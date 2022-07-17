@@ -17,13 +17,20 @@ import {
   LearnParagraph,
   TextWrapper,
   MoreWork,
+  TopContainer,
 } from "../styles/styledCaseStudies";
-import { Overlay } from "../styles/styledWork";
+
 import Image from "next/image";
 import { RevealUp, transition } from "../components/hooks/animation";
 import { tripClosetData } from "../components/cases/content";
 import Accordion from "../components/cases/accordion";
-import { AccordionWrap, Paragraph, Title } from "../styles/styledTripCloset";
+import {
+  AccordionWrap,
+  Paragraph,
+  Quote,
+  QuoteLarge,
+  Title,
+} from "../styles/styledTripCloset";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 import Link from "next/link";
 import Marquee from "../components/work/marquee";
@@ -33,6 +40,7 @@ import Head from "next/head";
 const TripCloset = () => {
   return (
     <>
+      {/* SEO */}
       <Head>
         <title>Trip Closet</title>
         <meta
@@ -40,55 +48,31 @@ const TripCloset = () => {
           content="A UX casestudy about the making of trip closet, the ai generated clothing rental app "
         />
       </Head>
+
       <Container exit={{ opacity: 0 }}>
         <Link scroll={false} href="/#work" as="/">
           <a>
             <IoArrowBackCircleSharp className="w-9 h-9 fixed top-4 right-4 cursor-pointer md:top-6 md:right-6 z-50 mix-blend-difference text-white" />
           </a>
         </Link>
-        <TopRow>
+
+        <TopContainer>
           <Hero>
             <Heading
-              initial={{ opacity: 0, y: 24, rotate: 2 }}
-              animate={{ opacity: 1, y: 0, rotate: 0 }}
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
             >
               Trip Closet
             </Heading>
+
             <FlexRow>
               <CaseInfo title="Category" subtitle="Product design" />
               <CaseInfo title="Work" subtitle="App concept" />
               <CaseInfo title="Year" subtitle="2022" />
             </FlexRow>
           </Hero>
-        </TopRow>
-
-        <SecondRow
-          transition={transition}
-          initial={{ padding: "1.5rem" }}
-          animate={{ padding: "0rem" }}
-        >
-          <Overlay
-            transition={{ ease: [0.65, 0.05, 0.36, 1], duration: 0.7 }}
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 0 }}
-            exit={{ opactiy: 0 }}
-          />
-
-          <StartImage
-            initial={{ height: "100vh", y: 0 }}
-            animate={{ height: "75vh", y: "75vh" }}
-            transition={transition}
-          >
-            <Image
-              priority
-              className="object-cover"
-              layout="fill"
-              alt="Same mockup of the screens as the one you clicked"
-              src="/Assets/Images/tripcloset-banner.png"
-            />
-          </StartImage>
-        </SecondRow>
+        </TopContainer>
 
         <AccordionSection>
           <AccordionWrap>
@@ -108,7 +92,6 @@ const TripCloset = () => {
             <Accordion key={i} title={title} content={content} />
           ))}
         </AccordionSection>
-
         <ImageContainer>
           <Image
             className="object-cover"
@@ -146,8 +129,30 @@ const TripCloset = () => {
             </RevealUp>
           </ProcessText>
         </Process>
+        <Quote>
+          <RevealUp cascade={true}>
+            <QuoteLarge>
+              ”Increased circularity means less material. The goal is not to
+              recycle but to reuse.”
+              <span>
+                Quote from interview with Emma Ingo @ textile startup vividye
+              </span>
+            </QuoteLarge>
+          </RevealUp>
+        </Quote>
+        <div className="flex justify-center w-full h-screen p-6">
+          <div className="grid grid-cols-1 max-w-[1440px] lg:grid-cols-12 grid-flow-row lg:grid-rows-2 gap-6 w-full h-full ">
+            <div className=" bg-indigo-500 col-span-6 rounded-3xl" />
+            <div className=" bg-green-500 col-span-6 rounded-3xl" />
+            <div className=" bg-orange-500 row-start-2 col-span-6 rounded-3xl" />
+            <div className="col-span-6 grid grid-cols-1 grid-rows-2 gap-6 rounded-3xl">
+              <div className="bg-indigo-500 rounded-3xl w-full h-full" />
+              <div className="bg-indigo-500 rounded-3xl w-full h-full" />
+            </div>
+          </div>
+        </div>
 
-        <ImageContainer>
+        {/* <ImageContainer>
           <Image
             alt="Wireframes and userflow charts"
             className="object-cover"
@@ -212,7 +217,7 @@ const TripCloset = () => {
               href="/forgetful"
             />
           </div>
-        </MoreWork>
+        </MoreWork> */}
       </Container>
     </>
   );

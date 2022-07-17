@@ -40,3 +40,30 @@ export const Paragraph = styled.p`
     max-width: 100%;
   }
 `;
+
+export const Quote = styled.section`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+`;
+
+export const QuoteLarge = styled.h2`
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  display: flex;
+  flex-direction: column;
+  letter-spacing: -00.02em;
+  line-height: clamp(130%, 110%, 110%);
+  padding: 0 1rem;
+  max-width: 900px;
+  span {
+    font-size: clamp(0.8rem, 0.6vw + 0.5rem, 1rem);
+    font-weight: 300;
+    color: dark-gray;
+    letter-spacing: 0.03em;
+    line-height: 100%;
+    padding: 1rem 0;
+  }
+`;

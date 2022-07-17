@@ -1,4 +1,4 @@
-import { AboutWrapper } from "../../styles/styledAbout";
+import { AboutWrapper } from "./styledAbout";
 import { Profile } from "./profile";
 import { Slogan } from "./slogan";
 

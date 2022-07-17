@@ -2,8 +2,8 @@ import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 const links = [
   { link: "Home", id: "home", offset: -100 },
-  { link: "Work", id: "work", offset: -30 },
-  { link: "About", id: "about" },
+  { link: "Work", id: "work", offset: 0 },
+  { link: "About", id: "about", offset: 30 },
   { link: "Contact", id: "contact", offset: 0 },
 ];
 

@@ -1,10 +1,4 @@
-import {
-  Content,
-  Flex,
-  Footer,
-  LinkWrapper,
-  Socials,
-} from "../../styles/styledFooter";
+import { Content, Container, Flex, LinkWrapper, Socials } from "./styledFooter";
 import SocialLinks from "./socialLink";
 import { TimeZone } from "./timeZone";
 import UnderLineTitle from "./markTitle";
@@ -12,7 +6,7 @@ import UnderLineTitle from "./markTitle";
 const Contact = () => {
   return (
     <>
-      <Footer id="contact">
+      <Container id="contact">
         <Content>
           <Flex>
             <Socials>
@@ -44,9 +38,9 @@ const Contact = () => {
               </LinkWrapper>
             </Socials>
           </Flex>
+          <TimeZone />
         </Content>
-        <TimeZone />
-      </Footer>
+      </Container>
     </>
   );
 };

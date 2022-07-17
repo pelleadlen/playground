@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  background-color: #f2f2f2;
+  background-color: #fff;
   overscroll-behavior: none;
   overflow-x: hidden;
 }
@@ -46,7 +46,8 @@ nav {
   bottom: 0;
   left: 50%;
   right: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  margin-bottom: 1.5rem;
   display: flex;
   z-index: 4;
   box-shadow: 3.5px 5px 2.2px -39px rgba(0, 0, 0, 0.026),

@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 export const WorkWrapper = styled(motion.section)`
   background: #fff;
-  width: 100vw;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
+  border-radius: 1.5rem;
+  transform: translateY(-3rem);
 `;
 
 export const Word = styled(motion.span)`
@@ -86,8 +86,9 @@ export const Overlay = styled(motion.div)`
 `;
 
 export const OverlayText = styled.h3`
+  font-weight: 340;
   letter-spacing: 0.02em;
-  font-size: ${(props) => (props.small ? "1rem" : "2rem")};
+  font-size: ${(props) => (props.small ? "1rem" : "4rem")};
   color: white;
 `;
 

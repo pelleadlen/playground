@@ -1,6 +1,6 @@
 import Work from "../components/work/work";
 import About from "../components/about/about";
-import Contact from "../components/contact/contact";
+import Contact from "../components/footer/contact";
 import Home from "../components/home";
 import { Navigation } from "../components/navigation/navigation";
 import { Layout } from "../styles/layout";
@@ -9,7 +9,7 @@ import { useEffect } from "react";
 
 const Index = ({ history }) => {
   useEffect(() => {
-    const element = document.getElementById(history)
+    const element = document.getElementById(history);
     if (element) {
       const elementBounds = element.getBoundingClientRect();
       const yOffset = -((window.innerHeight - elementBounds.height) / 2);
@@ -39,5 +39,5 @@ const Index = ({ history }) => {
   );
 };
 
-Index.displayName = "Index"
+Index.displayName = "Index";
 export default Index;

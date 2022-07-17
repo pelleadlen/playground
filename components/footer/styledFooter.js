@@ -1,20 +1,23 @@
 import styled, { css } from "styled-components";
 
-const Footer = styled.footer`
-  background-color: white;
-  width: 100vw;
+const Container = styled.section`
   height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  background-color: #f2f2f2;
 `;
 
 const Content = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
   gap: 1rem;
-  height: 100%;
+  height: 80%;
   width: 100%;
   padding: 0 1.5rem 0 1.5rem;
-  background-color: rgb(242 242 242);
   border-top-right-radius: 1.5rem;
   border-top-left-radius: 1.5rem;
   @media only screen and (max-width: 640px) {
@@ -75,7 +78,7 @@ const Underline = styled.div`
 `;
 
 export {
-  Footer,
+  Container,
   Content,
   Underline,
   Title,

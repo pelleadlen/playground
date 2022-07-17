@@ -1,14 +1,19 @@
-import HeroText from "./heroText";
-import Header from "../header/header";
-import { HomeWrapper } from "../../styles/styledHome";
-import { Fade } from "react-awesome-reveal";
+import Header from "./header";
+import { Heading, HomeWrapper } from "./styledHome";
 
 const Home = () => {
   return (
     <>
       <HomeWrapper exit={{ opacity: 0 }} id="home">
         <Header />
-        <HeroText className="pb-12" />
+        <Heading
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          UX/UI designer & developer
+          <span>— Pelle Adlén</span>
+        </Heading>
       </HomeWrapper>
     </>
   );

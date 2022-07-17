@@ -1,11 +1,5 @@
 import { useEffect } from "react";
-import {
-  Word,
-  Title,
-  Character,
-  SelectedWork,
-  Paragraph,
-} from "../../styles/styledWork";
+import { Word, Title, Character, SelectedWork, Paragraph } from "./styledWork";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 

@@ -40,8 +40,16 @@ export const FlexRow = styled.div`
   width: 100%;
 `;
 
+export const TopContainer = styled.div`
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+`;
+
 export const Hero = styled.div`
-  height: 40vh;
+  height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -61,8 +69,9 @@ export const CaseInfo = (props) => {
 };
 
 export const Heading = styled(motion.span)`
-  font-size: clamp(2.5rem, 18vw, 8rem);
+  font-size: clamp(2.5rem, 18vw, 12rem);
   line-height: 1;
+  letter-spacing: -0.02em;
 `;
 
 //Section two
@@ -82,7 +91,7 @@ export const SecondRow = styled(motion.div)`
 
 export const AccordionSection = styled.section`
   height: 100vh;
-  margin-top: 24rem;
+
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
