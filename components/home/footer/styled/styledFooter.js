@@ -1,15 +1,16 @@
 import styled, { css } from "styled-components";
 
-const Container = styled.section`
+export const Container = styled.section`
   height: 100vh;
   display: flex;
   align-items: flex-end;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
-  background-color: #f2f2f2;
+  background-color: ${(props) => props.theme.bgGray};
+  z-index: 1000;
 `;
 
-const Content = styled.div`
+export const Content = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -26,13 +27,22 @@ const Content = styled.div`
   }
 `;
 
-const Flex = styled.div`
+export const Flex = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4rem;
 `;
 
-const Wrap = styled.div`
+export const Socials = styled.div``;
+
+export const LinkWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  gap: 0.5rem;
+`;
+
+export const Wrap = styled.div`
   position: relative;
   pointer-events: auto;
   max-width: fit-content;
@@ -44,30 +54,22 @@ const Wrap = styled.div`
     `};
 `;
 
-const Socials = styled.div``;
-
-const Title = styled.h1`
+export const Title = styled.h1`
   font-size: clamp(1.8rem, 4vw, 3.5rem);
   line-height: 1.2;
   position: relative;
-  font-weight: 500;
+  font-weight: 400;
+  margin-bottom: 1rem;
 `;
 
-const TitleLink = styled.a`
+export const TitleLink = styled.a`
   font-size: clamp(1.8rem, 4vw, 3.5rem);
   line-height: 1.2;
   position: relative;
   font-weight: 300;
 `;
 
-const LinkWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  gap: 0.5rem;
-`;
-
-const Underline = styled.div`
+export const Underline = styled.div`
   position: absolute;
   left: 0;
   bottom: 0;
@@ -76,15 +78,3 @@ const Underline = styled.div`
   background-color: #000;
   transform-origin: left;
 `;
-
-export {
-  Container,
-  Content,
-  Underline,
-  Title,
-  Wrap,
-  TitleLink,
-  LinkWrapper,
-  Socials,
-  Flex,
-};

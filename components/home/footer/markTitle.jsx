@@ -1,7 +1,8 @@
-import { Underline, Title, Wrap } from "./styledFooter";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { useAnimation, motion } from "framer-motion";
+
+import { Title, Wrap, Underline } from "./styled/styledFooter";
 
 //Animation
 const underline = {
@@ -9,7 +10,7 @@ const underline = {
   hidden: { scaleX: 0 },
 };
 
-const UnderLineTitle = ({ title }) => {
+export const MarkTitle = (props) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -18,8 +19,8 @@ const UnderLineTitle = ({ title }) => {
   });
   return (
     <>
-      <Wrap margin>
-        <Title>{title}:</Title>
+      <Wrap>
+        <Title>{props.title}:</Title>
         <Underline
           as={motion.div}
           ref={ref}
@@ -32,4 +33,4 @@ const UnderLineTitle = ({ title }) => {
   );
 };
 
-export default UnderLineTitle;
+export default MarkTitle;

@@ -1,11 +1,11 @@
-import Clock from "react-live-clock";
+import { Heading, StyledClock, Wrapper } from "./styled/styledTimeZone";
 
 export const TimeZone = () => {
   return (
     <>
-      <div className="hidden md:flex gap-3  pb-6">
-        <h3 className="text-xl ">LOCAL TIME</h3>
-        <Clock
+      <Wrapper>
+        <Heading>LOCAL TIME</Heading>
+        <StyledClock
           format={"h:mm A"}
           timezone={"Europe/Stockholm"}
           className="
@@ -13,7 +13,7 @@ export const TimeZone = () => {
           ticking={true}
           noSsr={true}
         />
-      </div>
+      </Wrapper>
     </>
   );
 };

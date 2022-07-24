@@ -46,7 +46,7 @@ export const SelectedWork = styled.div`
   align-items: center;
   gap: 1em;
   width: 100%;
-  height: 90vh;
+  height: 72vh;
 `;
 
 export const Grid = styled.section`
@@ -55,47 +55,67 @@ export const Grid = styled.section`
   min-width: 100%;
   padding: 1.5rem 1.5rem 4rem 1.5rem;
   display: grid;
-  grid-template-rows: repeat(auto, minmax(0, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
   min-height: 100vh;
   gap: 1.5rem;
+
   @media only screen and (max-width: 1024px) {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 1.5rem 0rem;
   }
-  @media only screen and (max-width: 640px) {
-    padding: 1rem 1rem 2rem 1rem;
+
+  @media only screen and (max-width: 768px) {
+    padding: 1rem 1rem 4rem 1rem;
   }
 `;
 
 export const Overlay = styled(motion.div)`
   position: absolute;
   display: flex;
-  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
   inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
+  background: rgb(0, 0, 0, 0.3);
+
   z-index: 1;
   @media only screen and (max-width: 768px) {
     display: none;
   }
 `;
 
+export const TextBetween = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  align-items: center;
+`;
+
 export const OverlayText = styled.h3`
-  font-weight: 340;
-  letter-spacing: 0.02em;
-  font-size: ${(props) => (props.small ? "1rem" : "4rem")};
+  justify-content: start;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+  align-items: center;
+  letter-spacing: 0.01em;
+  font-size: ${(props) => (props.small ? "1.2rem" : "4rem")};
+  color: white;
+`;
+
+export const Year = styled.h3`
+  font-size: 1.2rem;
   color: white;
 `;
 
 export const MobileText = styled.h3`
   font-size: ${(props) => (props.small ? "1rem" : "1.5rem")};
   padding-top: ${(props) => (props.large ? "0.5rem" : "0")};
-  color: black;
+  color: ${(props) => (props.gray ? "gray" : "black")}; ;
 `;
 
 export const Cursor = styled(motion.div)`

@@ -1,17 +1,22 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+//Index Styles
+
 export const HomeWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
   padding: 0 1.5rem;
-  background: #f2f2f2;
+  background: ${(props) => props.theme.bgGray};
+
   @media only screen and (max-width: 640px) {
     padding: 0 1rem;
   }
 `;
+
+// Heading Styles
 
 export const Heading = styled(motion.h1)`
   margin: 0 1rem 8rem 0;
@@ -28,5 +33,7 @@ export const Heading = styled(motion.h1)`
     font-size: clamp(1rem, 3vw, 2rem);
     letter-spacing: -0.02em;
     font-weight: 300;
+    position: sticky;
+    top: 1rem;
   }
 `;

@@ -1,7 +1,7 @@
 import Work from "../components/work/work";
-import About from "../components/about/about";
-import Contact from "../components/footer/contact";
-import Home from "../components/home";
+import About from "../components/home/about/index";
+import Contact from "../components/home/footer/index";
+import Home from "../components/home/hero";
 import { Navigation } from "../components/navigation/navigation";
 import { Layout } from "../styles/layout";
 import Head from "next/head";
@@ -27,6 +27,7 @@ const Index = ({ history }) => {
           content="Pelle Adlén is a digital product designer & UI developer from Sweden. This portfolio contains all information you need to hire a passionate tech nerd"
         />
       </Head>
+
       <Navigation />
 
       <Layout>

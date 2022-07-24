@@ -1,5 +1,7 @@
-import { Link } from "react-scroll";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
+import styles from "./navigation.module.css";
+
 const links = [
   { link: "Home", id: "home", offset: -100 },
   { link: "Work", id: "work", offset: 0 },
@@ -10,11 +12,12 @@ const links = [
 export const Navigation = () => {
   return (
     <>
-      <motion.nav exit={{ opacity: 0 }}>
+      <motion.nav className={styles.navbar} exit={{ opacity: 0 }}>
         {links.map(({ link, id, offset }) => (
           <Link
             offset={offset}
-            className="link"
+            className={styles.link}
+            activeClass={styles.active}
             spy={true}
             smooth={true}
             duration={500}

@@ -1,5 +1,5 @@
 import Header from "./header";
-import { Heading, HomeWrapper } from "./styledHome";
+import { Heading, HomeWrapper } from "./styled/styledHome";
 
 const Home = () => {
   return (

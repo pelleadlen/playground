@@ -1,6 +1,7 @@
-import { TitleLink, Underline, Wrap } from "./styledFooter";
-import { motion } from "framer-motion";
 import { useState } from "react";
+import { Wrap, Underline, TitleLink } from "./styled/styledFooter";
+import { motion } from "framer-motion";
+
 const SocialLinks = ({ LinkName, href, layoutId }) => {
   const [isHovered, setIsHovered] = useState(0);
   return (
@@ -24,5 +25,4 @@ const SocialLinks = ({ LinkName, href, layoutId }) => {
     </Wrap>
   );
 };
-
 export default SocialLinks;

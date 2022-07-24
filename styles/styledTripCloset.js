@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-export const AccordionWrap = styled.div`
+export const AccordionWrap = styled(motion.div)`
   padding: 1rem;
   color: #fff;
   width: 100%;

@@ -71,7 +71,7 @@ export const CaseInfo = (props) => {
 export const Heading = styled(motion.span)`
   font-size: clamp(2.5rem, 18vw, 12rem);
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.009em;
 `;
 
 //Section two

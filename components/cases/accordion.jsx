@@ -21,10 +21,11 @@ export const Accordion = ({ title, content }) => {
       </Heading>
       {isActive && (
         <motion.div
-          exit={{ height: 0 }}
+          layout
+          exit={{ height: "0px" }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
           initial={{ height: 0 }}
-          animate={{ height: isActive ? "auto" : 0 }}
+          animate={{ height: isActive ? "auto" : "0px" }}
         >
           <Paragraph>{content}</Paragraph>
         </motion.div>

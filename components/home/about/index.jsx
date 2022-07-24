@@ -1,4 +1,4 @@
-import { AboutWrapper } from "./styledAbout";
+import { AboutWrapper } from "./styled/styledAbout";
 import { Profile } from "./profile";
 import { Slogan } from "./slogan";
 
@@ -7,7 +7,6 @@ const About = () => {
     <>
       <AboutWrapper id="about">
         <Slogan />
-
         <Profile />
       </AboutWrapper>
     </>

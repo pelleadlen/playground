@@ -9,25 +9,17 @@ const Work = () => {
         <SelectedWorkTitle />
         <Grid>
           <CaseCard
+            className=" col-span-1 lg:col-span-2"
             title="Trip closet"
             subtitle="Product design"
             layoutId="page"
             alt="trip closet mockups of all screens"
             src="/Assets/Images/tripcloset-banner.png"
             href="/tripCloset"
-            cursor="View casestudy"
             id="TripCloset"
+            year="2022"
           />
-          <CaseCard
-            alt="mockup of macbook pro"
-            src="/Assets/Images/forgetful-mockup-mac.png"
-            title="Forgetful"
-            subtitle="Micro interactions"
-            buttonText="view case"
-            href="/forgetful"
-            cursor="View project"
-            id="forgetful"
-          />
+
           <CaseCard
             alt="Fourtrack mockup of safari browser"
             src="/Assets/Images/fourtrack-browser-safari.png"
@@ -35,8 +27,8 @@ const Work = () => {
             subtitle="Product design"
             buttonText="view case"
             href="/fourtrack"
-            cursor="View project"
             id="fourtrack"
+            year="2022"
           />
 
           <CaseCard
@@ -46,8 +38,19 @@ const Work = () => {
             subtitle="redesign"
             buttonText="view case"
             href="/ourlegacy"
-            cursor="View project"
             id="ourlegacy"
+            year="2022"
+          />
+          <CaseCard
+            className="col-span-1 lg:col-span-2"
+            alt="mockup of macbook pro"
+            src="/Assets/Images/forgetful-mockup-mac.png"
+            title="Forgetful"
+            subtitle="Micro interactions"
+            buttonText="view case"
+            href="/forgetful"
+            id="forgetful"
+            year="2022"
           />
         </Grid>
       </WorkWrapper>

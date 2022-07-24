@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import { ThemeProvider } from "styled-components";
 import { AnimatePresence } from "framer-motion";
 import Script from "next/script";
 import * as gtag from "../lib/gtag";
@@ -6,24 +7,27 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { hotjar } from "react-hotjar";
 import Head from "next/head";
+import { theme } from "../styles/theme";
+import { createGlobalStyle } from "styled-components";
+import { GlobalStyle } from "../styles/globalStyle";
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
-  const [history, setHistory] = useState('')
+  const [history, setHistory] = useState("");
 
   useEffect(() => {
     hotjar.initialize(2865806, 6);
   }, []);
 
   useEffect(() => {
-    switch(Component.displayName){
-      case 'Index':
-        break
+    switch (Component.displayName) {
+      case "Index":
+        break;
       default:
-        window.scrollTo({top: 0})
-        setHistory(Component.displayName)
+        window.scrollTo({ top: 0 });
+        setHistory(Component.displayName);
     }
-  }, [Component, history])
+  }, [Component, history]);
 
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -61,10 +65,12 @@ const MyApp = ({ Component, pageProps }) => {
           `,
         }}
       />
-      <AnimatePresence
-        exitBeforeEnter
-      >
-        <Component {...pageProps} key={router.route} history={history} />
+
+      <AnimatePresence exitBeforeEnter>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Component {...pageProps} key={router.route} history={history} />
+        </ThemeProvider>
       </AnimatePresence>
     </>
   );

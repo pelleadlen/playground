@@ -33,7 +33,7 @@ export const Paragraph = styled.p`
   font-weight: 400;
   line-height: 1.5;
   font-size: 1.5rem;
-  max-width: 480px;
+  max-width: 55ch;
 `;
 
 export const ParagraphSpan = styled.span`
