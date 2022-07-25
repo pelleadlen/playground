@@ -1,16 +1,19 @@
 import Image from "next/image";
 import { useState } from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import {
-  MobileText,
   Overlay,
-  OverlayText,
   TextBetween,
+  MobileText,
+  OverlayText,
   Year,
-} from "./styledWork";
-import { RevealUp } from "../hooks/animation";
+  MobileTextBlock,
+  ImageContainer,
+  CenteredTitle,
+} from "./styled/styledCaseCard";
+
 import { IoEllipse } from "react-icons/io5";
+import { RevealUp } from "../../hooks/animation";
 export const CaseCard = ({
   alt,
   className,
@@ -25,16 +28,15 @@ export const CaseCard = ({
 
   return (
     <>
-      <RevealUp className={className} triggerOnce={true}>
+      <RevealUp className={className} cascade={true} triggerOnce={true}>
         <Link scroll={false} href={href}>
           <a id={id}>
-            <motion.div
+            <ImageContainer
               exit={{ opacity: 0 }}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               animate={{ borderRadius: isHovered ? "0rem" : "1.5rem" }}
               transition={{ ease: "easeInOut", duration: 0.4 }}
-              className="relative w-full  h-[80vh] overflow-hidden "
             >
               <Overlay
                 transition={{ ease: [0.65, 0.05, 0.36, 1], duration: 0.8 }}
@@ -42,7 +44,17 @@ export const CaseCard = ({
                 whileHover={{ opacity: 1 }}
                 exit={{ opactiy: 0 }}
               >
-                <TextBetween>
+                <TextBetween
+                  animate={{
+                    y: isHovered ? 10 : 0,
+                  }}
+                  transition={{
+                    delay: 0.2,
+                    duration: 0.4,
+                    type: "spring",
+                    stiffness: 100,
+                  }}
+                >
                   <OverlayText small>
                     {subtitle}
                     <IoEllipse className="w-4 h-4" />
@@ -50,8 +62,7 @@ export const CaseCard = ({
                   <Year>{year}</Year>
                 </TextBetween>
 
-                <motion.div
-                  className="self-center"
+                <CenteredTitle
                   exit={{ opacity: 0 }}
                   animate={{
                     y: isHovered ? -"10" : 0,
@@ -64,7 +75,7 @@ export const CaseCard = ({
                   }}
                 >
                   <OverlayText>{title}</OverlayText>
-                </motion.div>
+                </CenteredTitle>
               </Overlay>
 
               <Image
@@ -74,14 +85,14 @@ export const CaseCard = ({
                 alt={alt}
                 src={src}
               />
-            </motion.div>
+            </ImageContainer>
 
-            <div className=" block md:hidden ">
+            <MobileTextBlock>
               <MobileText large>{title}</MobileText>
               <MobileText small gray>
                 {subtitle}
               </MobileText>
-            </div>
+            </MobileTextBlock>
           </a>
         </Link>
       </RevealUp>

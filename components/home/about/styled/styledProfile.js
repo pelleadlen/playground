@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-export const ProfileWrapper = styled.div`
+export const Profile = styled.div`
   display: flex;
   flex-direction: column;
   background: ${(props) => props.theme.bgWhite};

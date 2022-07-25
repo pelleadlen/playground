@@ -1,15 +1,16 @@
-import { WorkWrapper, Grid } from "./styledWork";
-import { CaseCard } from "./caseCard";
 import { SelectedWorkTitle } from "./selectedWorkTitle";
-
+import { WorkWrapper, Grid } from "./styled/styledWork";
+import { CaseCard } from "./caseCard";
+import { RevealUp } from "../../hooks/animation";
 const Work = () => {
   return (
     <>
       <WorkWrapper name="work" id="work">
         <SelectedWorkTitle />
+
         <Grid>
           <CaseCard
-            className=" col-span-1 lg:col-span-2"
+            className="col-span-1 lg:col-span-2"
             title="Trip closet"
             subtitle="Product design"
             layoutId="page"
@@ -19,7 +20,6 @@ const Work = () => {
             id="TripCloset"
             year="2022"
           />
-
           <CaseCard
             alt="Fourtrack mockup of safari browser"
             src="/Assets/Images/fourtrack-browser-safari.png"
@@ -30,7 +30,6 @@ const Work = () => {
             id="fourtrack"
             year="2022"
           />
-
           <CaseCard
             alt="macbook pro with redesigned ourlegacy homepage"
             src="/Assets/Images/ourlegacy-banner.png"

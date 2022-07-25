@@ -2,8 +2,6 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
-@import url("https://rsms.me/inter/inter.css");
-
 html {
   font-family: "Inter", sans-serif;
 }

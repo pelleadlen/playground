@@ -1,18 +1,11 @@
-import Image from "next/image";
 import { RevealUp } from "../../hooks/animation";
-import {
-  Flex,
-  Images,
-  Paragraph,
-  ProfilePicture,
-  ProfileWrapper,
-} from "./styled/styledProfile";
+import * as styled from "./styled/styledProfile";
 export const Profile = () => {
   return (
     <RevealUp>
-      <ProfileWrapper id="profile">
-        <Flex>
-          <Paragraph>
+      <styled.Profile id="profile">
+        <styled.Flex>
+          <styled.Paragraph>
             Hi. My name is Pelle Adlén. I’m a music loving tech enthusiast with
             a passion for slick user experiences. Currently based in
             <span>Gothenburg, Sweden,</span>
@@ -24,18 +17,18 @@ export const Profile = () => {
             stuff I design. Beyond the obvious beauty and beyond expected
             function. This is my recipe and the flavor I bring to the table.
             Let’s get together and push some pixels for a reason!
-          </Paragraph>
+          </styled.Paragraph>
 
-          <ProfilePicture>
-            <Images
+          <styled.ProfilePicture>
+            <styled.Images
               priority={true}
               alt="Pelle Adlén in a blue shirt thinking about digital design"
               layout="fill"
               src="/Assets/Images/profilepic.png"
             />
-          </ProfilePicture>
-        </Flex>
-      </ProfileWrapper>
+          </styled.ProfilePicture>
+        </styled.Flex>
+      </styled.Profile>
     </RevealUp>
   );
 };

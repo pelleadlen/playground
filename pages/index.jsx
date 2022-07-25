@@ -1,4 +1,4 @@
-import Work from "../components/work/work";
+import Work from "../components/home/work/index";
 import About from "../components/home/about/index";
 import Contact from "../components/home/footer/index";
 import Home from "../components/home/hero";
@@ -29,7 +29,6 @@ const Index = ({ history }) => {
       </Head>
 
       <Navigation />
-
       <Layout>
         <Home />
         <Work />

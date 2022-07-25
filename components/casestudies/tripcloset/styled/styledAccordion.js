@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { IoArrowForwardOutline } from "react-icons/io5";
+
 export const AccordionWrap = styled(motion.div)`
   padding: 1rem;
   color: #fff;
@@ -16,7 +18,7 @@ export const AccordionWrap = styled(motion.div)`
 export const Title = styled(motion.h3)`
   font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 500;
-  color: #fff;
+  color: ${(props) => props.theme.textWhite};
   letter-spacing: 0.02em;
 `;
 
@@ -41,29 +43,25 @@ export const Paragraph = styled.p`
   }
 `;
 
-export const Quote = styled.section`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
+export const Arrow = styled(IoArrowForwardOutline)`
+  width: 2.25rem;
+  height: 2.25rem;
 `;
 
-export const QuoteLarge = styled.h2`
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+export const AccordionSection = styled.section`
+  height: 100vh;
+
   display: flex;
   flex-direction: column;
-  letter-spacing: -00.02em;
-  line-height: clamp(130%, 110%, 110%);
-  padding: 0 1rem;
-  max-width: 900px;
-  span {
-    font-size: clamp(0.8rem, 0.6vw + 0.5rem, 1rem);
-    font-weight: 300;
-    color: dark-gray;
-    letter-spacing: 0.03em;
-    line-height: 100%;
-    padding: 1rem 0;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 1.5rem;
+  background: #000;
+  position: relative;
+
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    height: 100%;
   }
 `;
