@@ -36,4 +36,8 @@ export const Heading = styled(motion.h1)`
     position: sticky;
     top: 1rem;
   }
+
+  @media only screen and (max-width: 640px) {
+    padding-bottom: 3rem;
+  }
 `;

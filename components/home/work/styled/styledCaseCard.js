@@ -61,6 +61,7 @@ export const ImageContainer = styled(motion.div)`
   position: relative;
   height: 80vh;
   overflow: hidden;
+  box-shadow: ${(props) => props.theme.shadow}; ;
 `;
 
 export const CenteredTitle = styled(motion.div)`

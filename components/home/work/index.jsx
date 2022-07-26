@@ -1,7 +1,7 @@
 import { SelectedWorkTitle } from "./selectedWorkTitle";
 import { WorkWrapper, Grid } from "./styled/styledWork";
 import { CaseCard } from "./caseCard";
-import { RevealUp } from "../../hooks/animation";
+
 const Work = () => {
   return (
     <>

@@ -4,6 +4,7 @@ export const Quotes = styled.section`
   width: 100vw;
   height: 100vh;
   display: flex;
+  padding: 0 1.5rem;
   justify-content: center;
   align-items: center;
   align-items: center;
@@ -11,7 +12,7 @@ export const Quotes = styled.section`
 `;
 
 export const QuoteLarge = styled.h2`
-  font-size: clamp(2rem, 6vw, 6rem);
+  font-size: clamp(2.8rem, 6vw, 5rem);
   display: flex;
   flex-direction: column;
   align-items: center;

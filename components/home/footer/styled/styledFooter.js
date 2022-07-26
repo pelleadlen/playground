@@ -16,8 +16,9 @@ export const Content = styled.div`
   justify-content: space-between;
   flex-direction: column;
   gap: 1rem;
-  height: 80%;
+  height: 75%;
   width: 100%;
+
   padding: 0 1.5rem 0 1.5rem;
   border-top-right-radius: 1.5rem;
   border-top-left-radius: 1.5rem;

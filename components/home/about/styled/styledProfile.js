@@ -39,8 +39,10 @@ export const Paragraph = styled.p`
 
 export const ProfilePicture = styled.div`
   position: relative;
+  border-radius: 1.5rem;
   max-width: 56rem;
   height: 80vh;
+  box-shadow: ${(props) => props.theme.shadow}; ;
 `;
 
 export const Images = styled(Image)`
