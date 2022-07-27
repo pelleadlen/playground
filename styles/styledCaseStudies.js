@@ -33,16 +33,3 @@ import { motion } from "framer-motion";
 // Marquee
 
 //ProcessInformation
-
-export const MoreWork = styled.div`
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2f2f2;
-  @media (max-width: 1024px) {
-    padding: 0 1rem;
-  }
-`;

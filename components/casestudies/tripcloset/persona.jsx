@@ -1,61 +1,83 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import {
+  Container,
+  Grid,
+  Card,
+  TopCard,
+  RowTwoCard,
+  SmallCards,
+  Img,
+  Title,
+  PersonaInfo,
+  PersonaContent,
+  BackgroundInfo,
+} from "./styled/styledPersona";
 
-const Container = styled.section`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  padding: 1.5rem;
-`;
+const NameAge = () => {
+  return <Title>Michael Swift,32</Title>;
+};
 
-const Grid = styled(motion.div)`
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  max-width: 1440px;
-  max-width: 1440px;
-  gap: 1.5rem;
-  width: 100%;
-  height: 100%;
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-  }
-`;
-
-const Card = styled.div`
-  border-radius: 1.5rem;
-  background-color: ${(props) => props.theme.bgWhite};
-  box-shadow: ${(props) => props.theme.shadow}; ;
-`;
-
-const TopCard = styled(Card)`
-  grid-column: span 6 / span 6;
-`;
-
-const RowTwoCard = styled(Card)`
-  grid-row-start: 2;
-  grid-column: span 6 / span 6;
-`;
-
-const SmallCards = styled.div`
-  grid-column: span 6 / span 6;
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 1.5rem;
-`;
+const PersonaInformation = (props) => {
+  return (
+    <>
+      <PersonaInfo>
+        <div>
+          <p>{props.title}</p>
+        </div>
+        <div>
+          <p>{props.subTitle}</p>
+        </div>
+      </PersonaInfo>
+    </>
+  );
+};
 
 const Persona = () => {
   return (
     <Container>
       <Grid>
-        <TopCard />
-        <TopCard />
-        <RowTwoCard />
+        <TopCard>
+          <PersonaContent>
+            <NameAge />
+            <PersonaInformation
+              title="Occupation"
+              subTitle="Digital marketing"
+            />
+            <PersonaInformation title="Status" subTitle="Single" />
+            <PersonaInformation title="Location" subTitle="Traveling" />
+            <PersonaInformation title="Tech Literte" subTitle="Good" />
+          </PersonaContent>
+        </TopCard>
+        <TopCard>
+          <Title>Background</Title>
+          <BackgroundInfo>
+            Michael is a digital nomad currently working with digital marketing
+            at a finance startup fully remote. He loves to surf and visiting
+            places with the best waves and coffeshops with lightning fast wi-fi.
+          </BackgroundInfo>
+        </TopCard>
+        <RowTwoCard>
+          <Img layout="fill" src="/Assets/Images/digital-nomad.jpg" />
+        </RowTwoCard>
+
         <SmallCards>
-          <Card />
-          <Card />
+          <Card>
+            <Title>Core needs</Title>
+            <ul>
+              <li>Need to find quality products easily.</li>
+              <li>Find best offers for products</li>
+              <li>Be able to find products suitable for the location. </li>
+              <li>Travel without unnecessary items.</li>
+            </ul>
+          </Card>
+          <Card>
+            <Title>Core needs</Title>
+            <ul>
+              <li>Need to find quality products easily.</li>
+              <li>Find best offers for products</li>
+              <li>Be able to find products suitable for the location. </li>
+              <li>Travel without unnecessary items.</li>
+            </ul>
+          </Card>
         </SmallCards>
       </Grid>
     </Container>

@@ -3,6 +3,7 @@ export const theme = {
   bgGray: "#f4f0f0",
   bgWhite: "#fff",
   textWhite: "#fff",
+  textGray: "rgb(75 85 99)",
 
   // Shadow
 

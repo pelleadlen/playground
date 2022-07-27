@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { RevealUp } from "../components/hooks/animation";
 import {
   Container,
   TopContainer,
@@ -107,23 +106,6 @@ const TripCloset = () => {
             ))}
           </Wrapper>
         </MoreWork>
-
-        {/* <MoreWork>
-          <div className=" w-full lg:w-1/2">
-            <LearnTitle>More work</LearnTitle>
-        
-            <CaseLinks
-              title="Our Legacy"
-              category="Redesign"
-              href="/ourlegacy"
-            />
-            <CaseLinks
-              title="Forgetful"
-              category="Micro interactions"
-              href="/forgetful"
-            />
-          </div>
-        </MoreWork> */}
       </Container>
     </>
   );
