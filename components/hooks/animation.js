@@ -15,10 +15,17 @@ const customFade = keyframes`
   }
 `;
 
-export const RevealUp = ({ children, cascade, triggerOnce, className }) => {
+export const RevealUp = ({
+  children,
+  cascade,
+  triggerOnce,
+  className,
+  style,
+}) => {
   return (
     <>
       <Reveal
+        style={style}
         className={className}
         keyframes={customFade}
         duration="700"

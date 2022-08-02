@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 export const Container = styled(motion.main)`
   min-height: 100%;
   width: 100%;
-  background: ${(props) => props.theme.bgWhite}; ;
+  background: ${(props) => props.theme.bgWhite};
+  overflow-x: hidden;
 `;
 
 export const TopContainer = styled.div`
@@ -62,8 +63,9 @@ export const CaseInfo = (props) => {
   );
 };
 
-export const ImageContainer = styled.div`
-  position: relative;
+export const FixedImage = styled.div`
+  background: url(/Assets/Images/trip3iphones.png) fixed center;
+  background-size: cover;
   width: 100%;
   height: 75vh;
 `;

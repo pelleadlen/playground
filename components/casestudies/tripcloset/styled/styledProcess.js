@@ -29,7 +29,7 @@ export const ProcessInformation = ({ method, methodInformation }) => {
 
 export const Processes = styled.section`
   min-height: 100vh;
-  background-color: #f2f2f2;
+  background-color: ${(props) => props.theme.bgGray};
   display: flex;
   flex-direction: column;
   justify-content: center;
