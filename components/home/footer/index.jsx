@@ -35,8 +35,8 @@ const Contact = () => {
             <Socials>
               <MarkTitle title="Follow" />
               <LinkWrapper>
-                {links.map(({ href, LinkName }) => (
-                  <SocialLinks href={href} LinkName={LinkName} />
+                {links.map(({ href, LinkName }, index) => (
+                  <SocialLinks key={index} href={href} LinkName={LinkName} />
                 ))}
               </LinkWrapper>
             </Socials>

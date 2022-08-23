@@ -8,7 +8,7 @@ export const Profile = () => {
           <styled.Paragraph>
             Hi. My name is Pelle Adlén. I’m a music loving tech enthusiast with
             a passion for slick user experiences. Currently based in
-            <span>Gothenburg, Sweden,</span>
+            <span>Malmö, Sweden,</span>
             anywhere.
             <br />
             <br /> Design with a purpose is what excites me. And like your

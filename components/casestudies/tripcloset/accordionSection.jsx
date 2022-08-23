@@ -7,7 +7,6 @@ import {
 import { RevealUp } from "../../hooks/animation";
 import { tripClosetData } from "./content";
 import Accordion from "./accordion";
-import { LayoutGroup } from "framer-motion";
 
 const AccordionContent = () => {
   return (
