@@ -69,13 +69,16 @@ export const Wrapper = styled(motion.div)`
 export const AppWrapper = styled(Wrapper)`
   display: flex;
   height: 90vh;
-  width: 50%;
+  width: full;
   margin-top: 2rem;
 
   position: relative;
 
   @media (max-width: 1220px) {
     width: 100%;
+  }
+  @media (max-width: 800px) {
+    height: 70vh;
   }
 `;
 
