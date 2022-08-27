@@ -111,13 +111,14 @@ const SplashScreen = ({ messageText, replay }) => {
     if (inView) {
       setLoading(true);
       setTimeout(() => {
-        setLoading(false);
+        setLoading(!loading);
       }, 2000);
     }
-    if (!inView) {
-      setLoading(false);
-    }
   }, [inView]);
+
+  function handleReplay() {
+    setLoading((prevState) => !prevState);
+  }
 
   return (
     <>
@@ -125,7 +126,7 @@ const SplashScreen = ({ messageText, replay }) => {
         {loading ? <Loader /> : null}
         <MessageText>{messageText}</MessageText>
 
-        <Replay replay={replay} onClick={() => setLoading(!loading)}>
+        <Replay replay={replay} onClick={handleReplay}>
           {replay}
         </Replay>
       </Wrapper>

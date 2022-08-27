@@ -8,6 +8,13 @@ import StaggerSection from "../components/casestudies/forgetful/staggerSection";
 import { Main } from "../components/casestudies/forgetful/styled/styledForgetful";
 import Arrow from "../components/casestudies/shared/arrow";
 import { RevealUp } from "../components/hooks/animation";
+import {
+  MoreWork,
+  Wrapper,
+  Title,
+} from "../components/casestudies/shared/styled/styledCaseLinks";
+import { forgetfulCases } from "../components/casestudies/shared/caseLinksData";
+import CaseLinks from "../components/casestudies/shared/caseLinks";
 const forgetful = () => {
   const mainIntro = {
     hidden: {
@@ -45,6 +52,19 @@ const forgetful = () => {
           <StaggerSection />
           <ReorderSection />
           <AppSection />
+          <MoreWork>
+            <Wrapper>
+              <Title>More work</Title>
+              {forgetfulCases.map(({ href, title, category }, i) => (
+                <CaseLinks
+                  href={href}
+                  title={title}
+                  category={category}
+                  key={i}
+                />
+              ))}
+            </Wrapper>
+          </MoreWork>
         </Main>
       </RevealUp>
     </>

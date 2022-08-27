@@ -21,14 +21,15 @@ const Work = () => {
             year="2022"
           />
           <CaseCard
+            box="box"
             alt="Fourtrack mockup of safari browser"
             src="/Assets/Images/fourtrack-browser-safari.png"
             title="Fourtrack"
             subtitle="Product design"
             buttonText="view case"
-            href="/fourtrack"
+            href="/"
             id="fourtrack"
-            year="2022"
+            year="coming soon"
           />
           <CaseCard
             alt="macbook pro with redesigned ourlegacy homepage"

@@ -11,6 +11,8 @@ import {
   Title,
 } from "../components/casestudies/shared/styled/styledCaseLinks";
 import { ourLegacyCases } from "../components/casestudies/shared/caseLinksData";
+import { ImageGrid } from "../components/casestudies/ourlegacy/imageGrid";
+import { MobileImageGrid } from "../components/casestudies/ourlegacy/mobileImageGrid";
 
 const ourlegacy = () => {
   return (
@@ -26,6 +28,9 @@ const ourlegacy = () => {
         <Arrow href="/" />
         <Hero />
         <Text />
+
+        <ImageGrid />
+        <MobileImageGrid />
 
         <VideoMockup />
         <MoreWork>

@@ -59,7 +59,7 @@ const Card = styled.div`
     list-style-type: disc;
   }
   li {
-    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-size: clamp(1rem, 4vw, 1.4rem);
     color: ${(props) => props.theme.textGray};
     margin: 0.5rem 0;
     font-weight: 300;
@@ -79,7 +79,7 @@ const PersonaContent = styled.div`
 `;
 
 const Title = styled.h3`
-  font-size: clamp(1.5rem, 8vw, 2.5rem);
+  font-size: clamp(1.5rem, 8vw, 2rem);
   line-height: 133%;
   font-weight: 340;
   padding-bottom: 1.5rem;
@@ -88,7 +88,7 @@ const Title = styled.h3`
 const PersonaInfo = styled.div`
   display: flex;
   justify-content: space-between;
-  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-size: clamp(1rem, 4vw, 1.4rem);
   color: ${(props) => props.theme.textGray};
   font-weight: 300;
 

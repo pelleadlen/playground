@@ -22,9 +22,9 @@ export const Profile = () => {
           <styled.ProfilePicture>
             <styled.Images
               priority={true}
-              alt="Pelle Adlén in a blue shirt thinking about digital design"
+              alt="Pelle Adlén in a figma cap thinking about digital design"
               layout="fill"
-              src="/Assets/Images/profilepic.png"
+              src="/Assets/Images/pellepic.png"
             />
           </styled.ProfilePicture>
         </styled.Flex>

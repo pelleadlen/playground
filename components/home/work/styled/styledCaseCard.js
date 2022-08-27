@@ -40,7 +40,12 @@ export const OverlayText = styled.h3`
 
 export const Year = styled.h3`
   font-size: 1.2rem;
-  color: ${(props) => props.theme.textWhite}; ;
+  color: ${(props) => (props.box ? "#000" : "#fff")};
+  padding: ${(props) => (props.box ? "0.5rem 1rem" : "0")};
+  border-radius: 1.5rem;
+  border: ${(props) => (props.box ? "1px solid #000" : "")};
+  opacity: ${(props) => (props.box ? "0.8" : "")};
+  background-color: ${(props) => (props.box ? "white" : "")}; ;
 `;
 
 export const MobileText = styled.h3`

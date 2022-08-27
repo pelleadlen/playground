@@ -23,6 +23,7 @@ export const CaseCard = ({
   subtitle,
   year,
   id,
+  box,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -59,7 +60,7 @@ export const CaseCard = ({
                     {subtitle}
                     <IoEllipse className="w-4 h-4" />
                   </OverlayText>
-                  <Year>{year}</Year>
+                  <Year box={box}>{year}</Year>
                 </TextBetween>
 
                 <CenteredTitle

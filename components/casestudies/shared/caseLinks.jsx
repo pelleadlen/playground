@@ -11,7 +11,7 @@ const CaseLinks = ({ title, category, href }) => {
         <motion.div
           onMouseEnter={() => setIsHovered(!isHovered)}
           onMouseLeave={() => setIsHovered(false)}
-          whileHover={{ scale: 1.03 }}
+          whileHover={{ scale: 1.005 }}
           transition={{ duration: 0.2, type: "spring", stiffness: 50 }}
         >
           <CaseText>

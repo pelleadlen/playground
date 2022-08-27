@@ -26,7 +26,7 @@ export const Paragraph = styled.p`
   font-size: clamp(1.25rem, 5vw, 2rem);
   line-height: 1.75rem;
   font-weight: 460;
-  max-width: 56rem;
+  max-width: 50rem;
   line-height: 1.5;
   padding: 3rem 0;
 
