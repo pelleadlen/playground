@@ -25,7 +25,7 @@ const Work = () => {
             alt="Fourtrack mockup of safari browser"
             src="/Assets/Images/fourtrack-browser-safari.png"
             title="Fourtrack"
-            subtitle="Product design"
+            subtitle="[COMING SOON]"
             buttonText="view case"
             href="/"
             id="fourtrack"
