@@ -2,7 +2,7 @@ import { RevealUp } from "../../hooks/animation";
 import * as styled from "./styled/styledProfile";
 export const Profile = () => {
   return (
-    <RevealUp>
+    <RevealUp triggerOnce={true}>
       <styled.Profile id="profile">
         <styled.Flex>
           <styled.Paragraph>

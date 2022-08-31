@@ -5,10 +5,10 @@ export const tripCases = [
 
 export const ourLegacyCases = [
   { href: "/forgetful", title: "Forgetful", category: "UI development" },
-  { href: "/tripcloset", title: "Trip Closet", category: "Product design" },
+  { href: "/tripCloset", title: "Trip Closet", category: "Product design" },
 ];
 
 export const forgetfulCases = [
   { href: "/ourlegacy", title: "Our Legacy", category: "UI design" },
-  { href: "/tripcloset", title: "Trip Closet", category: "Product design" },
+  { href: "/tripCloset", title: "Trip Closet", category: "Product design" },
 ];

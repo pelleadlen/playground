@@ -39,7 +39,6 @@ const TripCloset = () => {
 
       {/* Page */}
       <Container exit={{ opacity: 0 }}>
-        <Arrow href="#work" />
         <TopContainer>
           <Hero>
             <Heading

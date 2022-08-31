@@ -7,7 +7,6 @@ export const HomeWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
   padding: 0 1.5rem;
   background: ${(props) => props.theme.bgGray};
 
@@ -35,9 +34,5 @@ export const Heading = styled(motion.h1)`
     font-weight: 300;
     position: sticky;
     top: 1rem;
-  }
-
-  @media only screen and (max-width: 640px) {
-    padding-bottom: 3rem;
   }
 `;

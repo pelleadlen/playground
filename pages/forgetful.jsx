@@ -6,7 +6,6 @@ import SectionTwo from "../components/casestudies/forgetful/sectionTwo";
 import SplashSection from "../components/casestudies/forgetful/splashSection";
 import StaggerSection from "../components/casestudies/forgetful/staggerSection";
 import { Main } from "../components/casestudies/forgetful/styled/styledForgetful";
-import Arrow from "../components/casestudies/shared/arrow";
 import { RevealUp } from "../components/hooks/animation";
 import {
   MoreWork,
@@ -37,8 +36,8 @@ const forgetful = () => {
           content="Should designers code? A casestudy about micro interactions by designer Pelle Adlén"
         />
       </Head>
-      <Arrow href="/" />
-      <RevealUp>
+
+      <RevealUp triggerOnce={true}>
         <Main
           variants={mainIntro}
           initial="hidden"

@@ -25,7 +25,6 @@ const ourlegacy = () => {
         />
       </Head>
       <Main exit={{ opacity: 0 }}>
-        <Arrow href="/" />
         <Hero />
         <Text />
 
