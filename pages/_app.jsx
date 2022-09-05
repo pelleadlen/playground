@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 import { hotjar } from "react-hotjar";
 import Head from "next/head";
 import { theme } from "../styles/theme";
-import { createGlobalStyle } from "styled-components";
 import { GlobalStyle } from "../styles/globalStyle";
 
 const MyApp = ({ Component, pageProps }) => {

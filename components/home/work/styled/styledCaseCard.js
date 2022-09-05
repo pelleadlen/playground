@@ -19,7 +19,7 @@ export const Overlay = styled(motion.div)`
 
 export const TextBetween = styled(motion.div)`
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
   width: 100%;
   padding: 1rem;

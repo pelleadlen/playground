@@ -14,7 +14,7 @@ import { RevealUp } from "../../hooks/animation";
 export const ImageGrid = () => {
   return (
     <>
-      <RevealUp cascade={true}>
+      <RevealUp cascade={true} triggerOnce={true}>
         <Section>
           <Grid>
             <ImgWrapper>

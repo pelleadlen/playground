@@ -1,4 +1,4 @@
-import { MarqueeText, Marquees, Track } from "./styled/styledMarquee";
+import { Marquees, Track } from "./styled/styledMarquee";
 
 const marqueeVariants = {
   animate: {
@@ -7,28 +7,19 @@ const marqueeVariants = {
       x: {
         repeat: Infinity,
         repeatType: "loop",
-        duration: 20,
+        duration: 40,
         ease: "linear",
       },
     },
   },
 };
 
-const Marquee = (props) => {
+export const Marquee = (props) => {
   return (
-    <div className={props.className}>
-      <Marquees>
-        <Track className="track" variants={marqueeVariants} animate="animate">
-          <MarqueeText>
-            Process Process Process Process Process Process Process Process
-            Process Process Process Process Process Process Process Process
-            Process Process Process Process Process Process Process Process
-            Process Process Process
-          </MarqueeText>
-        </Track>
-      </Marquees>
-    </div>
+    <Marquees>
+      <Track animate="animate" variants={marqueeVariants}>
+        {props.marquee}
+      </Track>
+    </Marquees>
   );
 };
-
-export default Marquee;

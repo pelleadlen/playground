@@ -1,109 +1,104 @@
 import { RevealUp } from "../../hooks/animation";
+import { ImgLarge } from "./imgLarge";
 import {
-  Container,
+  About,
+  Card,
   Grid,
-  TopCard,
-  RowTwoCard,
-  Img,
-  Title,
-  PersonaInfo,
-  PersonaContent,
-  BackgroundInfo,
-  SmallCardTop,
-  SmallCardBottom,
-  Introduction,
+  Li,
+  Name,
+  Qa,
+  Row,
+  SpaceBetween,
+  Status,
 } from "./styled/styledPersona";
+import { TextBox } from "./styled/styledProcess";
+import { Paragraph, Title } from "./styled/styledTripCloset";
 
-const NameAge = () => {
-  return <Title>Michael Swift,32</Title>;
-};
+const personaData = [
+  { name: "Michael Swift, ", age: "32", id: 1 },
+  { status: "Occupation", about: "Digital marketing", id: 2 },
+  { status: "Status", about: "Single", id: 3 },
+  { status: "Location", about: "Traveling", id: 4 },
+  { status: "Tech literte", about: "Good", id: 5 },
+];
 
-const PersonaInformation = (props) => {
+export const CardNameInfo = () => {
   return (
     <>
-      <PersonaInfo>
-        <div>
-          <p>{props.title}</p>
-        </div>
-        <div>
-          <p>{props.subTitle}</p>
-        </div>
-      </PersonaInfo>
+      <Card>
+        <Qa>
+          <About>
+            {personaData.map(({ name, age, id }) => (
+              <Name key={id}>
+                {name}
+                {age}
+              </Name>
+            ))}
+            {personaData.map(({ status, id }) => (
+              <Status key={id}>{status}</Status>
+            ))}
+          </About>
+          <div className="self-end">
+            {personaData.map(({ id, about }) => (
+              <Status key={id}>{about}</Status>
+            ))}
+          </div>
+        </Qa>
+      </Card>
     </>
   );
 };
 
-const Persona = () => {
+export const Persona = () => {
   return (
-    <Container>
-      <RevealUp cascade={true}>
-        <Introduction>
-          <div>
-            <h3>User Persona</h3>
-            <p>
-              To better understand how to design for users who are constantly
-              traveling and are in need of clothing, User Personas were created.
-              Below is a brief version of Michael's persona, who is made up by
-              combining all of my interviewees. He was used to understand a user
-              who would care more about renting clothes instead of buying new
-              ones for a short period of time.
-            </p>
-          </div>
-        </Introduction>
-
-        <Grid>
-          <TopCard>
-            <PersonaContent>
-              <NameAge />
-              <PersonaInformation
-                title="Occupation"
-                subTitle="Digital marketing"
-              />
-              <PersonaInformation title="Status" subTitle="Single" />
-              <PersonaInformation title="Location" subTitle="Traveling" />
-              <PersonaInformation title="Tech Literte" subTitle="Good" />
-            </PersonaContent>
-          </TopCard>
-
-          <TopCard left>
-            <Title>Background</Title>
-            <BackgroundInfo>
+    <RevealUp cascade={true} triggerOnce={true}>
+      <Grid>
+        <CardNameInfo />
+        <Card flexStart>
+          <TextBox>
+            <Name>Background</Name>
+            <Status>
               Michael is a digital nomad currently working with digital
               marketing at a finance startup fully remote. He loves to surf and
               visiting places with the best waves and coffeshops with lightning
-              fast wi-fi.
-            </BackgroundInfo>
-          </TopCard>
-
-          <RowTwoCard>
-            <Img
-              alt="digital nomad working with computer on the balcony"
-              layout="fill"
-              src="/Assets/Images/digital-nomad.jpg"
-            />
-          </RowTwoCard>
-          <SmallCardTop>
-            <Title>Core needs</Title>
-            <ul>
-              <li>Need to find quality products easily.</li>
-              <li>Find best offers for products</li>
-              <li>Be able to find products suitable for the location. </li>
-              <li>Travel without unnecessary items.</li>
-            </ul>
-          </SmallCardTop>
-          <SmallCardBottom>
-            <Title>Frustrations</Title>
-            <ul>
-              <li>Needs to buy new clothes all the time.</li>
-              <li>Get’s tired of clothing fast.</li>
-              <li>Poor rental services and description of products </li>
-              <li>Hard to return products in new countries.</li>
-            </ul>
-          </SmallCardBottom>
-        </Grid>
-      </RevealUp>
-    </Container>
+              fast wi-fi.{" "}
+            </Status>
+          </TextBox>
+        </Card>
+        <Card noPadding>
+          <ImgLarge
+            halfHeight
+            noMargin
+            src={"/Assets/Images/digital-nomad.jpg"}
+          />
+        </Card>
+        <Card>
+          <SpaceBetween>
+            <div>
+              <Name>Core needs</Name>
+              <ul>
+                <Li as="li">Need to find quality products easily.</Li>
+                <Li as="li">Find best offers for products.</Li>
+                <Li as="li">
+                  Be able to find products suitable for the location.{" "}
+                </Li>
+                <Li as="li">Travel without unnecessary items.</Li>
+              </ul>
+            </div>
+            <div>
+              <Name>Frustrations</Name>
+              <ul>
+                <Li as="li">Needs to buy clothes all the time.</Li>
+                <Li as="li">Get’s tired of clothing fast.</Li>
+                <Li as="li">
+                  Poor rental services and description of products
+                </Li>
+                <Li as="li">Hard to return products in new countries.</Li>
+              </ul>
+            </div>
+          </SpaceBetween>
+        </Card>
+      </Grid>
+    </RevealUp>
   );
 };
-
-export default Persona;

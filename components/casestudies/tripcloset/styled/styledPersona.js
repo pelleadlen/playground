@@ -1,139 +1,71 @@
 import styled from "styled-components";
-import Image from "next/image";
-import { motion } from "framer-motion";
 
-const Container = styled.section`
+export const Card = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 1.5rem 8rem 1.5rem;
-  background: ${(props) => props.theme.bgWhite}; ;
+  justify-content: ${(props) => (props.flexStart ? "flex-start" : "center")};
+
+  padding: ${(props) => (props.noPadding ? "0" : "2em")};
+  border-radius: 1.5rem;
+
+  box-shadow: ${(props) => props.theme.shadow}; ;
 `;
 
-const Introduction = styled.div`
-  height: 80vh;
-  width: 100%;
-  padding: 0 1rem;
+export const SpaceBetween = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  div {
-  }
-  h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  p {
-    font-size: clamp(1rem, 4vw, 1.5rem);
-    line-height: 1.6;
-    max-width: 52ch;
-
-    font-weight: 300;
-  }
-`;
-
-const Grid = styled(motion.div)`
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: auto;
-  max-width: 1440px;
-  gap: 1.5rem;
-  width: 100%;
   height: 100%;
+  justify-content: space-evenly;
 
-  @media screen and (max-width: 1024px) {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-`;
-
-const Card = styled.div`
-  padding: 2.5rem 2.5rem;
-  border-radius: 1.5rem;
-  background-color: ${(props) => props.theme.bgWhite};
-  box-shadow: ${(props) => props.theme.shadow};
   ul {
-    list-style-type: disc;
-  }
-  li {
-    font-size: clamp(1rem, 4vw, 1.4rem);
-    color: ${(props) => props.theme.textGray};
-    margin: 0.5rem 0;
-    font-weight: 300;
+    list-style: disc;
+    margin-top: 1rem;
+    @media (max-width: 932px) {
+      margin-bottom: 2rem;
+    }
   }
 `;
 
-const TopCard = styled(Card)`
-  display: flex;
-  flex-direction: column;
-`;
-
-const PersonaContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+export const Grid = styled.div`
+  display: grid;
+  max-width: 900px;
   gap: 1rem;
-`;
-
-const Title = styled.h3`
-  font-size: clamp(1.5rem, 8vw, 2rem);
-  line-height: 133%;
-  font-weight: 340;
-  padding-bottom: 1.5rem;
-`;
-
-const PersonaInfo = styled.div`
-  display: flex;
-  justify-content: space-between;
-  font-size: clamp(1rem, 4vw, 1.4rem);
-  color: ${(props) => props.theme.textGray};
-  font-weight: 300;
-
-  div {
-    width: 100%;
+  margin: auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  @media (max-width: 932px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin: 1rem;
   }
 `;
 
-const BackgroundInfo = styled.div`
-  font-size: clamp(1rem, 4vw, 1.5rem);
-  color: ${(props) => props.theme.textGray};
+export const Name = styled.h3`
+  font-size: 1.5rem;
   font-weight: 300;
-  max-width: 40ch;
-  line-height: 1.8;
+  padding-bottom: 0.1rem;
 `;
 
-const RowTwoCard = styled(Card)`
-  position: relative;
-  grid-row: 2 / 4;
-  min-height: 400px;
+export const About = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
-const SmallCardTop = styled(Card)``;
-
-const SmallCardBottom = styled(Card)``;
-
-const Img = styled(Image)`
-  border-radius: 1.5rem;
-  object-fit: cover;
-  min-width: 800px;
-  height: 700px;
+export const Qa = styled.div`
+  display: flex;
+  align-items: flex-end;
 `;
 
-export {
-  SmallCardBottom,
-  SmallCardTop,
-  RowTwoCard,
-  TopCard,
-  Card,
-  Grid,
-  Container,
-  Img,
-  Title,
-  PersonaInfo,
-  PersonaContent,
-  BackgroundInfo,
-  Introduction,
-};
+export const Row = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`;
+
+export const Status = styled.div`
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  color: ${(props) => props.theme.textGray};
+`;
+export const Li = styled(Status)`
+  color: ${(props) => props.theme.textGray};
+`;

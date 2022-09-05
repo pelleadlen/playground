@@ -4,7 +4,7 @@ import { ImgSm, ImgWrapperSm, Section } from "./styled/styledMobileImageGrid";
 export const MobileImageGrid = () => {
   return (
     <>
-      <RevealUp>
+      <RevealUp triggerOnce={true}>
         <Section>
           <ImgWrapperSm>
             <ImgSm
