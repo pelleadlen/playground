@@ -1,3 +1,4 @@
+import { CopyToClipboard } from "./copyToClipboard";
 import MarkTitle from "./markTitle";
 import SocialLinks from "./socialLink";
 import {
@@ -27,10 +28,7 @@ const Contact = () => {
           <Flex>
             <Socials>
               <MarkTitle title="Say hello" />
-              <SocialLinks
-                href="mailto: pelleadlen@gmail.com?subject= 👨‍💻🍺?"
-                LinkName="pelleadlen@gmail.com"
-              />
+              <CopyToClipboard mail="pelleadlen@gmail.com" />
             </Socials>
             <Socials>
               <MarkTitle title="Follow" />

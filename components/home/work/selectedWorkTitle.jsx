@@ -14,10 +14,7 @@ export const SelectedWorkTitle = () => {
 
   const controls = useAnimation();
 
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
-  });
+  const [ref, inView] = useInView();
 
   useEffect(() => {
     if (inView) {

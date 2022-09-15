@@ -4,10 +4,13 @@ export const Container = styled.section`
   height: 100vh;
   display: flex;
   align-items: flex-end;
+
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
   background-color: ${(props) => props.theme.bgGray};
-  z-index: 1000;
+  @media only screen and (max-width: 640px) {
+    height: 90vh;
+  }
 `;
 
 export const Content = styled.div`
@@ -25,6 +28,7 @@ export const Content = styled.div`
   @media only screen and (max-width: 640px) {
     padding: 0 1rem;
     align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -41,6 +45,9 @@ export const LinkWrapper = styled.div`
   flex-wrap: wrap;
   width: 80%;
   gap: 0.5rem;
+  @media (max-width: 500px) {
+    gap: 1rem;
+  }
 `;
 
 export const Wrap = styled.div`
@@ -56,7 +63,7 @@ export const Wrap = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1.2;
   position: relative;
   font-weight: 400;
@@ -64,10 +71,11 @@ export const Title = styled.h1`
 `;
 
 export const TitleLink = styled.a`
-  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1.2;
   position: relative;
   font-weight: 300;
+  cursor: pointer;
 `;
 
 export const Underline = styled.div`
@@ -78,4 +86,7 @@ export const Underline = styled.div`
   height: 4px;
   background-color: #000;
   transform-origin: left;
+  @media (max-width: 500px) {
+    height: 2px;
+  }
 `;
