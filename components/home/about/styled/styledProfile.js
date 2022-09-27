@@ -41,6 +41,7 @@ export const ProfilePicture = styled.div`
   position: relative;
   border-radius: 1.5rem;
   max-width: 56rem;
+  margin-bottom: 1.5rem;
   height: 80vh;
   box-shadow: ${(props) => props.theme.shadow}; ;
 `;

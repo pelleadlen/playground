@@ -1,6 +1,7 @@
 import Tilt from "react-parallax-tilt";
 import { Link } from "react-scroll";
 import { RevealUp } from "../../hooks/animation";
+
 import * as styled from "./styled/styledSlogan";
 
 export const Slogan = () => {
@@ -14,7 +15,7 @@ export const Slogan = () => {
         >
           <Link to="profile" offset={6} smooth={true}>
             <styled.TextXL>
-              What's new <span>and exiting in </span>
+              What's new <span>and exciting in </span>
               <span>Product design?</span>
             </styled.TextXL>
           </Link>

@@ -4,7 +4,7 @@ export const Container = styled.section`
   height: 100vh;
   display: flex;
   align-items: flex-end;
-
+  width: 100%;
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
   background-color: ${(props) => props.theme.bgGray};
@@ -20,8 +20,6 @@ export const Content = styled.div`
   flex-direction: column;
   gap: 1rem;
   height: 75%;
-  width: 100%;
-
   padding: 0 1.5rem 0 1.5rem;
   border-top-right-radius: 1.5rem;
   border-top-left-radius: 1.5rem;

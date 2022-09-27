@@ -12,6 +12,7 @@ const IconWrapper = styled.div`
   padding: 0.5rem;
   right: 1.5rem;
   top: 1.5rem;
+  z-index: 10;
   transition: background-color 200ms;
   border-radius: 0.5rem;
   &:hover {
