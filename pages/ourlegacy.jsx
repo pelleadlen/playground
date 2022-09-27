@@ -6,6 +6,7 @@ import VideoMockup from "../components/casestudies/ourlegacy/videoMockup";
 import { ImageGrid } from "../components/casestudies/ourlegacy/imageGrid";
 import { MobileImageGrid } from "../components/casestudies/ourlegacy/mobileImageGrid";
 import { MoreWork } from "../components/casestudies/shared/moreWork";
+import Arrow from "../components/casestudies/shared/arrow";
 
 const ourlegacy = () => {
   return (
@@ -17,7 +18,9 @@ const ourlegacy = () => {
           content="Redesign of Our legacy together with gothenburg agency "
         />
       </Head>
+
       <Main exit={{ opacity: 0 }}>
+        <Arrow />
         <Hero />
         <Text />
 

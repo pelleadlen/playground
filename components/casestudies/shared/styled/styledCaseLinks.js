@@ -35,7 +35,7 @@ export const Item = styled.div`
   cursor: pointer;
   display: flex;
   padding: 1rem 0;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid ${(props) => props.theme.underLine};
   width: 50vw;
   @media (max-width: 665px) {
     width: 100vw;

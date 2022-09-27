@@ -26,10 +26,7 @@ const SplashSection = () => {
             </Paragraph>
           </TextBlock>
           <div>
-            <SplashScreen
-              messageText="Can you really remember everything?"
-              replay="play again"
-            />
+            <SplashScreen replay="play again" />
           </div>
         </Grid>
       </RevealUp>

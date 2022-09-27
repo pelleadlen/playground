@@ -1,7 +1,6 @@
 import { Tooltip } from "@mui/material";
 import copy from "copy-to-clipboard";
 import { useState } from "react";
-import { useIsMobile } from "../../hooks/isMobile";
 import SocialLinks from "./socialLink";
 
 export const CopyToClipboard = ({ mail }) => {

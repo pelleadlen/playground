@@ -35,7 +35,7 @@ export const OverlayText = styled.h3`
   align-items: center;
   letter-spacing: 0.01em;
   font-size: ${(props) => (props.small ? "1.2rem" : "4rem")};
-  color: ${(props) => props.theme.textWhite}; ;
+  color: #fff;
 `;
 
 export const Year = styled.h3`
@@ -51,7 +51,7 @@ export const Year = styled.h3`
 export const MobileText = styled.h3`
   font-size: ${(props) => (props.small ? "1rem" : "1.5rem")};
   padding-top: ${(props) => (props.large ? "0.5rem" : "0")};
-  color: ${(props) => (props.gray ? "gray" : "black")}; ;
+  color: ${(props) => props.theme.fontColor};
 `;
 
 export const MobileTextBlock = styled.div`

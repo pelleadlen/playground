@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const Section = styled.section`
   display: flex;
   flex-direction: column;
-  background: ${(props) => props.theme.bgGray};
+  background: ${(props) => props.theme.off};
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
   height: 100vh;

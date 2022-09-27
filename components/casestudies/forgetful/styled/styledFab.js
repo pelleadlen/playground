@@ -10,7 +10,8 @@ export const Wrapper = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.theme.bgWhite};
+  background-color: #fff;
+  color: black;
   background-image: radial-gradient(#efefef 1px, transparent 0);
   background-size: 30px 30px;
   background-position: -19px -19px;

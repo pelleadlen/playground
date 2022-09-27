@@ -9,10 +9,18 @@ import { hotjar } from "react-hotjar";
 import Head from "next/head";
 import { theme } from "../styles/theme";
 import { GlobalStyle } from "../styles/globalStyle";
+import { lightTheme, darkTheme } from "../styles/theme";
+import { ToggleSwitch } from "../components/casestudies/shared/toggleSwitch";
 
 const MyApp = ({ Component, pageProps }) => {
+  const [theme, setTheme] = useState("light");
+
   const router = useRouter();
   const [history, setHistory] = useState("");
+
+  const themeToggler = () => {
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  };
 
   useEffect(() => {
     hotjar.initialize(2865806, 6);
@@ -66,7 +74,8 @@ const MyApp = ({ Component, pageProps }) => {
       />
 
       <AnimatePresence exitBeforeEnter>
-        <ThemeProvider theme={theme}>
+        <ToggleSwitch handleToggle={() => themeToggler()} />
+        <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
           <GlobalStyle />
           <Component {...pageProps} key={router.route} history={history} />
         </ThemeProvider>

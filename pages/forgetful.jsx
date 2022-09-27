@@ -14,6 +14,7 @@ import {
 import { forgetfulCases } from "../components/casestudies/shared/caseLinksData";
 import CaseLinks from "../components/casestudies/shared/caseLinks";
 import { MoreWork } from "../components/casestudies/shared/moreWork";
+import Arrow from "../components/casestudies/shared/arrow";
 const forgetful = () => {
   const mainIntro = {
     hidden: {
@@ -36,7 +37,7 @@ const forgetful = () => {
           content="Should designers code? A casestudy about micro interactions by designer Pelle Adlén"
         />
       </Head>
-
+      <Arrow />
       <RevealUp triggerOnce={true}>
         <Main
           variants={mainIntro}

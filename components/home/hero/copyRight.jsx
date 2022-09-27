@@ -14,7 +14,7 @@ const CopyRight = () => {
       onClick={() => setIsHovered(true)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      animate={{ width: isHovered ? 252 : 180 }}
+      animate={{ width: isHovered ? 252 : 122 }}
       initial={false}
     >
       <CopySymbol
@@ -26,7 +26,7 @@ const CopyRight = () => {
       <OverflowHidden>
         <Text
           transition={{ duration: 0.1, type: "spring", stiffness: 50 }}
-          animate={{ x: isHovered ? -96 : 0 }}
+          animate={{ x: isHovered ? -64 : 0 }}
           initial={{ x: 0 }}
         >
           code by Pelle Adlén

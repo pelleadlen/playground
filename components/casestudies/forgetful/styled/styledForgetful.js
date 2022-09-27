@@ -5,6 +5,7 @@ export const Main = styled(motion.main)`
   min-height: 100vh;
   min-width: 100vw;
   overflow-x: hidden;
+  background-color: ${(props) => props.theme.off}; ;
 `;
 export const Grid = styled.section`
   display: grid;
@@ -58,7 +59,7 @@ export const Wrapper = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.theme.bgWhite};
+  background-color: #fff;
   background-image: radial-gradient(#efefef 1px, transparent 0);
   background-size: 30px 30px;
   background-position: -19px -19px;

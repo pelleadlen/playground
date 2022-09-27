@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const WorkWrapper = styled(motion.section)`
-  background: #fff;
+  background: ${(props) => props.theme.off};
   min-width: 100vw;
   display: flex;
   flex-direction: column;

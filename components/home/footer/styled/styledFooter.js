@@ -84,7 +84,7 @@ export const Underline = styled.div`
   bottom: 0;
   width: 100%;
   height: 4px;
-  background-color: #000;
+  background-color: ${(props) => props.theme.underLine};
   transform-origin: left;
   @media (max-width: 500px) {
     height: 2px;

@@ -31,7 +31,7 @@ export const SelectedWork = styled.div`
 
 export const Paragraph = styled(motion.p)`
   font-weight: 300;
-  color: rgb(107 114 128);
+  color: ${(props) => props.theme.fontColor};
   padding-top: 0.5rem;
   font-size: 1rem;
   @media screen and (max-width: 600px) {
