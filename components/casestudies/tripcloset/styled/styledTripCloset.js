@@ -13,6 +13,11 @@ export const Container = styled(motion.main)`
   }
   @media (max-width: 608px) {
     margin: 1rem;
+    height: 80vh;
+  }
+  @media (max-width: 400px) {
+    margin: 1rem;
+    height: 90vh;
   }
 `;
 
