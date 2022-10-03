@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { hotjar } from "react-hotjar";
 import Head from "next/head";
-import { theme } from "../styles/theme";
 import { GlobalStyle } from "../styles/globalStyle";
 import { lightTheme, darkTheme } from "../styles/theme";
 import { ToggleSwitch } from "../components/casestudies/shared/toggleSwitch";

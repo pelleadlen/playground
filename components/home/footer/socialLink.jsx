@@ -1,12 +1,12 @@
-import { Wrap, TitleLink } from "./styled/styledFooter";
 import { motion } from "framer-motion";
+import { Wrap, TitleLink } from "./styled/styledFooter";
 
-const SocialLinks = ({ LinkName, href, layoutId }) => {
+const SocialLinks = ({ LinkName, href }) => {
   return (
     <Wrap>
-      <TitleLink as={motion.a} href={href}>
-        {LinkName}
-      </TitleLink>
+      <motion.div whileHover={{ scale: 1.01, y: 2 }}>
+        <TitleLink href={href}>{LinkName}</TitleLink>
+      </motion.div>
     </Wrap>
   );
 };

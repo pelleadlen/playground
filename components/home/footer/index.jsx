@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { CopyToClipboard } from "./copyToClipboard";
 import MarkTitle from "./markTitle";
 import SocialLinks from "./socialLink";

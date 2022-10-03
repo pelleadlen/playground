@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { motion } from "framer-motion";
 
 export const Container = styled.section`
   height: 100vh;
@@ -26,7 +27,6 @@ export const Content = styled.div`
   @media only screen and (max-width: 640px) {
     padding: 0 1rem;
     align-items: center;
-    justify-content: center;
   }
 `;
 
@@ -41,10 +41,11 @@ export const Socials = styled.div``;
 export const LinkWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  width: 78%;
   gap: 0.5rem;
   @media (max-width: 500px) {
     gap: 1rem;
+    width: 90%;
   }
 `;
 
@@ -68,10 +69,10 @@ export const Title = styled.h1`
   margin-bottom: 1rem;
 `;
 
-export const TitleLink = styled.a`
+export const TitleLink = styled(motion.a)`
   font-size: clamp(2rem, 4vw, 3.5rem);
   line-height: 1.2;
-  position: relative;
+
   font-weight: 300;
   cursor: pointer;
 `;

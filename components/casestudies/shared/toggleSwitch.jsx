@@ -1,8 +1,11 @@
 import styled from "styled-components";
-import { IoSunnyOutline } from "react-icons/io5";
+import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
 import { useState } from "react";
 
-const Icon = styled(IoSunnyOutline)`
+const IconSun = styled(IoSunnyOutline)`
+  right: 0;
+`;
+const IconMoon = styled(IoMoonOutline)`
   right: 0;
 `;
 
@@ -24,13 +27,15 @@ const IconWrapper = styled.div`
 `;
 
 export const ToggleSwitch = ({ handleToggle }) => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
   return (
     <IconWrapper
       onClick={() => {
         handleToggle();
+        setIsDarkMode(!isDarkMode);
       }}
     >
-      <Icon size={16} />
+      {isDarkMode ? <IconSun size={16} /> : <IconMoon size={16} />}
     </IconWrapper>
   );
 };
